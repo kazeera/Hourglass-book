@@ -1,0 +1,215 @@
+---
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+---
+# How to Use the Desktop Application
+
+> Note: we use the term "graphical user interface" interchangeably with "desktop application". 
+
+The graphical user interface (GUI) contains sequential tabs taking users step-by-step through the Hourglass algorithm. Each tab contains options to relay data to the R package and customize Hourglass output. GUI tabs and key user events are described here.
+
+## Output: Excel file
+The purpose of this application is to create an Excel file that will be read into R. 
+There are the 4 tables/worksheets:
+
+| No. | Name | Description |
+|:- |:--- |:--- |
+|1| **Comparisons** | comparisons and other analysis parameters (e.g, local file paths to data, survival columns, which plots to create) | 
+|2| **Colors** | color palette for values in comparisons, first column is name and second is color hex code | 
+|3| **Feature Sets** | named groups of features |
+|4| **Feature Parameters** | standard and optionally alternative parameters for the feature sets |
+
+
+## Basic Workflow
+Allows users to pick options and navigate through workflow:
+* Upload data (rows = samples)
+* Choose comparisons of interest (filter rows)
+* Choose genes/features (columns) of interest and label
+* Interactively look at data (make heatmap and boxplot)
+* Run R package to create all plots with one click
+
+## Upload Files
+
+> This tab specifies input data paths that will 1 - customize the user's experience (in this application) and 2 - be used in Hourglass analysis runs.
+
+* Enter the name of your dataset in text input field.
+* Use "Choose File" buttons to upload the required 3 data files from your computer's file directory, specifically:
+1) **numMat** - numeric matrix file 
+2) **rowAnn** - row annotations (clinical and sample descriptions)
+3) **colAnn** - column annotations (feature and parameter descriptions). 
+
+Check [# Input Data ## file format] for table formatting details and supported file types.
+
+## Define Comparisons
+
+> This tab creates a table of "comparisons" on how to stratify patients or samples. Each comparison/row will be run independent of other comparisons.
+
+* Select "Patient ID" from the drop down menu displaying rowAnn column names (e.g. smoker, age group). It will be used to group samples belonging to the same patient in By Patient analysis and patient-paired plots. Skip this step if patient-level analysis is not required.
+
+**Make comparisons**
+
+> Note: All text input fields are case-sensitive, _i.e._ must match data.
+
+* Press "Add a row" button to create a new comparison.
+
+* Define a comparison for each row (required), by **either**:
+     * Selecting a "Main Comparison" from the drop down menu displaying rowAnn column names (e.g. smoker, age group) 
+     * Filling "Custom Comparison" - type in the exact column name of a variable from numMat (feature+parameter e.g. IL6_num.positive.pixels) or from rowAnn (e.g. age)
+
+* Customize comparison with optional fields:
+
+**Subgroup**
+
+Select a "Subgroup" from the drop down menu displaying rowAnn column names (e.g. smoker, age group). This is only for a secondary color coding of dots in boxplots and an extra annotation color bar in heatmaps.
+{insert 2 boxplot images with and without colored dots} 
+
+**Within Group**
+
+This will run Hourglass within groups or cohorts of sample/patients.
+Append rowAnn column names with ";". 
+e.g. Sex;Smoker
+
+**Filter**
+
+Specify exclusion criteria with this format: rowAnn_columnname != or == variable to keep/exclude.
+e.g. Smoker=="Yes" - this keeps all smokers and excludes all other samples/patients from analysis. Ensure that "Smoker" is a column in rowAnn and "Yes" is one of its column values. 
+Choose multiple filters by appending filters with ";", e.g. Smoker=="Yes";NeoAdjuvant!=neo
+
+**By Sample**
+
+Check box to create plots from original input files, treating each row in numMat as an individual data point. 
+
+**By Patient**
+
+Check box to average across Patient ID (see below) and create plots.
+> Note: at least one of By Sample or By Patient must be selected for comparison to run.
+
+
+Example of a comparison:
+
+| Field | Value | Description |
+|:-- |:-- |:-- |
+| Main comparison | | Since main comparison is empty, custom comparison must be defined |
+| Custom comparison | IL6_Number.Positive.Pixels | Compare IL6 high vs low groups (# intermediate depends on the "Number of custom levels" in Advanced Options tab) |
+| Subgroup | Smoker | Color code boxplot dots by Yes or No (values in Smoker column) |
+| Within Group | Sex;Smoker | Run Hourglass for all samples/patients. Then rerun within male cohort and female cohort. Run within Smoker-Yes, then Smoker-No cohort.| 
+| Filter | NeoAdjuvant != neo | Before running this comparison, remove all samples/patient rows that are "neo". |
+| By Sample | (checked) | Run this comparison at the sample-level. |
+| By Patient | (checked) | Run this comparison at the patient-level (average the multiple samples per patient). | 
+
+## Define feature sets
+
+> This tab allows users to pick biologically relevant parameters for each feature and group them as feature sets.
+
+
+**Tab 1: Select columns**
+
+* Select column name from colAnn for Feature and Parameter columns.
+
+* Recall [# What is Hourglass? ##Terminology]: 
+
++ **Feature** = stains, genes, markers, etc (e.g. Gene1, ProteinX, IL6), while 
+
++ **Parameters** = readouts, measurements of features (e.g. Numbers of Positive Pixels, Percent Positive Pixels, Stained Area mm^2,Total Area mm^2).
+
+
+
+**Tab 2: Define parameters**
+
+* Using drop-down menus, pick relevant parameters for each feature (called standard) and optionally, an alternative.
+
+* Note: this will populate the table/sheet in the output Excel file called Feature Parameters.
+
+
+
+**Tab 3: Define sets**
+
+* Next, define sets. Press the "Add a row" button to add a new set. 
+
++ **Name of group**: Type in a name for group, e.g. T_cell_markers.
+
++ **List of features**: Type in a list of features (see Tab1 for options) or group names, appended ",". e.g. "CD4, CD8". The delimiter must be a comma, leading and trailing whitespace will be ignored.
+
++ **Alt** (Alternative): Select "Alt-Yes" to run this set with standard AND alternative parameters separately, or "Alt-No" for a run with standard parameters. 
+
+Note if "Alt-Yes" is selected, there will be two folders for a feature set, one with the original name and another with "_alt" appended, e.g. "TCellMarkers" for standard parameters and "TCellMarkers_alt" for alternative.
+
+Note: this will populate the table/worksheet in the output Excel file called Feature Sets.
+
+## Advanced options
+
+> This tab includes customization for statistics, plot types, etc. 
+
+Labels for options are on the left and drop down menus on the right side:
+
+* **Correlation method**: Method for correlation between two variables. Options are "pearson" (linear relationship using raw data), or"spearman","kendall" f(monotonic relationship using ranked data).
+
+* **Test method**: Which two-sample test should be used? Student's t-test for parametric data, wilcoxon usually for non-parametric.
+
+* **p-values label**: How p (significance) values are to be represented in boxplots, correlation plots, p-value/fold-change heatmap. Stars or exact numeric values.
+
+* **Fold-change method**: Fold change computation method to use, either "divide" (for non-transformed values) or "subtract" (for log2-transformed values).
+
+* **Color gradient**: Color palette for scaled plot types: heatmaps, correlation plots. See color palettes (visual) by pressing the button "See color gradients".
+
+* **Number of custom levels**: Number of intermediate groups resulting from Hourglass separating a continuous variable into low, int, high. For example, if 2 is selected, there will only be low and high groups, whereas if 4 is selected, the groups will be low, int1, int2, high. 
+
+* **Save ID data to file**: Would you like sample/patient IDs and corresponding comparison groups to be saved to a .csv table? If TRUE is selected, then yes. This may be useful to 1) identify how Hourglass stratified custom comparisons, i.e. which patient IDs were considers low, int, high in the analysis and 2) see which samples/patients were in analysis after filtering steps.
+
+
+Survival analysis options:
+
+* Check box (Run survival analysis) to specify creation of survival plots.
+
+* **Survival time column**: Time starting from a predefined point to the occurrence of the event of interest, usually OS time (overall survival time - time from diagnosis to death.
+
+* **Censoring status column**:  Numeric event status represented by 0 and 1 for each patient, where 1 indicates the event has occurred and 1 means the status is incomplete. A patient is censored when we don't know the true survival time for that patient.
+
+The two columns above must be in rowAnn table.
+
+
+Additional options:
+
+* **Discrete parameters**: Manually type in list of parameters (appended by ",") in numMat that are to be viewed discretely, not continuous as Hourglass assumes. _e.g._ "Het.Score" might have values from 1 to 10.
+
+* **Remove outliers**: Check box. If selected, outliers will be removed columnwise for all runs (included imputed version) based on the IQR method. Any observations that are more than 1.5 IQR below Q1 or more than 1.5 IQR above Q3 are considered outliers and become NAs.
+
+* **Run imputed version**:
+      + Check box to run imputed analysis in parallel. This indicates that all comparisons at sample and patient level will be run Hourglass 
+      + Move slider to specify the extent of imputation. Missing data points in numMat will be imputed columnwise with a random value plus or minus _x_% around the mean of each column, default is 5%.
+
+## Customize colors
+> This tab contains buttons for each unique value in all comparisons. 
+
+* A button for each unique value in defined comparisons will automatically be displayed. For example, if "Cancer Type" was chosen as a main comparison, corresponding buttons for lung, breast, pancreatic, and other values in the "Cancer Type" column will be displayed. 
+
+* Press the button to open a color picker window. Select a color by: 
+     * Enter a hex code in the text input field at the bottom of the left panel.
+     * Placing and clicking cursor on the color wheel.
+     * Move slider.
+
+* Press "Select and Close Window" to save.
+
+* If **white** is chosen (center of the color wheel), that value will be excluded from all comparisons. This will bypass filters in comparisons. For example, perhaps "Sex" in rowAnn has the values "F", "M" and "X", where "X" does not have high enough patient numbers. To exclude this group, make the "Sex-X" button white.
+
+* Press "Select" to choose colors.
+Note: the information will help populate the table/sheet in the output Excel file called Colors.
+
+## Run Hourglass 
+> This tab is the final tab that defines which plot types should be created in output folder
+
+* Check boxes for quality control boxplots, for the feature and parameter colAnn columns (optional). {Insert 2 plots}. Note this uses information from Feature Sets Tab 1.
+
+* Check boxes for plots that will be created for each feature set. 
+
+* Hourglass will read from the output Excel file, mentioned in the beginning of this chapter [##Output excel file].  
+
+* **Either** press:
+     * "Create output spreadsheet" button and navigate through the folder directory and save the Excel file locally. Modify if needed before pressing Run. 
+     * **OR** press "Upload existing spreadsheet" and find and upload a locally existing Excel file.
+       
+* Finally! Press the "Run Hourglass" button which interfaces to R (back-end).
+
+This action will relay user options and data file paths to the Hourglass R package and calls on functions to run comparisons, create new output folders and create plots using established R plotting libraries, such as ggplot2 and pheatmap. An error window will pop up if there are any issues running Hourglass on the R side.
+	

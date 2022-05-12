@@ -1,5 +1,6 @@
 book_filename: "Hourglass-book"
 delete_merged_file: true
+css: style.css
 language:
   ui:
-    chapter_name: "Chapter "
+    chapter_name: ""

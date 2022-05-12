@@ -1,34 +1,30 @@
 --- 
-title: "A Minimal Book Example"
-author: "Yihui Xie"
-date: "`r Sys.Date()`"
+title: "Documentation for Hourglass"
+author: "Kazeera Aliar"
+date: "last revised Mar 31, 2022"
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [book.bib, packages.bib]
-biblio-style: apalike
-link-citations: yes
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+output: bookdown::gitbook
+description: "This is the official documentation for Hourglass - learn how to install and utilize the tool."
 ---
 
-# Prerequisites
+# About
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+This is the official guide for _Hourglass_, the tool to systematically interrogate multiparametric datasets in a semi-automated manner. It allows users to filter and subset large datasets and compare groups in an automated manner. Hourglass exists as a stand-alone open-source R package and a desktop application for Windows or OSX. 
+  
+Please refer to our [link]() paper for more info.  
 
-The **bookdown** package can be installed from CRAN or Github:
+![](Hourglass_logo-removebg.png)
 
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
+**Acknowledgements**
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+We are ready to share Hourglass with the world. It's about _time_.
 
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
+First of all, I would like to thank Dr. Barbara Gruenwald, whose role cannot be overstated. She is the phenomenal force that curated the pancreatic ductal adenocarcinoma (PDAC) immunochemistry (IHC) dataset, helped conceptualize this toolbox, and drove this project forward. It started off as a script, with 300 lines of code in a single for loop, and progressively grew bigger as we added more stains and figured out new ways to interrogate the data. 
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+Next, I would like to thank Henry Waterhouse who built the graphical user interface with me, from planning to launch. Foram Vyas, Emily Poulton, and Nathan Chan are the image analysis experts who quantified the IHC data and consistently offered intelligent and creative feedback. I would like to thank my supervisor, Dr. Rama Khokha, Dr. Paul Waterhouse, and the rest of the Khokha Lab for sharing your excitement about Hourglass.
+
+I also would like to thank the developers of R, python, and Kivy for facilitating the making of Hourglass, the StackOverflow community for having the answers to everything, Github for providing a platform in which this program is easily accessible, and RStudio for creating R markdown and bookdown to facilitate the making of the R package and this book. 
+
+Kazeera
+

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 How to Use the Desktop Application | Documentation for Hourglass</title>
+  <meta name="description" content="This is the official documentation for Hourglass - learn how to install and utilize the tool." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 How to Use the Desktop Application | Documentation for Hourglass" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the official documentation for Hourglass - learn how to install and utilize the tool." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 How to Use the Desktop Application | Documentation for Hourglass" />
+  
+  <meta name="twitter:description" content="This is the official documentation for Hourglass - learn how to install and utilize the tool." />
+  
+
+<meta name="author" content="Kazeera Aliar" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="input-data.html"/>
+<link rel="next" href="output-plot-types.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a></li>
+<li class="chapter" data-level="2" data-path="installation.html"><a href="installation.html"><i class="fa fa-check"></i><b>2</b> Installation</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="installation.html"><a href="installation.html#install-r"><i class="fa fa-check"></i><b>2.1</b> Install R</a></li>
+<li class="chapter" data-level="2.2" data-path="installation.html"><a href="installation.html#install-desktop-application"><i class="fa fa-check"></i><b>2.2</b> Install desktop application</a></li>
+<li class="chapter" data-level="2.3" data-path="installation.html"><a href="installation.html#install-r-package-optional"><i class="fa fa-check"></i><b>2.3</b> Install R package (optional)</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html"><i class="fa fa-check"></i><b>3</b> What is Hourglass?</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#roadmap"><i class="fa fa-check"></i><b>3.1</b> Roadmap</a></li>
+<li class="chapter" data-level="3.2" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#tldr"><i class="fa fa-check"></i><b>3.2</b> tl;dr</a></li>
+<li class="chapter" data-level="3.3" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#is-this-tool-for-me"><i class="fa fa-check"></i><b>3.3</b> Is this tool for me?</a></li>
+<li class="chapter" data-level="3.4" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#advantages"><i class="fa fa-check"></i><b>3.4</b> Advantages</a></li>
+<li class="chapter" data-level="3.5" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#terminology"><i class="fa fa-check"></i><b>3.5</b> Terminology</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="input-data.html"><a href="input-data.html"><i class="fa fa-check"></i><b>4</b> Input Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="input-data.html"><a href="input-data.html#file-format"><i class="fa fa-check"></i><b>4.1</b> File format</a></li>
+<li class="chapter" data-level="4.2" data-path="input-data.html"><a href="input-data.html#the-3-files"><i class="fa fa-check"></i><b>4.2</b> The 3 files</a></li>
+<li class="chapter" data-level="4.3" data-path="input-data.html"><a href="input-data.html#similar-format"><i class="fa fa-check"></i><b>4.3</b> Similar Format</a></li>
+<li class="chapter" data-level="4.4" data-path="input-data.html"><a href="input-data.html#example-dataset"><i class="fa fa-check"></i><b>4.4</b> Example Dataset</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="input-data.html"><a href="input-data.html#features-of-example-dataset"><i class="fa fa-check"></i><b>4.4.1</b> Features of example dataset:</a></li>
+<li class="chapter" data-level="4.4.2" data-path="input-data.html"><a href="input-data.html#parameters"><i class="fa fa-check"></i><b>4.4.2</b> Parameters</a></li>
+<li class="chapter" data-level="4.4.3" data-path="input-data.html"><a href="input-data.html#stains"><i class="fa fa-check"></i><b>4.4.3</b> Stains</a></li>
+<li class="chapter" data-level="4.4.4" data-path="input-data.html"><a href="input-data.html#summary-of-trends"><i class="fa fa-check"></i><b>4.4.4</b> Summary of Trends</a></li>
+<li class="chapter" data-level="4.4.5" data-path="input-data.html"><a href="input-data.html#how-to-access"><i class="fa fa-check"></i><b>4.4.5</b> How to Access</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html"><i class="fa fa-check"></i><b>5</b> How to Use the Desktop Application</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#output-excel-file"><i class="fa fa-check"></i><b>5.1</b> Output: Excel file</a></li>
+<li class="chapter" data-level="5.2" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#basic-workflow"><i class="fa fa-check"></i><b>5.2</b> Basic Workflow</a></li>
+<li class="chapter" data-level="5.3" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#upload-files"><i class="fa fa-check"></i><b>5.3</b> Upload Files</a></li>
+<li class="chapter" data-level="5.4" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#define-comparisons"><i class="fa fa-check"></i><b>5.4</b> Define Comparisons</a></li>
+<li class="chapter" data-level="5.5" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#define-feature-sets"><i class="fa fa-check"></i><b>5.5</b> Define feature sets</a></li>
+<li class="chapter" data-level="5.6" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#advanced-options"><i class="fa fa-check"></i><b>5.6</b> Advanced options</a></li>
+<li class="chapter" data-level="5.7" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#customize-colors"><i class="fa fa-check"></i><b>5.7</b> Customize colors</a></li>
+<li class="chapter" data-level="5.8" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#run-hourglass"><i class="fa fa-check"></i><b>5.8</b> Run Hourglass</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="output-plot-types.html"><a href="output-plot-types.html"><i class="fa fa-check"></i><b>6</b> Output Plot Types</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="output-plot-types.html"><a href="output-plot-types.html#navigating-output-folder"><i class="fa fa-check"></i><b>6.1</b> Navigating Output Folder</a></li>
+<li class="chapter" data-level="6.2" data-path="output-plot-types.html"><a href="output-plot-types.html#types-of-plots"><i class="fa fa-check"></i><b>6.2</b> Types of Plots</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="output-plot-types.html"><a href="output-plot-types.html#quality-control"><i class="fa fa-check"></i><b>6.2.1</b> 1. Quality Control</a></li>
+<li class="chapter" data-level="6.2.2" data-path="output-plot-types.html"><a href="output-plot-types.html#feature-sets"><i class="fa fa-check"></i><b>6.2.2</b> 2. Feature Sets</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html"><i class="fa fa-check"></i><b>7</b> How to Use the R Package</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#installation-and-usage"><i class="fa fa-check"></i><b>7.1</b> Installation and Usage</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Documentation for Hourglass</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="how-to-use-the-desktop-application" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> How to Use the Desktop Application</h1>
+<blockquote>
+<p>Note: we use the term “graphical user interface” interchangeably with “desktop application”.</p>
+</blockquote>
+<p>The graphical user interface (GUI) contains sequential tabs taking users step-by-step through the Hourglass algorithm. Each tab contains options to relay data to the R package and customize Hourglass output. GUI tabs and key user events are described here.</p>
+<div id="output-excel-file" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Output: Excel file</h2>
+<p>The purpose of this application is to create an Excel file that will be read into R.
+There are the 4 tables/worksheets:</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="40%" />
+<col width="40%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">No.</th>
+<th align="left">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left"><strong>Comparisons</strong></td>
+<td align="left">comparisons and other analysis parameters (e.g, local file paths to data, survival columns, which plots to create)</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left"><strong>Colors</strong></td>
+<td align="left">color palette for values in comparisons, first column is name and second is color hex code</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left"><strong>Feature Sets</strong></td>
+<td align="left">named groups of features</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left"><strong>Feature Parameters</strong></td>
+<td align="left">standard and optionally alternative parameters for the feature sets</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="basic-workflow" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Basic Workflow</h2>
+<p>Allows users to pick options and navigate through workflow:
+* Upload data (rows = samples)
+* Choose comparisons of interest (filter rows)
+* Choose genes/features (columns) of interest and label
+* Interactively look at data (make heatmap and boxplot)
+* Run R package to create all plots with one click</p>
+</div>
+<div id="upload-files" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Upload Files</h2>
+<blockquote>
+<p>This tab specifies input data paths that will 1 - customize the user’s experience (in this application) and 2 - be used in Hourglass analysis runs.</p>
+</blockquote>
+<ul>
+<li>Enter the name of your dataset in text input field.</li>
+<li>Use “Choose File” buttons to upload the required 3 data files from your computer’s file directory, specifically:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><strong>numMat</strong> - numeric matrix file</li>
+<li><strong>rowAnn</strong> - row annotations (clinical and sample descriptions)</li>
+<li><strong>colAnn</strong> - column annotations (feature and parameter descriptions).</li>
+</ol>
+<p>Check [# Input Data ## file format] for table formatting details and supported file types.</p>
+</div>
+<div id="define-comparisons" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Define Comparisons</h2>
+<blockquote>
+<p>This tab creates a table of “comparisons” on how to stratify patients or samples. Each comparison/row will be run independent of other comparisons.</p>
+</blockquote>
+<ul>
+<li>Select “Patient ID” from the drop down menu displaying rowAnn column names (e.g. smoker, age group). It will be used to group samples belonging to the same patient in By Patient analysis and patient-paired plots. Skip this step if patient-level analysis is not required.</li>
+</ul>
+<p><strong>Make comparisons</strong></p>
+<blockquote>
+<p>Note: All text input fields are case-sensitive, <em>i.e.</em> must match data.</p>
+</blockquote>
+<ul>
+<li><p>Press “Add a row” button to create a new comparison.</p></li>
+<li><p>Define a comparison for each row (required), by <strong>either</strong>:</p>
+<ul>
+<li>Selecting a “Main Comparison” from the drop down menu displaying rowAnn column names (e.g. smoker, age group)</li>
+<li>Filling “Custom Comparison” - type in the exact column name of a variable from numMat (feature+parameter e.g. IL6_num.positive.pixels) or from rowAnn (e.g. age)</li>
+</ul></li>
+<li><p>Customize comparison with optional fields:</p></li>
+</ul>
+<p><strong>Subgroup</strong></p>
+<p>Select a “Subgroup” from the drop down menu displaying rowAnn column names (e.g. smoker, age group). This is only for a secondary color coding of dots in boxplots and an extra annotation color bar in heatmaps.
+{insert 2 boxplot images with and without colored dots}</p>
+<p><strong>Within Group</strong></p>
+<p>This will run Hourglass within groups or cohorts of sample/patients.
+Append rowAnn column names with “;”.
+e.g. Sex;Smoker</p>
+<p><strong>Filter</strong></p>
+<p>Specify exclusion criteria with this format: rowAnn_columnname != or == variable to keep/exclude.
+e.g. Smoker==“Yes” - this keeps all smokers and excludes all other samples/patients from analysis. Ensure that “Smoker” is a column in rowAnn and “Yes” is one of its column values.
+Choose multiple filters by appending filters with “;”, e.g. Smoker==“Yes”;NeoAdjuvant!=neo</p>
+<p><strong>By Sample</strong></p>
+<p>Check box to create plots from original input files, treating each row in numMat as an individual data point.</p>
+<p><strong>By Patient</strong></p>
+<p>Check box to average across Patient ID (see below) and create plots.
+&gt; Note: at least one of By Sample or By Patient must be selected for comparison to run.</p>
+<p>Example of a comparison:</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Field</th>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Main comparison</td>
+<td align="left"></td>
+<td align="left">Since main comparison is empty, custom comparison must be defined</td>
+</tr>
+<tr class="even">
+<td align="left">Custom comparison</td>
+<td align="left">IL6_Number.Positive.Pixels</td>
+<td align="left">Compare IL6 high vs low groups (# intermediate depends on the “Number of custom levels” in Advanced Options tab)</td>
+</tr>
+<tr class="odd">
+<td align="left">Subgroup</td>
+<td align="left">Smoker</td>
+<td align="left">Color code boxplot dots by Yes or No (values in Smoker column)</td>
+</tr>
+<tr class="even">
+<td align="left">Within Group</td>
+<td align="left">Sex;Smoker</td>
+<td align="left">Run Hourglass for all samples/patients. Then rerun within male cohort and female cohort. Run within Smoker-Yes, then Smoker-No cohort.</td>
+</tr>
+<tr class="odd">
+<td align="left">Filter</td>
+<td align="left">NeoAdjuvant != neo</td>
+<td align="left">Before running this comparison, remove all samples/patient rows that are “neo”.</td>
+</tr>
+<tr class="even">
+<td align="left">By Sample</td>
+<td align="left">(checked)</td>
+<td align="left">Run this comparison at the sample-level.</td>
+</tr>
+<tr class="odd">
+<td align="left">By Patient</td>
+<td align="left">(checked)</td>
+<td align="left">Run this comparison at the patient-level (average the multiple samples per patient).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="define-feature-sets" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Define feature sets</h2>
+<blockquote>
+<p>This tab allows users to pick biologically relevant parameters for each feature and group them as feature sets.</p>
+</blockquote>
+<p><strong>Tab 1: Select columns</strong></p>
+<ul>
+<li><p>Select column name from colAnn for Feature and Parameter columns.</p></li>
+<li><p>Recall [# What is Hourglass? ##Terminology]:</p></li>
+<li><p><strong>Feature</strong> = stains, genes, markers, etc (e.g. Gene1, ProteinX, IL6), while</p></li>
+<li><p><strong>Parameters</strong> = readouts, measurements of features (e.g. Numbers of Positive Pixels, Percent Positive Pixels, Stained Area mm^2,Total Area mm^2).</p></li>
+</ul>
+<p><strong>Tab 2: Define parameters</strong></p>
+<ul>
+<li><p>Using drop-down menus, pick relevant parameters for each feature (called standard) and optionally, an alternative.</p></li>
+<li><p>Note: this will populate the table/sheet in the output Excel file called Feature Parameters.</p></li>
+</ul>
+<p><strong>Tab 3: Define sets</strong></p>
+<ul>
+<li><p>Next, define sets. Press the “Add a row” button to add a new set.</p></li>
+<li><p><strong>Name of group</strong>: Type in a name for group, e.g. T_cell_markers.</p></li>
+<li><p><strong>List of features</strong>: Type in a list of features (see Tab1 for options) or group names, appended “,”. e.g. “CD4, CD8”. The delimiter must be a comma, leading and trailing whitespace will be ignored.</p></li>
+<li><p><strong>Alt</strong> (Alternative): Select “Alt-Yes” to run this set with standard AND alternative parameters separately, or “Alt-No” for a run with standard parameters.</p></li>
+</ul>
+<p>Note if “Alt-Yes” is selected, there will be two folders for a feature set, one with the original name and another with "_alt" appended, e.g. “TCellMarkers” for standard parameters and “TCellMarkers_alt” for alternative.</p>
+<p>Note: this will populate the table/worksheet in the output Excel file called Feature Sets.</p>
+</div>
+<div id="advanced-options" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Advanced options</h2>
+<blockquote>
+<p>This tab includes customization for statistics, plot types, etc.</p>
+</blockquote>
+<p>Labels for options are on the left and drop down menus on the right side:</p>
+<ul>
+<li><p><strong>Correlation method</strong>: Method for correlation between two variables. Options are “pearson” (linear relationship using raw data), or“spearman”,“kendall” f(monotonic relationship using ranked data).</p></li>
+<li><p><strong>Test method</strong>: Which two-sample test should be used? Student’s t-test for parametric data, wilcoxon usually for non-parametric.</p></li>
+<li><p><strong>p-values label</strong>: How p (significance) values are to be represented in boxplots, correlation plots, p-value/fold-change heatmap. Stars or exact numeric values.</p></li>
+<li><p><strong>Fold-change method</strong>: Fold change computation method to use, either “divide” (for non-transformed values) or “subtract” (for log2-transformed values).</p></li>
+<li><p><strong>Color gradient</strong>: Color palette for scaled plot types: heatmaps, correlation plots. See color palettes (visual) by pressing the button “See color gradients”.</p></li>
+<li><p><strong>Number of custom levels</strong>: Number of intermediate groups resulting from Hourglass separating a continuous variable into low, int, high. For example, if 2 is selected, there will only be low and high groups, whereas if 4 is selected, the groups will be low, int1, int2, high.</p></li>
+<li><p><strong>Save ID data to file</strong>: Would you like sample/patient IDs and corresponding comparison groups to be saved to a .csv table? If TRUE is selected, then yes. This may be useful to 1) identify how Hourglass stratified custom comparisons, i.e. which patient IDs were considers low, int, high in the analysis and 2) see which samples/patients were in analysis after filtering steps.</p></li>
+</ul>
+<p>Survival analysis options:</p>
+<ul>
+<li><p>Check box (Run survival analysis) to specify creation of survival plots.</p></li>
+<li><p><strong>Survival time column</strong>: Time starting from a predefined point to the occurrence of the event of interest, usually OS time (overall survival time - time from diagnosis to death.</p></li>
+<li><p><strong>Censoring status column</strong>: Numeric event status represented by 0 and 1 for each patient, where 1 indicates the event has occurred and 1 means the status is incomplete. A patient is censored when we don’t know the true survival time for that patient.</p></li>
+</ul>
+<p>The two columns above must be in rowAnn table.</p>
+<p>Additional options:</p>
+<ul>
+<li><p><strong>Discrete parameters</strong>: Manually type in list of parameters (appended by “,”) in numMat that are to be viewed discretely, not continuous as Hourglass assumes. <em>e.g.</em> “Het.Score” might have values from 1 to 10.</p></li>
+<li><p><strong>Remove outliers</strong>: Check box. If selected, outliers will be removed columnwise for all runs (included imputed version) based on the IQR method. Any observations that are more than 1.5 IQR below Q1 or more than 1.5 IQR above Q3 are considered outliers and become NAs.</p></li>
+<li><p><strong>Run imputed version</strong>:
++ Check box to run imputed analysis in parallel. This indicates that all comparisons at sample and patient level will be run Hourglass
++ Move slider to specify the extent of imputation. Missing data points in numMat will be imputed columnwise with a random value plus or minus <em>x</em>% around the mean of each column, default is 5%.</p></li>
+</ul>
+</div>
+<div id="customize-colors" class="section level2" number="5.7">
+<h2><span class="header-section-number">5.7</span> Customize colors</h2>
+<blockquote>
+<p>This tab contains buttons for each unique value in all comparisons.</p>
+</blockquote>
+<ul>
+<li><p>A button for each unique value in defined comparisons will automatically be displayed. For example, if “Cancer Type” was chosen as a main comparison, corresponding buttons for lung, breast, pancreatic, and other values in the “Cancer Type” column will be displayed.</p></li>
+<li><p>Press the button to open a color picker window. Select a color by:</p>
+<ul>
+<li>Enter a hex code in the text input field at the bottom of the left panel.</li>
+<li>Placing and clicking cursor on the color wheel.</li>
+<li>Move slider.</li>
+</ul></li>
+<li><p>Press “Select and Close Window” to save.</p></li>
+<li><p>If <strong>white</strong> is chosen (center of the color wheel), that value will be excluded from all comparisons. This will bypass filters in comparisons. For example, perhaps “Sex” in rowAnn has the values “F”, “M” and “X”, where “X” does not have high enough patient numbers. To exclude this group, make the “Sex-X” button white.</p></li>
+<li><p>Press “Select” to choose colors.
+Note: the information will help populate the table/sheet in the output Excel file called Colors.</p></li>
+</ul>
+</div>
+<div id="run-hourglass" class="section level2" number="5.8">
+<h2><span class="header-section-number">5.8</span> Run Hourglass</h2>
+<blockquote>
+<p>This tab is the final tab that defines which plot types should be created in output folder</p>
+</blockquote>
+<ul>
+<li><p>Check boxes for quality control boxplots, for the feature and parameter colAnn columns (optional). {Insert 2 plots}. Note this uses information from Feature Sets Tab 1.</p></li>
+<li><p>Check boxes for plots that will be created for each feature set.</p></li>
+<li><p>Hourglass will read from the output Excel file, mentioned in the beginning of this chapter [##Output excel file].</p></li>
+<li><p><strong>Either</strong> press:</p>
+<ul>
+<li>“Create output spreadsheet” button and navigate through the folder directory and save the Excel file locally. Modify if needed before pressing Run.</li>
+<li><strong>OR</strong> press “Upload existing spreadsheet” and find and upload a locally existing Excel file.</li>
+</ul></li>
+<li><p>Finally! Press the “Run Hourglass” button which interfaces to R (back-end).</p></li>
+</ul>
+<p>This action will relay user options and data file paths to the Hourglass R package and calls on functions to run comparisons, create new output folders and create plots using established R plotting libraries, such as ggplot2 and pheatmap. An error window will pop up if there are any issues running Hourglass on the R side.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="input-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="output-plot-types.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 What is Hourglass? | Documentation for Hourglass</title>
+  <meta name="description" content="This is the official documentation for Hourglass - learn how to install and utilize the tool." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 What is Hourglass? | Documentation for Hourglass" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the official documentation for Hourglass - learn how to install and utilize the tool." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 What is Hourglass? | Documentation for Hourglass" />
+  
+  <meta name="twitter:description" content="This is the official documentation for Hourglass - learn how to install and utilize the tool." />
+  
+
+<meta name="author" content="Kazeera Aliar" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="installation.html"/>
+<link rel="next" href="input-data.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a></li>
+<li class="chapter" data-level="2" data-path="installation.html"><a href="installation.html"><i class="fa fa-check"></i><b>2</b> Installation</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="installation.html"><a href="installation.html#install-r"><i class="fa fa-check"></i><b>2.1</b> Install R</a></li>
+<li class="chapter" data-level="2.2" data-path="installation.html"><a href="installation.html#install-desktop-application"><i class="fa fa-check"></i><b>2.2</b> Install desktop application</a></li>
+<li class="chapter" data-level="2.3" data-path="installation.html"><a href="installation.html#install-r-package-optional"><i class="fa fa-check"></i><b>2.3</b> Install R package (optional)</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html"><i class="fa fa-check"></i><b>3</b> What is Hourglass?</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#roadmap"><i class="fa fa-check"></i><b>3.1</b> Roadmap</a></li>
+<li class="chapter" data-level="3.2" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#tldr"><i class="fa fa-check"></i><b>3.2</b> tl;dr</a></li>
+<li class="chapter" data-level="3.3" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#is-this-tool-for-me"><i class="fa fa-check"></i><b>3.3</b> Is this tool for me?</a></li>
+<li class="chapter" data-level="3.4" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#advantages"><i class="fa fa-check"></i><b>3.4</b> Advantages</a></li>
+<li class="chapter" data-level="3.5" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#terminology"><i class="fa fa-check"></i><b>3.5</b> Terminology</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="input-data.html"><a href="input-data.html"><i class="fa fa-check"></i><b>4</b> Input Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="input-data.html"><a href="input-data.html#file-format"><i class="fa fa-check"></i><b>4.1</b> File format</a></li>
+<li class="chapter" data-level="4.2" data-path="input-data.html"><a href="input-data.html#the-3-files"><i class="fa fa-check"></i><b>4.2</b> The 3 files</a></li>
+<li class="chapter" data-level="4.3" data-path="input-data.html"><a href="input-data.html#similar-format"><i class="fa fa-check"></i><b>4.3</b> Similar Format</a></li>
+<li class="chapter" data-level="4.4" data-path="input-data.html"><a href="input-data.html#example-dataset"><i class="fa fa-check"></i><b>4.4</b> Example Dataset</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="input-data.html"><a href="input-data.html#features-of-example-dataset"><i class="fa fa-check"></i><b>4.4.1</b> Features of example dataset:</a></li>
+<li class="chapter" data-level="4.4.2" data-path="input-data.html"><a href="input-data.html#parameters"><i class="fa fa-check"></i><b>4.4.2</b> Parameters</a></li>
+<li class="chapter" data-level="4.4.3" data-path="input-data.html"><a href="input-data.html#stains"><i class="fa fa-check"></i><b>4.4.3</b> Stains</a></li>
+<li class="chapter" data-level="4.4.4" data-path="input-data.html"><a href="input-data.html#summary-of-trends"><i class="fa fa-check"></i><b>4.4.4</b> Summary of Trends</a></li>
+<li class="chapter" data-level="4.4.5" data-path="input-data.html"><a href="input-data.html#how-to-access"><i class="fa fa-check"></i><b>4.4.5</b> How to Access</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html"><i class="fa fa-check"></i><b>5</b> How to Use the Desktop Application</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#output-excel-file"><i class="fa fa-check"></i><b>5.1</b> Output: Excel file</a></li>
+<li class="chapter" data-level="5.2" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#basic-workflow"><i class="fa fa-check"></i><b>5.2</b> Basic Workflow</a></li>
+<li class="chapter" data-level="5.3" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#upload-files"><i class="fa fa-check"></i><b>5.3</b> Upload Files</a></li>
+<li class="chapter" data-level="5.4" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#define-comparisons"><i class="fa fa-check"></i><b>5.4</b> Define Comparisons</a></li>
+<li class="chapter" data-level="5.5" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#define-feature-sets"><i class="fa fa-check"></i><b>5.5</b> Define feature sets</a></li>
+<li class="chapter" data-level="5.6" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#advanced-options"><i class="fa fa-check"></i><b>5.6</b> Advanced options</a></li>
+<li class="chapter" data-level="5.7" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#customize-colors"><i class="fa fa-check"></i><b>5.7</b> Customize colors</a></li>
+<li class="chapter" data-level="5.8" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#run-hourglass"><i class="fa fa-check"></i><b>5.8</b> Run Hourglass</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="output-plot-types.html"><a href="output-plot-types.html"><i class="fa fa-check"></i><b>6</b> Output Plot Types</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="output-plot-types.html"><a href="output-plot-types.html#navigating-output-folder"><i class="fa fa-check"></i><b>6.1</b> Navigating Output Folder</a></li>
+<li class="chapter" data-level="6.2" data-path="output-plot-types.html"><a href="output-plot-types.html#types-of-plots"><i class="fa fa-check"></i><b>6.2</b> Types of Plots</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="output-plot-types.html"><a href="output-plot-types.html#quality-control"><i class="fa fa-check"></i><b>6.2.1</b> 1. Quality Control</a></li>
+<li class="chapter" data-level="6.2.2" data-path="output-plot-types.html"><a href="output-plot-types.html#feature-sets"><i class="fa fa-check"></i><b>6.2.2</b> 2. Feature Sets</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html"><i class="fa fa-check"></i><b>7</b> How to Use the R Package</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#installation-and-usage"><i class="fa fa-check"></i><b>7.1</b> Installation and Usage</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Documentation for Hourglass</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="what-is-hourglass" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> What is Hourglass?</h1>
+<div id="roadmap" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Roadmap</h2>
+<p>Insert paper image.</p>
+</div>
+<div id="tldr" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> tl;dr</h2>
+<p><strong>What?</strong></p>
+<p>To facilitate exploration of multi-parametric data (especially bioimage analysis quantification)</p>
+<p><strong>For who?</strong></p>
+<p>Individuals who are non-experts in computational analysis or just need their data analyzed quickly.</p>
+<p><strong>How?</strong></p>
+<p>Provide user preferences to filter and subset large datasets and compare groups in an automated manner.</p>
+</div>
+<div id="is-this-tool-for-me" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Is this tool for me?</h2>
+<p><strong>What is it optimal for?</strong></p>
+<ul>
+<li><p>Multiparametric data analysis</p></li>
+<li><p>Systematic data interrogation</p></li>
+<li><p>Explores multiple groups</p></li>
+<li><p>Wide range of plotting functions</p></li>
+<li><p>Method of quality control</p></li>
+</ul>
+<p><strong>What can it do, but is not optimal for?</strong></p>
+<ul>
+<li>Omics visualization, i.e. ny numeric dataset with annotations</li>
+</ul>
+<p><strong>What can it not do?</strong></p>
+<ul>
+<li><p>Integration of multiple independent datasets, e.g. can’t compare proteome vs transcriptome</p></li>
+<li><p>Image analysis, i.e. read and interpret raw image files</p></li>
+</ul>
+</div>
+<div id="advantages" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Advantages</h2>
+<p>There are multiple advantages of using Hourglass as a framework for multiparametric dataset interrogation.</p>
+<p><strong>Accessibility</strong></p>
+<ul>
+<li><p>Accessible for non-expert users, fully reproducible and open-source</p></li>
+<li><p>Makes publication-ready plots via robust and automated pipeline reduces manual work</p></li>
+<li><p>Leverages metrics of heterogeneity from standard tissue microarray designs</p></li>
+</ul>
+<p><strong>Query and Exploration</strong></p>
+<ul>
+<li><p>Customizable and endless combinations of selections of what labels/annotations to compare. . Thus, multiple layers of information from TMAs are extracted but can only be understood or interpreted via a smart way of visualizing the data to make sense of it. Hourglass is the tool to subset, integrate, and pick specific parameters to appreciate all of the information from a dataset.</p></li>
+<li><p>Different levels of analysis (global or by patient vs regional or by sample) can be run. Common practice is to average these values and collapse by patient, however a wealth of information is contained in the sample data and intra-patient differences.</p></li>
+<li><p>Resolves regional vs global differences via paired analysis and heterogeneity barplots. Multiple layers of information from TMAs are extracted but can only be understood or interpreted via a smart way of visualizing the data to make sense of it.</p></li>
+</ul>
+<p><strong>Data cleaning and wrangling</strong></p>
+<ul>
+<li><p>Subset input table with all parameters to be compared</p></li>
+<li><p>Filtering - Incorporates exclusion/inclusion criteria, within subgroups. For example, a researcher may want to exclude certain patient subgroups or focus on a subset of a 40 stain panel or pre-treated patients may be excluded to observe the effects of basic biology.</p></li>
+<li><p>Imputation for dropouts. Often, datasets are patchy containing NA values.</p></li>
+<li><p>Supports removal of outliers below the first quartile and above the third.</p></li>
+</ul>
+</div>
+<div id="terminology" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Terminology</h2>
+<p>Hourglass uses some common words with specific meanings.</p>
+<p><strong>Annotation</strong> = any discrete label or description for features+parameters and patients/samples. See Input Data for more information.</p>
+<p>Annotations are another layer of data that we can add to an already multi-parametric data table.</p>
+<ul>
+<li><p><strong>Feature</strong> = stains, genes, markers, etc (e.g. Gene1, ProteinX, IL6)</p></li>
+<li><p><strong>Parameters</strong> = readouts, measurements of features (e.g. Numbers of Positive Pixels, Percent Positive Pixels, Stained Area mm^2,Total Area mm^2)</p></li>
+<li><p><strong>Multi-parametric</strong> = data with more than two dimensions, results from multiple parameters being measured from features. For example, from methods such as Immunohistochemistry (IHC), immunomasscytometry (IMC), etc.</p></li>
+</ul>
+<p>If we look at the feature IL6, using bioimage analysis tools, we can measure many readouts from one feature, such as:
+IL6 –&gt; Number of positive pixels AND
+Area AND
+Positive Pixel percent</p>
+<ul>
+<li><strong>Uni-parametric</strong> = data from methods such as microarray, transcriptomics, proteomics, etc.</li>
+</ul>
+<p>If we look at the same feature IL6, using traditional omics, we get a single readout from one feature, such as:
+IL6 –&gt; protein abundance OR
+gene expression</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="installation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="input-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

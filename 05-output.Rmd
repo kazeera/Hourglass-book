@@ -1,0 +1,85 @@
+---
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+---
+# Output Plot Types
+## Navigating Output Folder
+todo: Insert visual folder hierarchy. Video tutorial
+
+
+## Types of Plots 
+### 1. Quality Control
+
+Purpose:
+
+*  Informs whether anything is skewed in a comparison. For example, the overall number of positive cells for that stain is higher in high groups (a problem)
+
+* Verify that a specific metric or data point exists for a stain
+
+
+Types of stratification (creates similar plots but different combinations):
+
+* **By.feature**: Plot all parameters present for a feature, split by comparison
+
+* **By.parameter**: Plot all features present for a parameter, split by comparison
+
+Patient paired plots for by sample comparisons can also be used for quality control. How? 
+
+
+todo: create generic boxplot for Gene1 multiple params vs Param1 multiple features to illustrate.
+
+### 2. Feature Sets
+
+Purpose: 
+
+* Look at stains in context of other stains within the dataset  
+  
+**Step 1: Specify relevant parameters for each stain.**  
+
+If multiple parameters are present per feature (usually the case in multiparametric imaging data), most will be irrelevant/for QC. The final readout is usually a ratio: (1) /(2), where (1) is quantification metric and (2) is normalization metric.
+  
+**Step 2: Make groups, the data integration step.**  
+ 
+Look at a stain in context of other stains within the dataset. Make smaller groups (e.g. T cell, immune, stromal cell features).
+
+Multiple plot types are supported for feature sets. 
+
+groups (from comparison from row annotations) = e.g. Smoker-Yes, Smoker-No
+
+1. **Overview Boxplot** 
++ 
++ 
+![](www.image_url_here.png)
+
+2.  **Individual Boxplot**
++ 
++ 
+3.  **Paired Patient Plot**
++ 
++ 
+4.  **p-value/fold-change heatmap**
++ 
++ 
+5.  **Heatmaps** 
++ 
++ 
+6.  **Correlation Plots**
++ 
++ 
++ 
+7.  **Correlation scatter plots**
++
++ 
+8. **Survival analysis**
++ 
++ 
+9. **Discrete plots**
++ 
++ 
+10. **Patient (Bar) Profiles**
++ 
++   
+11. **Sample heterogeneity profiles**
++
++  

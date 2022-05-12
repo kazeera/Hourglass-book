@@ -1,0 +1,106 @@
+---
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+---
+# What is Hourglass?
+		      
+## Roadmap
+Insert paper image.
+
+## tl;dr
+
+
+**What?** 
+
+   To facilitate exploration of multi-parametric data (especially bioimage analysis quantification)
+   
+   
+**For who?**
+
+  Individuals who are non-experts in computational analysis or just need their data analyzed quickly.
+  
+  
+**How?** 
+
+   Provide user preferences to filter and subset large datasets and compare groups in an automated manner.
+
+## Is this tool for me?
+**What is it optimal for?**
+
+* Multiparametric data analysis
+
+* Systematic data interrogation
+
++ Explores multiple groups
++ Wide range of plotting functions
++ Method of quality control
+
+
+**What can it do, but is not optimal for?**
+
+* Omics visualization, i.e. ny numeric dataset with annotations
+
+
+**What can it not do?**
+
+* Integration of multiple independent datasets, e.g. can't compare proteome vs transcriptome
+
+* Image analysis, i.e. read and interpret raw image files
+
+## Advantages
+There are multiple advantages of using Hourglass as a framework for multiparametric dataset interrogation.
+
+
+**Accessibility**
+
+* Accessible for non-expert users, fully reproducible and open-source
+
+* Makes publication-ready plots via robust and automated pipeline reduces manual work 
+
+* Leverages metrics of heterogeneity from standard tissue microarray designs
+
+
+**Query and Exploration**
+
+* Customizable and endless combinations of selections of what labels/annotations to compare. . Thus, multiple layers of information from TMAs are extracted but can only be understood or interpreted via a smart way of visualizing the data to make sense of it. Hourglass is the tool to subset, integrate, and pick specific parameters to appreciate all of the information from a dataset.
+
+* Different levels of analysis (global or by patient vs regional or by sample) can be run. Common practice is to average these values and collapse by patient, however a wealth of information is contained in the sample data and intra-patient differences.
+
+* Resolves regional vs global differences via paired analysis and heterogeneity barplots. Multiple layers of information from TMAs are extracted but can only be understood or interpreted via a smart way of visualizing the data to make sense of it.
+
+
+**Data cleaning and wrangling**
+
+* Subset input table with all parameters to be compared 
+
+* Filtering - Incorporates exclusion/inclusion criteria, within subgroups. For example, a researcher may want to exclude certain patient subgroups or focus on a subset of a 40 stain panel or pre-treated patients may be excluded to observe the effects of basic biology.
+* Imputation for dropouts. Often, datasets are patchy containing NA values.
+* Supports removal of outliers below the first quartile and above the third.
+
+## Terminology
+Hourglass uses some common words with specific meanings.
+
+**Annotation** = any discrete label or description for features+parameters and patients/samples. See Input Data for more information.
+
+Annotations are another layer of data that we can add to an already multi-parametric data table.
+
+* **Feature** = stains, genes, markers, etc (e.g. Gene1, ProteinX, IL6)
+
+* **Parameters** = readouts, measurements of features (e.g. Numbers of Positive Pixels, Percent Positive Pixels, Stained Area mm^2,Total Area mm^2)
+
+* **Multi-parametric** = data with more than two dimensions, results from multiple parameters being measured from features. For example, from methods such as Immunohistochemistry (IHC), immunomasscytometry (IMC), etc.  
+  
+  
+If we look at the feature IL6, using bioimage analysis tools, we can measure many readouts from one feature, such as: 
+ IL6 -->  Number of positive pixels AND
+     Area AND
+     Positive Pixel percent
+
+* **Uni-parametric** = data from methods such as microarray, transcriptomics, proteomics, etc.
+
+If we look at the same feature IL6, using traditional omics, we get a single readout from one feature, such as: 
+ IL6 --> protein abundance OR
+	    gene expression
+
+
