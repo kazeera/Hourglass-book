@@ -46,8 +46,8 @@ When you run Hourglass for the first time in the desktop application, it will in
 > If you are familiar with R programming, Hourglass can be used as an R package independently. Note: It will be installed when running Hourglass application the first time.
 
 [Click here](https://github.com/kazeera/Hourglass) for installation instructions and source code.
-###### i. Open up R console.
-###### ii. Copy and paste this code at the >. 
+i. Open up R console.
+ii. Copy and paste this code at the >. 
 
 ```r{}
 install.packages(devtools)

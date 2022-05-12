@@ -14,13 +14,7 @@ file-format
 the-3-files
 similar-format
 example-dataset
-features-of-example-dataset
 parameters
-stains
-summary-of-trends
-how-to-access
-raw-csv-files
-access-in-r
 how-to-use-the-desktop-application
 output-excel-file
 basic-workflow

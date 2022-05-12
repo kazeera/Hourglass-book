@@ -6,11 +6,15 @@ documentclass: book
 # Input Data 
 ## File format
 Hourglass currently supports tables in:
+
 * *csv* = comma separated values files
+
 * *txt* = tab-delimited text files
 
 Requirements
+
 * All files should have row names.
+
 * Missing values should be denoted NA or left blank (not nan, N/A, "NA")
 
 ## The 3 files
@@ -38,7 +42,8 @@ At least two columns are needed for "Feature" and "Parameter" (can be called som
 Hourglass also subsets columns based on a column called "Keep.In.Analysis". 
 
 * Descriptive columns names in data, e.g. feature_parameter
-For example, for the column "IL6.Number.of.Positive.Pixels", the Feature is IL6 and Parameter is Number.of.Positive.Pixels. For the column "Gene1_woo_ahaha_Area", 
+
+* For example, for the column "IL6.Number.of.Positive.Pixels", the Feature is IL6 and Parameter is Number.of.Positive.Pixels. For the column "Gene1_woo_ahaha_Area", 
 
 **2. Row Annotations (or 'rowAnn')**
 
@@ -52,13 +57,13 @@ These are labels or groups that will define main comparisons or groups to compar
 Examples
 
 * For samples:
-     + Tissue type
-     + Sample_Cancer_Subtype
+     * Tissue type
+     * Sample_Cancer_Subtype
 
 * For patients:
-     + Patient_Cancer_Subtype
-     + Smoker
-     + Age at diagnosis
+     * Patient_Cancer_Subtype
+     * Smoker
+     * Age at diagnosis
 
 A column for "PatientID" is required (can be called something else) for paired analysis (_i.e._ averaging samples from the same patient) and patient level analysis (_i.e._ averaging samples from the same patient).
 
@@ -68,70 +73,109 @@ A column for "PatientID" is required (can be called something else) for paired a
 
 ## Similar Format
 The data input was inspired by popular bioinformatics packages, with numeric data plus metadata. 
-* Struct is a package in which a simple DatasetExperiment object contains sample measurements, sample metadata, variable metadata. [Fig1 here]((https://academic.oup.com/bioinformatics/article/36/22-23/5551/6039109)
+* Struct is a package in which a simple DatasetExperiment object contains sample measurements, sample metadata, variable metadata. [Figure 1 here](https://academic.oup.com/bioinformatics/article/36/22-23/5551/6039109)
 
-* SingleCellExperiment object contains primary and transformed data (cell x feature matrix) and reads in feature and cell metadata. This is similar to Hourglass running the original and imputed versions in the same run. [Fig4.1 here] (http://bioconductor.org/books/3.13/OSCA.intro/the-singlecellexperiment-class.html).
+* SingleCellExperiment object contains primary and transformed data (cell x feature matrix) and reads in feature and cell metadata. This is similar to Hourglass running the original and imputed versions in the same run. [Figure 4.1 here](http://bioconductor.org/books/3.13/OSCA.intro/the-singlecellexperiment-class.html).
 
-* SummarizedExperiment object similarly contains multiple assays (feature by sample matrices) with colData and rowData. [Section 2](http://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html)
+* SummarizedExperiment object similarly contains multiple assays (feature by sample matrices) with colData and rowData. [Section 2 here](http://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html).
 
 ## Example Dataset
-We included an example multiparametric dataset with annotations for patients/samples. This is an entirely fake dataset. Its purpose is to showcase the functionalities of Hourglass and help users recreate plots seen here. These values have no biological relevance or connection to literature. Parameters and annotation labels were inspired by the quantified immunohistochemistry dataset for pancreatic cancer tissue microarray.
+We included an example multiparametric dataset with annotations for patients/samples. This is an **entirely fake dataset**. 
 
-### Features of example dataset:
+Its purpose is to showcase the functionalities of Hourglass and help users recreate plots seen here. These values have no biological relevance or connection to literature. Parameters and annotation labels were inspired by the quantified immunohistochemistry dataset for pancreatic cancer tissue microarray.
+
+**Features of example dataset**
+
 * 30 patients with 1-6 samples per patient
+
 * 102 samples in total (rows)
 
 ### Parameters 
 The parameters for one stain are:
+
 * **Area** = area of tissue image in mm^2 (random)
+
 * **Num.Detections** = number of detected pixels on tissue area = Num.Positive + Num.Negative
+
 * **Num.Negative** = number of pixels of negative staining (random)
+
 * **Num.Positive** = number of pixels of positive staining (based on trends), affects the following: 
-+ **Positive.Percent** = Num.Positive / Num.Detections x 100  
-+ **Negative.Percent** = 100 - Positive.Percent 
-+ **Pos.Pixel.Percent** = Num.Positive/10^3  x random value from 0.3 to 1.5 
-+ **Num.Pos.per.mm.2** = Num.Positive / Area x 10^4
 
-### Stains
+     * **Positive.Percent** = Num.Positive / Num.Detections x 100
+     
+     * **Negative.Percent** = 100 - Positive.Percent 
+     
+     * **Pos.Pixel.Percent** = Num.Positive/10^3  x random value from 0.3 to 1.5 
+     
+     * **Num.Pos.per.mm.2** = Num.Positive / Area x 10^4
+
+**Stains**
+
 The following stains were quantified:	
-* T Cell markers = CD3, CD8
-* B Cell = CD20, CD27, CD5, PDL1
-* other = IL6, SMA
-FeatureSets
-TCell CD3, CD8
-BCell CD20, CD27, CD5, PDL1
-Immune TCell, BCell
-All  Immune, IL6, SMA
 
-FeatureParams
+* T Cell markers = CD3, CD8
+
+* B Cell = CD20, CD27, CD5, PDL1
+
+* other = IL6, SMA
+
+**Possible Feature Sets**
+
+_TCell_ = CD3, CD8
+
+_BCell_ = CD20, CD27, CD5, PDL1
+
+_Immune_ = TCell, BCell
+
+_All_ = Immune, IL6, SMA
+
+
+**Possible Feature Parameters**
+
 Num.Pos.per.mm.2
+
 Pos.Pixel.Percent
 
 
-### Summary of Trends
+**Summary of Trends**
+
 Most values differ/segregate based on 3 sample cancer subtypes (A, B and C). When there are more than 2 samples per patient, there is a predominant "Patient Cancer Subtype" but some samples might deviate from this (ie. intrapatient heterogeneity).
 
 The following trends are:
+
 * Overall survival is low for A, medium for B, high for C
+
 * Average values for TCell (overall low)l vs. BCell (overall high)
+
 * Only for TCells:  
-+ Het.Score low for A, medium for B, high for C 
-+  Smokers for all subtypes for TCell stains are high
+
+     * Het.Score low for A, medium for B, high for C 
+     
+     * Smokers for all subtypes for TCell stains are high
+
 * Only for BCells:  
-+ NeoAdjuvant values are lower
+     * NeoAdjuvant values are lower
+
 * IL6 different between A,B,C subtypes only seen in females (Sex==F)
+
 * No trend in SMA
+
 * Random outliers (very high value, 4 per row) and random NAs (8 per row)
 
 
-### How to Access
-#### Raw csv files
-Download 3 files from https://github.com/kazeera/Hourglass, paths:
+**How to Access Files**
+
+Download 3 csv files from https://github.com/kazeera/Hourglass, paths:
+
 "ExampleData1/Example_IHC_sample_colAnn.csv" 
+
 "ExampleData1/Example_IHC_sample_rowAnn.csv"
+
 "ExampleData1/Example_IHC_sample_vals.csv"  
 
-#### Access in R
+
+**How to Access in R**
+
 This is a built-in dataset object in the Hourglass R package. 
 
 Rename the example dataset variable (to make it smaller).
@@ -139,6 +183,7 @@ ds = **d**ata**s**et
 ```{r, echo = FALSE}
 ds <- Hourglass::example_IHC_samples_dataset 
 ```
+
 Access individual tables. Since ds is a list object in R, the $ operator can be used to access individual elements.
 ```{r, echo = FALSE}
 ds$vals       # 102 rows 72 columns
