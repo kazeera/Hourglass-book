@@ -14,7 +14,7 @@ This is the official guide for _Hourglass_, the tool to systematically interroga
   
 Please refer to our [link]() paper for more info.  
 
-![](Hourglass_logo-removebg.png)
+![](images/Hourglass_logo-removebg.png)
 
 **Acknowledgements**
 

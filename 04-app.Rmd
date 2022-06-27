@@ -47,7 +47,7 @@ Check [# Input Data ## file format] for table formatting details and supported f
 
 * Select "Patient ID" from the drop down menu displaying rowAnn column names (e.g. smoker, age group). It will be used to group samples belonging to the same patient in By Patient analysis and patient-paired plots. Skip this step if patient-level analysis is not required.
 
-**Make comparisons**
+**Main or Custom Comparison**
 
 > Note: All text input fields are case-sensitive, _i.e._ must match data.
 
@@ -72,9 +72,8 @@ e.g. Sex;Smoker
 
 **Filter**
 
-Specify exclusion criteria with this format: rowAnn_columnname != or == variable to keep/exclude.
-e.g. Smoker=="Yes" - this keeps all smokers and excludes all other samples/patients from analysis. Ensure that "Smoker" is a column in rowAnn and "Yes" is one of its column values. 
-Choose multiple filters by appending filters with ";", e.g. Smoker=="Yes";NeoAdjuvant!=neo
+Specify exclusion criteria with this format: rowAnn_columnname != variable to exclude or rowAnn_columnname == variable to keep.
+e.g. Smoker=="Yes" - this keeps all smokers and excludes all other samples/patients from analysis. Ensure that "Smoker" is a column in rowAnn and "Yes" is one of its column values. Choose multiple filters by appending filters with ";", e.g. Smoker=="Yes";NeoAdjuvant!=neo
 
 **By Sample**
 
@@ -98,7 +97,7 @@ Example of a comparison:
 | By Sample | (checked) | Run this comparison at the sample-level. |
 | By Patient | (checked) | Run this comparison at the patient-level (average the multiple samples per patient). | 
 
-## Define feature sets
+## Define Feature Sets
 
 > This tab allows users to pick biologically relevant parameters for each feature and group them as feature sets.
 
@@ -129,15 +128,28 @@ Example of a comparison:
 
 + **Name of group**: Type in a name for group, e.g. T_cell_markers.
 
-+ **List of features**: Type in a list of features (see Tab1 for options) or group names, appended ",". e.g. "CD4, CD8". The delimiter must be a comma, leading and trailing whitespace will be ignored.
++ **List of features**: Type in a list of features (see Tab1 for options) or group names, appended with comma. 
+
+        - The delimiter must be a comma, leading and trailing whitespace will be ignored.
+        - Minimum of 3 features.
+        - Case-sensitive.
+
+Example of feature sets:
+
+| Group Name | Group List | Alternative | 
+|:-- |:-- |:-- |
+| TCell | CD3, CD8 ||
+| BCell | CD20, CD27, CD5, PDL1 ||
+| Immune | TCell, BCell ||
+| All | Immune, IL6, SMA ||
 
 + **Alt** (Alternative): Select "Alt-Yes" to run this set with standard AND alternative parameters separately, or "Alt-No" for a run with standard parameters. 
 
-Note if "Alt-Yes" is selected, there will be two folders for a feature set, one with the original name and another with "_alt" appended, e.g. "TCellMarkers" for standard parameters and "TCellMarkers_alt" for alternative.
+Note if "Alt-Yes" is selected, there will be two folders for a feature set, one with the original name and another with "_alt" appended, e.g. "TCell" for standard parameters and "TCell_alt" for alternative. 
 
 Note: this will populate the table/worksheet in the output Excel file called Feature Sets.
 
-## Advanced options
+## Advanced Options
 
 > This tab includes customization for statistics, plot types, etc. 
 
@@ -179,7 +191,7 @@ Additional options:
       + Check box to run imputed analysis in parallel. This indicates that all comparisons at sample and patient level will be run Hourglass 
       + Move slider to specify the extent of imputation. Missing data points in numMat will be imputed columnwise with a random value plus or minus _x_% around the mean of each column, default is 5%.
 
-## Customize colors
+## Customize Colors
 > This tab contains buttons for each unique value in all comparisons. 
 
 * A button for each unique value in defined comparisons will automatically be displayed. For example, if "Cancer Type" was chosen as a main comparison, corresponding buttons for lung, breast, pancreatic, and other values in the "Cancer Type" column will be displayed. 

@@ -39,11 +39,11 @@ For example, for RNA sequencing data: data matrix = expression matrix, columns =
 
 At least two columns are needed for "Feature" and "Parameter" (can be called something else). 
 
-Hourglass also subsets columns based on a column called "Keep.In.Analysis". 
-
 * Descriptive columns names in data, e.g. feature_parameter
 
-* For example, for the column "IL6.Number.of.Positive.Pixels", the Feature is IL6 and Parameter is Number.of.Positive.Pixels. For the column "Gene1_woo_ahaha_Area", 
+* For example, for the column "IL6.Number.of.Positive.Pixels", the feature is IL6 and parameter is Number.of.Positive.Pixels. For the column "Gene1_woo_ahaha_Area", the feature is Gene1 and parameter is Area, which will be reflected in the colAnn columns.
+
+* Hourglass also subsets columns based on a column called "Keep.In.Analysis" - TRUE to keep, FALSE to discard. 
 
 **2. Row Annotations (or 'rowAnn')**
 

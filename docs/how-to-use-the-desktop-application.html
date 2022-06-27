@@ -31,8 +31,8 @@
   
   
 <link rel="prev" href="input-data.html"/>
-<link rel="next" href="output-plot-types.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<link rel="next" href="how-to-use-the-r-package.html"/>
+<script src="libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,8 +50,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -68,54 +69,58 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a></li>
-<li class="chapter" data-level="2" data-path="installation.html"><a href="installation.html"><i class="fa fa-check"></i><b>2</b> Installation</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About<span></span></a></li>
+<li class="chapter" data-level="2" data-path="installation.html"><a href="installation.html"><i class="fa fa-check"></i><b>2</b> Installation<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="installation.html"><a href="installation.html#install-r"><i class="fa fa-check"></i><b>2.1</b> Install R</a></li>
-<li class="chapter" data-level="2.2" data-path="installation.html"><a href="installation.html#install-desktop-application"><i class="fa fa-check"></i><b>2.2</b> Install desktop application</a></li>
-<li class="chapter" data-level="2.3" data-path="installation.html"><a href="installation.html#install-r-package-optional"><i class="fa fa-check"></i><b>2.3</b> Install R package (optional)</a></li>
+<li class="chapter" data-level="2.1" data-path="installation.html"><a href="installation.html#install-r"><i class="fa fa-check"></i><b>2.1</b> Install R<span></span></a></li>
+<li class="chapter" data-level="2.2" data-path="installation.html"><a href="installation.html#install-desktop-application"><i class="fa fa-check"></i><b>2.2</b> Install desktop application<span></span></a></li>
+<li class="chapter" data-level="2.3" data-path="installation.html"><a href="installation.html#install-r-package-optional"><i class="fa fa-check"></i><b>2.3</b> Install R package (optional)<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html"><i class="fa fa-check"></i><b>3</b> What is Hourglass?</a>
+<li class="chapter" data-level="3" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html"><i class="fa fa-check"></i><b>3</b> What is Hourglass?<span></span></a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#roadmap"><i class="fa fa-check"></i><b>3.1</b> Roadmap</a></li>
-<li class="chapter" data-level="3.2" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#tldr"><i class="fa fa-check"></i><b>3.2</b> tl;dr</a></li>
-<li class="chapter" data-level="3.3" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#is-this-tool-for-me"><i class="fa fa-check"></i><b>3.3</b> Is this tool for me?</a></li>
-<li class="chapter" data-level="3.4" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#advantages"><i class="fa fa-check"></i><b>3.4</b> Advantages</a></li>
-<li class="chapter" data-level="3.5" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#terminology"><i class="fa fa-check"></i><b>3.5</b> Terminology</a></li>
+<li class="chapter" data-level="3.1" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction<span></span></a></li>
+<li class="chapter" data-level="3.2" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#roadmap"><i class="fa fa-check"></i><b>3.2</b> Roadmap<span></span></a></li>
+<li class="chapter" data-level="3.3" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#tldr"><i class="fa fa-check"></i><b>3.3</b> tl;dr<span></span></a></li>
+<li class="chapter" data-level="3.4" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#is-this-tool-for-me"><i class="fa fa-check"></i><b>3.4</b> Is this tool for me?<span></span></a></li>
+<li class="chapter" data-level="3.5" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#strengths"><i class="fa fa-check"></i><b>3.5</b> Strengths<span></span></a></li>
+<li class="chapter" data-level="3.6" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#limitations"><i class="fa fa-check"></i><b>3.6</b> Limitations<span></span></a></li>
+<li class="chapter" data-level="3.7" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#terminology"><i class="fa fa-check"></i><b>3.7</b> Terminology<span></span></a></li>
+<li class="chapter" data-level="3.8" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#global-vs.-regional-analyses"><i class="fa fa-check"></i><b>3.8</b> Global vs. regional analyses<span></span></a></li>
+<li class="chapter" data-level="3.9" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#comparisons-and-feature-sets"><i class="fa fa-check"></i><b>3.9</b> Comparisons and Feature Sets<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="input-data.html"><a href="input-data.html"><i class="fa fa-check"></i><b>4</b> Input Data</a>
+<li class="chapter" data-level="4" data-path="input-data.html"><a href="input-data.html"><i class="fa fa-check"></i><b>4</b> Input Data<span></span></a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="input-data.html"><a href="input-data.html#file-format"><i class="fa fa-check"></i><b>4.1</b> File format</a></li>
-<li class="chapter" data-level="4.2" data-path="input-data.html"><a href="input-data.html#the-3-files"><i class="fa fa-check"></i><b>4.2</b> The 3 files</a></li>
-<li class="chapter" data-level="4.3" data-path="input-data.html"><a href="input-data.html#similar-format"><i class="fa fa-check"></i><b>4.3</b> Similar Format</a></li>
-<li class="chapter" data-level="4.4" data-path="input-data.html"><a href="input-data.html#example-dataset"><i class="fa fa-check"></i><b>4.4</b> Example Dataset</a>
+<li class="chapter" data-level="4.1" data-path="input-data.html"><a href="input-data.html#file-format"><i class="fa fa-check"></i><b>4.1</b> File format<span></span></a></li>
+<li class="chapter" data-level="4.2" data-path="input-data.html"><a href="input-data.html#the-3-files"><i class="fa fa-check"></i><b>4.2</b> The 3 files<span></span></a></li>
+<li class="chapter" data-level="4.3" data-path="input-data.html"><a href="input-data.html#similar-format"><i class="fa fa-check"></i><b>4.3</b> Similar Format<span></span></a></li>
+<li class="chapter" data-level="4.4" data-path="input-data.html"><a href="input-data.html#example-dataset"><i class="fa fa-check"></i><b>4.4</b> Example Dataset<span></span></a>
 <ul>
-<li class="chapter" data-level="4.4.1" data-path="input-data.html"><a href="input-data.html#parameters"><i class="fa fa-check"></i><b>4.4.1</b> Parameters</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html"><i class="fa fa-check"></i><b>5</b> How to Use the Desktop Application</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#output-excel-file"><i class="fa fa-check"></i><b>5.1</b> Output: Excel file</a></li>
-<li class="chapter" data-level="5.2" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#basic-workflow"><i class="fa fa-check"></i><b>5.2</b> Basic Workflow</a></li>
-<li class="chapter" data-level="5.3" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#upload-files"><i class="fa fa-check"></i><b>5.3</b> Upload Files</a></li>
-<li class="chapter" data-level="5.4" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#define-comparisons"><i class="fa fa-check"></i><b>5.4</b> Define Comparisons</a></li>
-<li class="chapter" data-level="5.5" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#define-feature-sets"><i class="fa fa-check"></i><b>5.5</b> Define feature sets</a></li>
-<li class="chapter" data-level="5.6" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#advanced-options"><i class="fa fa-check"></i><b>5.6</b> Advanced options</a></li>
-<li class="chapter" data-level="5.7" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#customize-colors"><i class="fa fa-check"></i><b>5.7</b> Customize colors</a></li>
-<li class="chapter" data-level="5.8" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#run-hourglass"><i class="fa fa-check"></i><b>5.8</b> Run Hourglass</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="output-plot-types.html"><a href="output-plot-types.html"><i class="fa fa-check"></i><b>6</b> Output Plot Types</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="output-plot-types.html"><a href="output-plot-types.html#navigating-output-folder"><i class="fa fa-check"></i><b>6.1</b> Navigating Output Folder</a></li>
-<li class="chapter" data-level="6.2" data-path="output-plot-types.html"><a href="output-plot-types.html#types-of-plots"><i class="fa fa-check"></i><b>6.2</b> Types of Plots</a>
-<ul>
-<li class="chapter" data-level="6.2.1" data-path="output-plot-types.html"><a href="output-plot-types.html#quality-control"><i class="fa fa-check"></i><b>6.2.1</b> 1. Quality Control</a></li>
-<li class="chapter" data-level="6.2.2" data-path="output-plot-types.html"><a href="output-plot-types.html#feature-sets"><i class="fa fa-check"></i><b>6.2.2</b> 2. Feature Sets</a></li>
+<li class="chapter" data-level="4.4.1" data-path="input-data.html"><a href="input-data.html#parameters"><i class="fa fa-check"></i><b>4.4.1</b> Parameters<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html"><i class="fa fa-check"></i><b>7</b> How to Use the R Package</a>
+<li class="chapter" data-level="5" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html"><i class="fa fa-check"></i><b>5</b> How to Use the Desktop Application<span></span></a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#installation-and-usage"><i class="fa fa-check"></i><b>7.1</b> Installation and Usage</a></li>
+<li class="chapter" data-level="5.1" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#output-excel-file"><i class="fa fa-check"></i><b>5.1</b> Output: Excel file<span></span></a></li>
+<li class="chapter" data-level="5.2" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#basic-workflow"><i class="fa fa-check"></i><b>5.2</b> Basic Workflow<span></span></a></li>
+<li class="chapter" data-level="5.3" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#upload-files"><i class="fa fa-check"></i><b>5.3</b> Upload Files<span></span></a></li>
+<li class="chapter" data-level="5.4" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#define-comparisons"><i class="fa fa-check"></i><b>5.4</b> Define Comparisons<span></span></a></li>
+<li class="chapter" data-level="5.5" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#define-feature-sets"><i class="fa fa-check"></i><b>5.5</b> Define Feature Sets<span></span></a></li>
+<li class="chapter" data-level="5.6" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#advanced-options"><i class="fa fa-check"></i><b>5.6</b> Advanced Options<span></span></a></li>
+<li class="chapter" data-level="5.7" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#customize-colors"><i class="fa fa-check"></i><b>5.7</b> Customize Colors<span></span></a></li>
+<li class="chapter" data-level="5.8" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#run-hourglass"><i class="fa fa-check"></i><b>5.8</b> Run Hourglass<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html"><i class="fa fa-check"></i><b>6</b> How to Use the R Package<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#installation-and-usage"><i class="fa fa-check"></i><b>6.1</b> Installation and Usage<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="output-plot-types.html"><a href="output-plot-types.html"><i class="fa fa-check"></i><b>7</b> Output Plot Types<span></span></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="output-plot-types.html"><a href="output-plot-types.html#navigating-output-folder"><i class="fa fa-check"></i><b>7.1</b> Navigating Output Folder<span></span></a></li>
+<li class="chapter" data-level="7.2" data-path="output-plot-types.html"><a href="output-plot-types.html#types-of-plots"><i class="fa fa-check"></i><b>7.2</b> Types of Plots<span></span></a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="output-plot-types.html"><a href="output-plot-types.html#quality-control"><i class="fa fa-check"></i><b>7.2.1</b> 1. Quality Control<span></span></a></li>
+<li class="chapter" data-level="7.2.2" data-path="output-plot-types.html"><a href="output-plot-types.html#feature-sets"><i class="fa fa-check"></i><b>7.2.2</b> 2. Feature Sets<span></span></a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -134,14 +139,14 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="how-to-use-the-desktop-application" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> How to Use the Desktop Application</h1>
+<div id="how-to-use-the-desktop-application" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> How to Use the Desktop Application<a href="how-to-use-the-desktop-application.html#how-to-use-the-desktop-application" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <blockquote>
 <p>Note: we use the term “graphical user interface” interchangeably with “desktop application”.</p>
 </blockquote>
 <p>The graphical user interface (GUI) contains sequential tabs taking users step-by-step through the Hourglass algorithm. Each tab contains options to relay data to the R package and customize Hourglass output. GUI tabs and key user events are described here.</p>
-<div id="output-excel-file" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Output: Excel file</h2>
+<div id="output-excel-file" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Output: Excel file<a href="how-to-use-the-desktop-application.html#output-excel-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The purpose of this application is to create an Excel file that will be read into R.
 There are the 4 tables/worksheets:</p>
 <table>
@@ -181,8 +186,8 @@ There are the 4 tables/worksheets:</p>
 </tbody>
 </table>
 </div>
-<div id="basic-workflow" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Basic Workflow</h2>
+<div id="basic-workflow" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Basic Workflow<a href="how-to-use-the-desktop-application.html#basic-workflow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Allows users to pick options and navigate through workflow:
 * Upload data (rows = samples)
 * Choose comparisons of interest (filter rows)
@@ -190,8 +195,8 @@ There are the 4 tables/worksheets:</p>
 * Interactively look at data (make heatmap and boxplot)
 * Run R package to create all plots with one click</p>
 </div>
-<div id="upload-files" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Upload Files</h2>
+<div id="upload-files" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Upload Files<a href="how-to-use-the-desktop-application.html#upload-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
 <p>This tab specifies input data paths that will 1 - customize the user’s experience (in this application) and 2 - be used in Hourglass analysis runs.</p>
 </blockquote>
@@ -206,15 +211,15 @@ There are the 4 tables/worksheets:</p>
 </ol>
 <p>Check [# Input Data ## file format] for table formatting details and supported file types.</p>
 </div>
-<div id="define-comparisons" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> Define Comparisons</h2>
+<div id="define-comparisons" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Define Comparisons<a href="how-to-use-the-desktop-application.html#define-comparisons" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
 <p>This tab creates a table of “comparisons” on how to stratify patients or samples. Each comparison/row will be run independent of other comparisons.</p>
 </blockquote>
 <ul>
 <li>Select “Patient ID” from the drop down menu displaying rowAnn column names (e.g. smoker, age group). It will be used to group samples belonging to the same patient in By Patient analysis and patient-paired plots. Skip this step if patient-level analysis is not required.</li>
 </ul>
-<p><strong>Make comparisons</strong></p>
+<p><strong>Main or Custom Comparison</strong></p>
 <blockquote>
 <p>Note: All text input fields are case-sensitive, <em>i.e.</em> must match data.</p>
 </blockquote>
@@ -235,9 +240,8 @@ There are the 4 tables/worksheets:</p>
 Append rowAnn column names with “;”.
 e.g. Sex;Smoker</p>
 <p><strong>Filter</strong></p>
-<p>Specify exclusion criteria with this format: rowAnn_columnname != or == variable to keep/exclude.
-e.g. Smoker==“Yes” - this keeps all smokers and excludes all other samples/patients from analysis. Ensure that “Smoker” is a column in rowAnn and “Yes” is one of its column values.
-Choose multiple filters by appending filters with “;”, e.g. Smoker==“Yes”;NeoAdjuvant!=neo</p>
+<p>Specify exclusion criteria with this format: rowAnn_columnname != variable to exclude or rowAnn_columnname == variable to keep.
+e.g. Smoker==“Yes” - this keeps all smokers and excludes all other samples/patients from analysis. Ensure that “Smoker” is a column in rowAnn and “Yes” is one of its column values. Choose multiple filters by appending filters with “;”, e.g. Smoker==“Yes”;NeoAdjuvant!=neo</p>
 <p><strong>By Sample</strong></p>
 <p>Check box to create plots from original input files, treating each row in numMat as an individual data point.</p>
 <p><strong>By Patient</strong></p>
@@ -296,8 +300,8 @@ Choose multiple filters by appending filters with “;”, e.g. Smoker==“Yes�
 </tbody>
 </table>
 </div>
-<div id="define-feature-sets" class="section level2" number="5.5">
-<h2><span class="header-section-number">5.5</span> Define feature sets</h2>
+<div id="define-feature-sets" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Define Feature Sets<a href="how-to-use-the-desktop-application.html#define-feature-sets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
 <p>This tab allows users to pick biologically relevant parameters for each feature and group them as feature sets.</p>
 </blockquote>
@@ -317,20 +321,57 @@ Choose multiple filters by appending filters with “;”, e.g. Smoker==“Yes�
 <ul>
 <li><p>Next, define sets. Press the “Add a row” button to add a new set.</p></li>
 <li><p><strong>Name of group</strong>: Type in a name for group, e.g. T_cell_markers.</p></li>
-<li><p><strong>List of features</strong>: Type in a list of features (see Tab1 for options) or group names, appended “,”. e.g. “CD4, CD8”. The delimiter must be a comma, leading and trailing whitespace will be ignored.</p></li>
-<li><p><strong>Alt</strong> (Alternative): Select “Alt-Yes” to run this set with standard AND alternative parameters separately, or “Alt-No” for a run with standard parameters.</p></li>
+<li><p><strong>List of features</strong>: Type in a list of features (see Tab1 for options) or group names, appended with comma.</p>
+<pre><code>  - The delimiter must be a comma, leading and trailing whitespace will be ignored.
+  - Minimum of 3 features.
+  - Case-sensitive.</code></pre></li>
 </ul>
-<p>Note if “Alt-Yes” is selected, there will be two folders for a feature set, one with the original name and another with "_alt" appended, e.g. “TCellMarkers” for standard parameters and “TCellMarkers_alt” for alternative.</p>
+<p>Example of feature sets:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Group Name</th>
+<th align="left">Group List</th>
+<th align="left">Alternative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">TCell</td>
+<td align="left">CD3, CD8</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">BCell</td>
+<td align="left">CD20, CD27, CD5, PDL1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Immune</td>
+<td align="left">TCell, BCell</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">All</td>
+<td align="left">Immune, IL6, SMA</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Alt</strong> (Alternative): Select “Alt-Yes” to run this set with standard AND alternative parameters separately, or “Alt-No” for a run with standard parameters.</li>
+</ul>
+<p>Note if “Alt-Yes” is selected, there will be two folders for a feature set, one with the original name and another with “_alt” appended, e.g. “TCell” for standard parameters and “TCell_alt” for alternative.</p>
 <p>Note: this will populate the table/worksheet in the output Excel file called Feature Sets.</p>
 </div>
-<div id="advanced-options" class="section level2" number="5.6">
-<h2><span class="header-section-number">5.6</span> Advanced options</h2>
+<div id="advanced-options" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Advanced Options<a href="how-to-use-the-desktop-application.html#advanced-options" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
 <p>This tab includes customization for statistics, plot types, etc.</p>
 </blockquote>
 <p>Labels for options are on the left and drop down menus on the right side:</p>
 <ul>
-<li><p><strong>Correlation method</strong>: Method for correlation between two variables. Options are “pearson” (linear relationship using raw data), or“spearman”,“kendall” f(monotonic relationship using ranked data).</p></li>
+<li><p><strong>Correlation method</strong>: Method for correlation between two variables. Options are “pearson” (linear relationship using raw data), or”spearman”,“kendall” f(monotonic relationship using ranked data).</p></li>
 <li><p><strong>Test method</strong>: Which two-sample test should be used? Student’s t-test for parametric data, wilcoxon usually for non-parametric.</p></li>
 <li><p><strong>p-values label</strong>: How p (significance) values are to be represented in boxplots, correlation plots, p-value/fold-change heatmap. Stars or exact numeric values.</p></li>
 <li><p><strong>Fold-change method</strong>: Fold change computation method to use, either “divide” (for non-transformed values) or “subtract” (for log2-transformed values).</p></li>
@@ -354,8 +395,8 @@ Choose multiple filters by appending filters with “;”, e.g. Smoker==“Yes�
 + Move slider to specify the extent of imputation. Missing data points in numMat will be imputed columnwise with a random value plus or minus <em>x</em>% around the mean of each column, default is 5%.</p></li>
 </ul>
 </div>
-<div id="customize-colors" class="section level2" number="5.7">
-<h2><span class="header-section-number">5.7</span> Customize colors</h2>
+<div id="customize-colors" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Customize Colors<a href="how-to-use-the-desktop-application.html#customize-colors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
 <p>This tab contains buttons for each unique value in all comparisons.</p>
 </blockquote>
@@ -373,8 +414,8 @@ Choose multiple filters by appending filters with “;”, e.g. Smoker==“Yes�
 Note: the information will help populate the table/sheet in the output Excel file called Colors.</p></li>
 </ul>
 </div>
-<div id="run-hourglass" class="section level2" number="5.8">
-<h2><span class="header-section-number">5.8</span> Run Hourglass</h2>
+<div id="run-hourglass" class="section level2 hasAnchor" number="5.8">
+<h2><span class="header-section-number">5.8</span> Run Hourglass<a href="how-to-use-the-desktop-application.html#run-hourglass" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
 <p>This tab is the final tab that defines which plot types should be created in output folder</p>
 </blockquote>
@@ -399,7 +440,7 @@ Note: the information will help populate the table/sheet in the output Excel fil
         </div>
       </div>
 <a href="input-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="output-plot-types.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="how-to-use-the-r-package.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
