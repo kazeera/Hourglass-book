@@ -1,5 +1,5 @@
 --- 
-title: "Documentation for Hourglass"
+title: "The Hourglass User's Guide"
 author: "Kazeera Aliar"
 date: "last revised Mar 31, 2022"
 site: bookdown::bookdown_site
