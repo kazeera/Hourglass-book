@@ -23,9 +23,9 @@ documentclass: book
    
 ## Introduction
 		      
-POV: You are a researcher that has access to multiple tumors samples from different patients. You have deidentified information about each patient's medication history, sex, smoker status, disease-free survival time, and so much more. You also sectioned and stained the tissue samples with 40 cell type markers and took images of them using a microscope. You used a bioimage analysis software to quantify the area, number of stained pixels, etc. 
+You are a researcher that has access to multiple tumors samples from different patients. You have deidentified information about each patient's medication history, sex, smoker status, disease-free survival time, and so much more. You also sectioned and stained the tissue samples with 40 cell type markers and took images of them using a microscope. You used a bioimage analysis software to quantify the area, number of stained pixels, etc. 
 
-Now you have a huge table with both patient information and stain quantification! You really wanted to determine the relationship between drug history and a group of markers. You are overwhelmed because you do not know where to start and your local bioinformatician is swamped with work. It's okay, we've all been there.. (jk not me). No need to fear, now you have Hourglass and you can easily uncover hidden secrets by just asking questions!
+Now you have a huge table with both patient information and stain quantification! You really wanted to determine the relationship between drug history and a group of markers. You are overwhelmed because you do not know where to start and your local bioinformatician is swamped with work. No need to fear, now you have Hourglass and you can easily uncover hidden secrets by just asking questions!
 
 [insert comic / video]
 
@@ -52,17 +52,15 @@ Hourglass as a software application was designed to be intuitive for non-expert 
 
 * [Advanced options]- **Advanced parameters** may be changed for experienced users to refine their analysis.
 
-![](images/advanced_options.png)
-
 * [Customize Colors]- Tremendously **customizable**, e.g. you may input hex codes for consistent colour schemes.
-
-![](images/customize_colors.png)
 
 The GUI contains sequential tabs taking users step-by-step through the Hourglass algorithm). A user interacts with data in a visual way and is obligated to set a clear structure for the analysis that can then easily be reproduced for any sub-analysis. 
 
-The Hourglass application creates an Excel file that serves as input to the R package with the same name. 
+The Hourglass application creates an Excel file that serves as input to the R package with the same name.
 
 This allows user to customize it again. Once the button is run (or alternatively in R, the run_from_excel function is used), it interfaces to the R statistical environment on local systems and runs as a sequential background process. The R package we created leverages newly-created and existing R functions for data wrangling and plotting and creates the publication ready plots in a single folder hierarchy.
+ 
+
 
 ## Roadmap
 ![](images/overall_inputoutput.png)
@@ -169,29 +167,30 @@ If we look at the same feature IL6, using traditional omics, we get a single rea
 	    gene expression
 
 
-## Global vs. regional analyses
+## By-Patient vs. By-Sample analyses
 In addition to enabling a highly systematic visualization of multiple research questions within the integrated dataset, Hourglass is designed to enable this structured analysis across multiple levels. Specifically, Hourglass is designed to leverage the fact that bioimaging datasets are typically recorded from  multiple samples per patient. For example, TMAs comprise multiple samples per patient while IMC and spatial omic methods usually record multiple regions of interest (ROIs) per patient.
 
 ![](images/patients_vs_samples.png)
 
 Hourglass accesses all levels of this unique data structure: ROIs/samples per patient may be averaged for by-patient analysis, run in parallel as individual sample analysis and, furthermore, be aggregated as patient-matched samples. Hourglass thereby accelerates exploration and direct comparison of regional versus global versus patient-paired features for each patient, providing a comprehensive overview over inter- and intratumoral stain differences.
 
-![](images/levels_of_analysis.png)
-
 The multiple levels are (see below for desription): 
 
-1) **Global/by-patient**: Typically, TMA-derived datasets comprising multiple samples per patient are averaged. Because there are multiple samples per patient, common practice is to collapse to a patient level by averaging samples across patients commonly done for this type of dataset on a by-patient basis. Collapsing our dataset resulted in patient x feature-parameter matrix dimensions of 165 x 631, with a total of 104,115 data points. For example, we could now compare IL6 hi vs IL6 low patients.
+![](images/levels_of_analysis.png)
 
-2) **Regional/by-sample**: This analysis is performed to figure out when intratumoral heterogeneity can be increasingly appreciated as a key factor in X. We saw a specific opportunity to dissolve those regions and look at heterogeneity across samples, so this is a specific angle that we implemented in Hourglass. For example, IL6 hi vs IL6 low regions across all samples.
+1) **Global/ByPatient**: Typically, TMA-derived datasets comprising multiple samples per patient are averaged. Because there are multiple samples per patient, common practice is to collapse to a patient level by averaging samples across patients commonly done for this type of dataset on a by-patient basis. Collapsing our dataset resulted in patient x feature-parameter matrix dimensions of 165 x 631, with a total of 104,115 data points. For example, we could now compare IL6 hi vs IL6 low patients.
 
-3) **Paired**: To analyze intrapatient heterogeneity, Hourglass can also resolve regional differences in a patient-paired manner. For example, for comparison of IL6 hi vs IL6 low regions within the same tumors. Hourglass averages the values and plots a graph in which the means of each group are paired. For example, tumor subtypes may vary across samples or ROIs in the same patient. If four samples from a patient are tumor subtype A and three are B, the means of these 2 groups are connected directly by a line and this comparison can be statistically assessed for all patients.
+2) **Regional/BySample**: This analysis is performed to figure out when intratumoral heterogeneity can be increasingly appreciated as a key factor in X. We saw a specific opportunity to dissolve those regions and look at heterogeneity across samples, so this is a specific angle that we implemented in Hourglass. For example, IL6 hi vs IL6 low regions across all samples.
+
+3) **Patient-Paired**: To analyze intrapatient heterogeneity, Hourglass can also resolve regional differences in a patient-paired manner. For example, for comparison of IL6 hi vs IL6 low regions within the same tumors. Hourglass averages the values and plots a graph in which the means of each group are paired. For example, tumor subtypes may vary across samples or ROIs in the same patient. If four samples from a patient are tumor subtype A and three are B, the means of these 2 groups are connected directly by a line and this comparison can be statistically assessed for all patients.
 
 These different analysis levels can be utilized alone or in combination, i.e. the user can easily focus on standard per-patient analysis only or perform the analysis under identical settings at the global, regional and patient-paired levels to systematically identify communalities and differences. For example, if regional differences are driving global trends then we know that either or both heterogeneity and sampling bias is relevant in this research question.
 
 
 ## Comparisons and Feature Sets
-
-![](images/workflow.JPG)
+```{r, echo=FALSE}
+knitr::include_graphics("images/workflow.JPG")
+```
 
 **Hourglass enables targeted analysis and grouping of feature sets**
 Often-times a dataset may contain features that are not of interest to a specific question or, related to this, sets of features that are biologically related (e.g. T cell stains CD3, CD8, FoxP3). 

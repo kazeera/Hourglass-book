@@ -23,6 +23,10 @@ Requirements
 
 The file descriptors are named below with abbreviations in brackets. For R package users, these are names of elements in the _dataset (ds)_ list object.
 
+```{r, echo=FALSE}
+knitr::include_graphics("images/input_files.jpg")
+```
+
 **1. Data Values (or 'vals')** 
 
 = Numeric values from quantification, where rows (samples/patients) x columns (genes/features/parameters).
@@ -32,25 +36,21 @@ For example, for RNA sequencing data: data matrix = expression matrix, columns =
 
 **2. Column Annotations (or 'colAnn')** 
 
+> Annotations/descriptors for columns in vals. At least two columns are needed for "Feature" and "Parameter" (can be called something else). 
+
 = Feature/parameter information, describes the columns of vals. First column must be the column names of vals.
 
-
-**These are feature/parameter annotations**:
-
-At least two columns are needed for "Feature" and "Parameter" (can be called something else). 
-
-* Descriptive columns names in data, e.g. feature_parameter
+* Descriptive columns names in data (recommended), e.g. feature_parameter
 
 * For example, for the column "IL6.Number.of.Positive.Pixels", the feature is IL6 and parameter is Number.of.Positive.Pixels. For the column "Gene1_woo_ahaha_Area", the feature is Gene1 and parameter is Area, which will be reflected in the colAnn columns.
 
 * Hourglass also subsets columns based on a column called "Keep.In.Analysis" - TRUE to keep, FALSE to discard. 
 
-**2. Row Annotations (or 'rowAnn')**
+**3. Row Annotations (or 'rowAnn')**
+
+> Annotations/descriptors for patient/sample in vals
 
 = Sample/patient information, describes the rows of vals. First column must be the row names of vals. 
-
-
-**These are patient/sample annotations**:
 
 These are labels or groups that will define main comparisons or groups to compare or for exclusion/inclusion of patients/samples (e.g. removing smokers)
  
@@ -73,6 +73,7 @@ A column for "PatientID" is required (can be called something else) for paired a
 
 ## Similar Format
 The data input was inspired by popular bioinformatics packages, with numeric data plus metadata. 
+
 * Struct is a package in which a simple DatasetExperiment object contains sample measurements, sample metadata, variable metadata. [Figure 1 here](https://academic.oup.com/bioinformatics/article/36/22-23/5551/6039109)
 
 * SingleCellExperiment object contains primary and transformed data (cell x feature matrix) and reads in feature and cell metadata. This is similar to Hourglass running the original and imputed versions in the same run. [Figure 4.1 here](http://bioconductor.org/books/3.13/OSCA.intro/the-singlecellexperiment-class.html).
@@ -167,11 +168,11 @@ The following trends are:
 
 Download 3 csv files from https://github.com/kazeera/Hourglass, paths:
 
-"ExampleData1/Example_IHC_sample_colAnn.csv" 
+"ExampleData2/Example_IHC_sample_colAnn.csv" 
 
-"ExampleData1/Example_IHC_sample_rowAnn.csv"
+"ExampleData2/Example_IHC_sample_rowAnn.csv"
 
-"ExampleData1/Example_IHC_sample_vals.csv"  
+"ExampleData2/Example_IHC_sample_vals.csv"  
 
 
 **How to Access in R**
@@ -184,13 +185,16 @@ ds = **d**ata**s**et
 ds <- Hourglass::example_IHC_samples_dataset 
 ```
 
-Access individual tables. Since ds is a list object in R, the $ operator can be used to access individual elements.
+Since ds is a list object in R, the $ operator can be used to access individual elements (type data.frame).
+
+Preview of each data frame: 
 ```{r, echo = FALSE}
-ds$vals       # 102 rows 72 columns
-ds$rowAnn  # 102 rows  12 columns
-ds$colAnn   # 72 rows  4 columns
+ds$vals[1:5, 1:3]
+ds$rowAnn[1:5, 1:5]
+ds$colAnn[1:3, 1:4]
 
-# Check the dimensions
-lapply(ds, dim)
+# Uncomment lines below to access eacah element
+# ds$vals       # 102 rows 72 columns
+# ds$colAnn   # 72 rows  4 columns
+# ds$rowAnn  # 102 rows  12 columns
 ```
-

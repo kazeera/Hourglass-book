@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Input Data | The Hourglass User’s Guide</title>
+  <meta name="description" content="This is the official documentation for Hourglass - learn how to install and utilize the tool." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Input Data | The Hourglass User’s Guide" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the official documentation for Hourglass - learn how to install and utilize the tool." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Input Data | The Hourglass User’s Guide" />
+  
+  <meta name="twitter:description" content="This is the official documentation for Hourglass - learn how to install and utilize the tool." />
+  
+
+<meta name="author" content="Kazeera Aliar" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="what-is-hourglass.html"/>
+<link rel="next" href="how-to-use-the-desktop-application.html"/>
+<script src="libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About<span></span></a></li>
+<li class="chapter" data-level="2" data-path="installation.html"><a href="installation.html"><i class="fa fa-check"></i><b>2</b> Installation<span></span></a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="installation.html"><a href="installation.html#install-r"><i class="fa fa-check"></i><b>2.1</b> Install R<span></span></a></li>
+<li class="chapter" data-level="2.2" data-path="installation.html"><a href="installation.html#install-desktop-application"><i class="fa fa-check"></i><b>2.2</b> Install desktop application<span></span></a></li>
+<li class="chapter" data-level="2.3" data-path="installation.html"><a href="installation.html#install-r-package-optional"><i class="fa fa-check"></i><b>2.3</b> Install R package (optional)<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html"><i class="fa fa-check"></i><b>3</b> What is Hourglass?<span></span></a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#tldr"><i class="fa fa-check"></i><b>3.1</b> tl;dr<span></span></a></li>
+<li class="chapter" data-level="3.2" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#introduction"><i class="fa fa-check"></i><b>3.2</b> Introduction<span></span></a></li>
+<li class="chapter" data-level="3.3" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#roadmap"><i class="fa fa-check"></i><b>3.3</b> Roadmap<span></span></a></li>
+<li class="chapter" data-level="3.4" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#is-this-tool-for-me"><i class="fa fa-check"></i><b>3.4</b> Is this tool for me?<span></span></a></li>
+<li class="chapter" data-level="3.5" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#strengths"><i class="fa fa-check"></i><b>3.5</b> Strengths<span></span></a></li>
+<li class="chapter" data-level="3.6" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#limitations"><i class="fa fa-check"></i><b>3.6</b> Limitations<span></span></a></li>
+<li class="chapter" data-level="3.7" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#terminology"><i class="fa fa-check"></i><b>3.7</b> Terminology<span></span></a></li>
+<li class="chapter" data-level="3.8" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#global-vs.-regional-analyses"><i class="fa fa-check"></i><b>3.8</b> Global vs. regional analyses<span></span></a></li>
+<li class="chapter" data-level="3.9" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#comparisons-and-feature-sets"><i class="fa fa-check"></i><b>3.9</b> Comparisons and Feature Sets<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="input-data.html"><a href="input-data.html"><i class="fa fa-check"></i><b>4</b> Input Data<span></span></a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="input-data.html"><a href="input-data.html#file-format"><i class="fa fa-check"></i><b>4.1</b> File format<span></span></a></li>
+<li class="chapter" data-level="4.2" data-path="input-data.html"><a href="input-data.html#the-3-files"><i class="fa fa-check"></i><b>4.2</b> The 3 files<span></span></a></li>
+<li class="chapter" data-level="4.3" data-path="input-data.html"><a href="input-data.html#similar-format"><i class="fa fa-check"></i><b>4.3</b> Similar Format<span></span></a></li>
+<li class="chapter" data-level="4.4" data-path="input-data.html"><a href="input-data.html#example-dataset"><i class="fa fa-check"></i><b>4.4</b> Example Dataset<span></span></a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="input-data.html"><a href="input-data.html#parameters"><i class="fa fa-check"></i><b>4.4.1</b> Parameters<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html"><i class="fa fa-check"></i><b>5</b> How to Use the Desktop Application<span></span></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#output-excel-file"><i class="fa fa-check"></i><b>5.1</b> Output: Excel file<span></span></a></li>
+<li class="chapter" data-level="5.2" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#basic-workflow"><i class="fa fa-check"></i><b>5.2</b> Basic Workflow<span></span></a></li>
+<li class="chapter" data-level="5.3" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#upload-files"><i class="fa fa-check"></i><b>5.3</b> Upload Files<span></span></a></li>
+<li class="chapter" data-level="5.4" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#define-comparisons"><i class="fa fa-check"></i><b>5.4</b> Define Comparisons<span></span></a></li>
+<li class="chapter" data-level="5.5" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#define-feature-sets"><i class="fa fa-check"></i><b>5.5</b> Define Feature Sets<span></span></a></li>
+<li class="chapter" data-level="5.6" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#advanced-options"><i class="fa fa-check"></i><b>5.6</b> Advanced Options<span></span></a></li>
+<li class="chapter" data-level="5.7" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#customize-colors"><i class="fa fa-check"></i><b>5.7</b> Customize Colors<span></span></a></li>
+<li class="chapter" data-level="5.8" data-path="how-to-use-the-desktop-application.html"><a href="how-to-use-the-desktop-application.html#run-hourglass"><i class="fa fa-check"></i><b>5.8</b> Run Hourglass<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html"><i class="fa fa-check"></i><b>6</b> How to Use the R Package<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#installation-and-usage"><i class="fa fa-check"></i><b>6.1</b> Installation and Usage<span></span></a></li>
+<li class="chapter" data-level="6.2" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#dataset-object"><i class="fa fa-check"></i><b>6.2</b> Dataset Object<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="output-plot-types.html"><a href="output-plot-types.html"><i class="fa fa-check"></i><b>7</b> Output Plot Types<span></span></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="output-plot-types.html"><a href="output-plot-types.html#navigating-output-folder"><i class="fa fa-check"></i><b>7.1</b> Navigating Output Folder<span></span></a></li>
+<li class="chapter" data-level="7.2" data-path="output-plot-types.html"><a href="output-plot-types.html#types-of-plots"><i class="fa fa-check"></i><b>7.2</b> Types of Plots<span></span></a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="output-plot-types.html"><a href="output-plot-types.html#quality-control"><i class="fa fa-check"></i><b>7.2.1</b> 1. Quality Control<span></span></a></li>
+<li class="chapter" data-level="7.2.2" data-path="output-plot-types.html"><a href="output-plot-types.html#feature-sets"><i class="fa fa-check"></i><b>7.2.2</b> 2. Feature Sets<span></span></a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Hourglass User’s Guide</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="input-data" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Input Data<a href="input-data.html#input-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="file-format" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> File format<a href="input-data.html#file-format" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Hourglass currently supports tables in:</p>
+<ul>
+<li><p><em>csv</em> = comma separated values files</p></li>
+<li><p><em>txt</em> = tab-delimited text files</p></li>
+</ul>
+<p>Requirements</p>
+<ul>
+<li><p>All files should have row names.</p></li>
+<li><p>Missing values should be denoted NA or left blank (not nan, N/A, “NA”)</p></li>
+</ul>
+</div>
+<div id="the-3-files" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> The 3 files<a href="input-data.html#the-3-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Your dataset comprises of 3 tables or files:</strong></p>
+<p>The file descriptors are named below with abbreviations in brackets. For R package users, these are names of elements in the <em>dataset (ds)</em> list object.</p>
+<p><img src="images/input_files.JPG" width="892" /></p>
+<p><strong>1. Data Values (or ‘vals’)</strong></p>
+<p>= Numeric values from quantification, where rows (samples/patients) x columns (genes/features/parameters).</p>
+<p>For example, for RNA sequencing data: data matrix = expression matrix, columns = genes, rows = samples.</p>
+<p><strong>2. Column Annotations (or ‘colAnn’)</strong></p>
+<blockquote>
+<p>Annotations/descriptors for columns in vals. At least two columns are needed for “Feature” and “Parameter” (can be called something else).</p>
+</blockquote>
+<p>= Feature/parameter information, describes the columns of vals. First column must be the column names of vals.</p>
+<ul>
+<li><p>Descriptive columns names in data (recommended), e.g. feature_parameter</p></li>
+<li><p>For example, for the column “IL6.Number.of.Positive.Pixels”, the feature is IL6 and parameter is Number.of.Positive.Pixels. For the column “Gene1_woo_ahaha_Area”, the feature is Gene1 and parameter is Area, which will be reflected in the colAnn columns.</p></li>
+<li><p>Hourglass also subsets columns based on a column called “Keep.In.Analysis” - TRUE to keep, FALSE to discard.</p></li>
+</ul>
+<p><strong>3. Row Annotations (or ‘rowAnn’)</strong></p>
+<blockquote>
+<p>Annotations/descriptors for patient/sample in vals</p>
+</blockquote>
+<p>= Sample/patient information, describes the rows of vals. First column must be the row names of vals.</p>
+<p>These are labels or groups that will define main comparisons or groups to compare or for exclusion/inclusion of patients/samples (e.g. removing smokers)</p>
+<p>Examples</p>
+<ul>
+<li>For samples:
+<ul>
+<li>Tissue type</li>
+<li>Sample_Cancer_Subtype</li>
+</ul></li>
+<li>For patients:
+<ul>
+<li>Patient_Cancer_Subtype</li>
+<li>Smoker</li>
+<li>Age at diagnosis</li>
+</ul></li>
+</ul>
+<p>A column for “PatientID” is required (can be called something else) for paired analysis (<em>i.e.</em> averaging samples from the same patient) and patient level analysis (<em>i.e.</em> averaging samples from the same patient).</p>
+<blockquote>
+<p>Note: this is external information from clinical charts / prior analysis that is integrated manually prior to running Hourglass. This means transcriptomic, genomic, and clinical calls are created independently of Hourglass and merged to the master rowAnn table via sample or patient identifiers.</p>
+</blockquote>
+</div>
+<div id="similar-format" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Similar Format<a href="input-data.html#similar-format" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The data input was inspired by popular bioinformatics packages, with numeric data plus metadata.
+* Struct is a package in which a simple DatasetExperiment object contains sample measurements, sample metadata, variable metadata. <a href="https://academic.oup.com/bioinformatics/article/36/22-23/5551/6039109">Figure 1 here</a></p>
+<ul>
+<li><p>SingleCellExperiment object contains primary and transformed data (cell x feature matrix) and reads in feature and cell metadata. This is similar to Hourglass running the original and imputed versions in the same run. <a href="http://bioconductor.org/books/3.13/OSCA.intro/the-singlecellexperiment-class.html">Figure 4.1 here</a>.</p></li>
+<li><p>SummarizedExperiment object similarly contains multiple assays (feature by sample matrices) with colData and rowData. <a href="http://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html">Section 2 here</a>.</p></li>
+</ul>
+</div>
+<div id="example-dataset" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Example Dataset<a href="input-data.html#example-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We included an example multiparametric dataset with annotations for patients/samples. This is an <strong>entirely fake dataset</strong>.</p>
+<p>Its purpose is to showcase the functionalities of Hourglass and help users recreate plots seen here. These values have no biological relevance or connection to literature. Parameters and annotation labels were inspired by the quantified immunohistochemistry dataset for pancreatic cancer tissue microarray.</p>
+<p><strong>Features of example dataset</strong></p>
+<ul>
+<li><p>30 patients with 1-6 samples per patient</p></li>
+<li><p>102 samples in total (rows)</p></li>
+</ul>
+<div id="parameters" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Parameters<a href="input-data.html#parameters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The parameters for one stain are:</p>
+<ul>
+<li><p><strong>Area</strong> = area of tissue image in mm^2 (random)</p></li>
+<li><p><strong>Num.Detections</strong> = number of detected pixels on tissue area = Num.Positive + Num.Negative</p></li>
+<li><p><strong>Num.Negative</strong> = number of pixels of negative staining (random)</p></li>
+<li><p><strong>Num.Positive</strong> = number of pixels of positive staining (based on trends), affects the following:</p>
+<ul>
+<li><p><strong>Positive.Percent</strong> = Num.Positive / Num.Detections x 100</p></li>
+<li><p><strong>Negative.Percent</strong> = 100 - Positive.Percent</p></li>
+<li><p><strong>Pos.Pixel.Percent</strong> = Num.Positive/10^3 x random value from 0.3 to 1.5</p></li>
+<li><p><strong>Num.Pos.per.mm.2</strong> = Num.Positive / Area x 10^4</p></li>
+</ul></li>
+</ul>
+<p><strong>Stains</strong></p>
+<p>The following stains were quantified:</p>
+<ul>
+<li><p>T Cell markers = CD3, CD8</p></li>
+<li><p>B Cell = CD20, CD27, CD5, PDL1</p></li>
+<li><p>other = IL6, SMA</p></li>
+</ul>
+<p><strong>Possible Feature Sets</strong></p>
+<p><em>TCell</em> = CD3, CD8</p>
+<p><em>BCell</em> = CD20, CD27, CD5, PDL1</p>
+<p><em>Immune</em> = TCell, BCell</p>
+<p><em>All</em> = Immune, IL6, SMA</p>
+<p><strong>Possible Feature Parameters</strong></p>
+<p>Num.Pos.per.mm.2</p>
+<p>Pos.Pixel.Percent</p>
+<p><strong>Summary of Trends</strong></p>
+<p>Most values differ/segregate based on 3 sample cancer subtypes (A, B and C). When there are more than 2 samples per patient, there is a predominant “Patient Cancer Subtype” but some samples might deviate from this (ie. intrapatient heterogeneity).</p>
+<p>The following trends are:</p>
+<ul>
+<li><p>Overall survival is low for A, medium for B, high for C</p></li>
+<li><p>Average values for TCell (overall low)l vs. BCell (overall high)</p></li>
+<li><p>Only for TCells:</p>
+<ul>
+<li><p>Het.Score low for A, medium for B, high for C</p></li>
+<li><p>Smokers for all subtypes for TCell stains are high</p></li>
+</ul></li>
+<li><p>Only for BCells:</p>
+<ul>
+<li>NeoAdjuvant values are lower</li>
+</ul></li>
+<li><p>IL6 different between A,B,C subtypes only seen in females (Sex==F)</p></li>
+<li><p>No trend in SMA</p></li>
+<li><p>Random outliers (very high value, 4 per row) and random NAs (8 per row)</p></li>
+</ul>
+<p><strong>How to Access Files</strong></p>
+<p>Download 3 csv files from <a href="https://github.com/kazeera/Hourglass" class="uri">https://github.com/kazeera/Hourglass</a>, paths:</p>
+<p>“ExampleData2/Example_IHC_sample_colAnn.csv”</p>
+<p>“ExampleData2/Example_IHC_sample_rowAnn.csv”</p>
+<p>“ExampleData2/Example_IHC_sample_vals.csv”</p>
+<p><strong>How to Access in R</strong></p>
+<p>This is a built-in dataset object in the Hourglass R package.</p>
+<p>Rename the example dataset variable (to make it smaller).
+ds = <strong>d</strong>ata<strong>s</strong>et</p>
+<p>Since ds is a list object in R, the $ operator can be used to access individual elements (type data.frame).</p>
+<p>Preview of each data frame:</p>
+<pre><code>##                    CD20_Area CD20_Het.Score CD20_Negative.Percent
+## C0_2721_NOOBV4101T   1025027             10                 58.91
+## C9_2721_QCECJ5772H   2405671              1                 53.44
+## E4_2721_KNFYL5159D   1283798              4                    NA
+## G5_3420_PORPL4558C    564828              4                 70.92
+## B4_3327_BWDLJ3279D   1096962              1                 35.22</code></pre>
+<pre><code>##                             Unique_ID Patient_ID TissueType Smoker Sex
+## C0_2721_NOOBV4101T C0_2721_NOOBV4101T       2721     Stroma   &lt;NA&gt;   M
+## C9_2721_QCECJ5772H C9_2721_QCECJ5772H       2721     Stroma   &lt;NA&gt;   M
+## E4_2721_KNFYL5159D E4_2721_KNFYL5159D       2721     Stroma   &lt;NA&gt;   M
+## G5_3420_PORPL4558C G5_3420_PORPL4558C       3420     Stroma   &lt;NA&gt;   M
+## B4_3327_BWDLJ3279D B4_3327_BWDLJ3279D       3327     Stroma   &lt;NA&gt;   F</code></pre>
+<pre><code>##                       Feature        Parameter isNumeric Parameter_of_interest
+## CD20_Area                CD20             Area      TRUE                 FALSE
+## CD20_Het.Score           CD20        Het.Score      TRUE                  TRUE
+## CD20_Negative.Percent    CD20 Negative.Percent      TRUE                  TRUE</code></pre>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="what-is-hourglass.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="how-to-use-the-desktop-application.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -29,9 +29,24 @@ Allows users to pick options and navigate through workflow:
 * Interactively look at data (make heatmap and boxplot)
 * Run R package to create all plots with one click
 
+## Welcome
+
+> This tab briefly explains the overall workflow.
+
+```{r,out.width="66%",echo=FALSE}
+knitr::include_graphics("images/app/GUI_1_welcome.png")
+```
+
 ## Upload Files
 
 > This tab specifies input data paths that will 1 - customize the user's experience (in this application) and 2 - be used in Hourglass analysis runs.
+
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Upload Data tab"}
+knitr::include_graphics(
+  c("images/app/GUI_2_upload-data1.png", "images/app/GUI_2_upload-data2.png")
+)
+```
+
 
 * Enter the name of your dataset in text input field.
 * Use "Choose File" buttons to upload the required 3 data files from your computer's file directory, specifically:
@@ -45,11 +60,18 @@ Check [# Input Data ## file format] for table formatting details and supported f
 
 > This tab creates a table of "comparisons" on how to stratify patients or samples. Each comparison/row will be run independent of other comparisons.
 
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Pick Comparisons tab"}
+knitr::include_graphics(
+  c("images/app/GUI_3_pick-comparisons1.png", "images/app/GUI_3_pick-comparisons2.png")
+)
+```
+
 * Select "Patient ID" from the drop down menu displaying rowAnn column names (e.g. smoker, age group). It will be used to group samples belonging to the same patient in By Patient analysis and patient-paired plots. Skip this step if patient-level analysis is not required.
 
 **Main or Custom Comparison**
 
 > Note: All text input fields are case-sensitive, _i.e._ must match data.
+```
 
 * Press "Add a row" button to create a new comparison.
 
@@ -103,6 +125,12 @@ Example of a comparison:
 
 
 **Tab 1: Select columns**
+
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Pick Comparisons tab"}
+knitr::include_graphics(
+  c("images/app/GUI_4_1_select-columns2.png", "images/app/GUI_4_1_select-columns2.png")
+)
+```
 
 * Select column name from colAnn for Feature and Parameter columns.
 
