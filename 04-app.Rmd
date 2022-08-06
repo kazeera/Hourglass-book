@@ -9,18 +9,6 @@ documentclass: book
 
 The graphical user interface (GUI) contains sequential tabs taking users step-by-step through the Hourglass algorithm. Each tab contains options to relay data to the R package and customize Hourglass output. GUI tabs and key user events are described here.
 
-## Output: Excel file
-The purpose of this application is to create an Excel file that will be read into R. 
-There are the 4 tables/worksheets:
-
-| No. | Name | Description |
-|:- |:--- |:--- |
-|1| **Comparisons** | comparisons and other analysis parameters (e.g, local file paths to data, survival columns, which plots to create) | 
-|2| **Colors** | color palette for values in comparisons, first column is name and second is color hex code | 
-|3| **Feature Sets** | named groups of features |
-|4| **Feature Parameters** | standard and optionally alternative parameters for the feature sets |
-
-
 ## Basic Workflow
 Allows users to pick options and navigate through workflow:
 * Upload data (rows = samples)
@@ -33,8 +21,8 @@ Allows users to pick options and navigate through workflow:
 
 > This tab briefly explains the overall workflow.
 
-```{r,out.width="66%",echo=FALSE}
-knitr::include_graphics("images/app/GUI_1_welcome.png")
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Pick Comparisons tab"}
+knitr::include_graphics(c("images/app/GUI_1_welcome.png"))
 ```
 
 ## Upload Files
@@ -42,19 +30,18 @@ knitr::include_graphics("images/app/GUI_1_welcome.png")
 > This tab specifies input data paths that will 1 - customize the user's experience (in this application) and 2 - be used in Hourglass analysis runs.
 
 ```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Upload Data tab"}
-knitr::include_graphics(
-  c("images/app/GUI_2_upload-data1.png", "images/app/GUI_2_upload-data2.png")
-)
+knitr::include_graphics(c("images/app/GUI_2_upload-data1.png",
+                          "images/app/GUI_2_upload-data2.png"))
 ```
 
 
-* Enter the name of your dataset in text input field.
-* Use "Choose File" buttons to upload the required 3 data files from your computer's file directory, specifically:
-1) **numMat** - numeric matrix file 
-2) **rowAnn** - row annotations (clinical and sample descriptions)
-3) **colAnn** - column annotations (feature and parameter descriptions). 
+1. Enter the name of your dataset in text input field ("Enter Text Here").
+2. Use "Choose File" buttons to upload the required 3 data files from your computer, specifically:
+* **numMat** - numeric matrix file 
+* **rowAnn** - row annotations (clinical and sample descriptions)
+* **colAnn** - column annotations (feature and parameter descriptions). 
 
-Check [# Input Data ## file format] for table formatting details and supported file types.
+Check [The 3 Files] for table formatting details and supported file types.
 
 ## Define Comparisons
 
@@ -66,14 +53,13 @@ knitr::include_graphics(
 )
 ```
 
-* Select "Patient ID" from the drop down menu displaying rowAnn column names (e.g. smoker, age group). It will be used to group samples belonging to the same patient in By Patient analysis and patient-paired plots. Skip this step if patient-level analysis is not required.
+1. Select "Patient ID" from the drop down menu displaying rowAnn column names. It will be used to group samples belonging to the same patient in By Patient analysis and patient-paired slopegraphs. Skip this step if patient-level analysis is not required.
 
-**Main or Custom Comparison**
+2. Press the "Add a comparison" button to add a new comparison and fill in the option fields:
 
 > Note: All text input fields are case-sensitive, _i.e._ must match data.
-```
 
-* Press "Add a row" button to create a new comparison.
+**Main or Custom Comparison**
 
 * Define a comparison for each row (required), by **either**:
      * Selecting a "Main Comparison" from the drop down menu displaying rowAnn column names (e.g. smoker, age group) 
@@ -104,6 +90,7 @@ Check box to create plots from original input files, treating each row in numMat
 **By Patient**
 
 Check box to average across Patient ID (see below) and create plots.
+
 > Note: at least one of By Sample or By Patient must be selected for comparison to run.
 
 
@@ -126,21 +113,18 @@ Example of a comparison:
 
 **Tab 1: Select columns**
 
-```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Pick Comparisons tab"}
-knitr::include_graphics(
-  c("images/app/GUI_4_1_select-columns2.png", "images/app/GUI_4_1_select-columns2.png")
-)
-```
-
 * Select column name from colAnn for Feature and Parameter columns.
 
-* Recall [# What is Hourglass? ##Terminology]: 
+* Recall [Terminology]: 
 
 + **Feature** = stains, genes, markers, etc (e.g. Gene1, ProteinX, IL6), while 
 
 + **Parameters** = readouts, measurements of features (e.g. Numbers of Positive Pixels, Percent Positive Pixels, Stained Area mm^2,Total Area mm^2).
 
-
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Select columns for feature sets."}
+knitr::include_graphics(c("images/app/GUI_4_1_select-columns2.png", 
+                          "images/app/GUI_4_1_select-columns2.png"))
+```
 
 **Tab 2: Define parameters**
 
@@ -148,11 +132,14 @@ knitr::include_graphics(
 
 * Note: this will populate the table/sheet in the output Excel file called Feature Parameters.
 
-
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Define feature set parameters."}
+knitr::include_graphics(c("images/app/GUI_4_2_pick-params1.png", 
+                          "images/app/GUI_4_2_pick-params2.png"))
+```
 
 **Tab 3: Define sets**
 
-* Next, define sets. Press the "Add a row" button to add a new set. 
+* Next, define feature sets. Press the "Add a row" button to add a new set. 
 
 + **Name of group**: Type in a name for group, e.g. T_cell_markers.
 
@@ -161,6 +148,11 @@ knitr::include_graphics(
         - The delimiter must be a comma, leading and trailing whitespace will be ignored.
         - Minimum of 3 features.
         - Case-sensitive.
+
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Define feature sets."}
+knitr::include_graphics(c("images/app/GUI_4_2_pick-params1.png", 
+                          "images/app/GUI_4_2_pick-params2.png"))
+```
 
 Example of feature sets:
 
@@ -180,6 +172,11 @@ Note: this will populate the table/worksheet in the output Excel file called Fea
 ## Advanced Options
 
 > This tab includes customization for statistics, plot types, etc. 
+
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Define feature sets."}
+knitr::include_graphics(c("images/app/GUI_5_adv-options1.png", 
+                          "images/app/GUI_5_adv-options2.png"))
+```
 
 Labels for options are on the left and drop down menus on the right side:
 
@@ -224,12 +221,17 @@ Additional options:
 
 * A button for each unique value in defined comparisons will automatically be displayed. For example, if "Cancer Type" was chosen as a main comparison, corresponding buttons for lung, breast, pancreatic, and other values in the "Cancer Type" column will be displayed. 
 
-* Press the button to open a color picker window. Select a color by: 
-     * Enter a hex code in the text input field at the bottom of the left panel.
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Customize colors."}
+knitr::include_graphics(c("images/app/GUI_6_customize-colors1.png", 
+                          "images/app/GUI_6_customize-colors2.png"))
+```
+
+1. Press the button to open a color picker window. Select a color by: 
+     * Entering a hex code in the text input field at the bottom of the left panel.
      * Placing and clicking cursor on the color wheel.
      * Move slider.
 
-* Press "Select and Close Window" to save.
+2. Press "Select and Close Window" to save.
 
 * If **white** is chosen (center of the color wheel), that value will be excluded from all comparisons. This will bypass filters in comparisons. For example, perhaps "Sex" in rowAnn has the values "F", "M" and "X", where "X" does not have high enough patient numbers. To exclude this group, make the "Sex-X" button white.
 
@@ -239,17 +241,35 @@ Note: the information will help populate the table/sheet in the output Excel fil
 ## Run Hourglass 
 > This tab is the final tab that defines which plot types should be created in output folder
 
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Run Hourglass."}
+knitr::include_graphics(c("images/app/GUI_7_run-hourglass.png"))
+```
+
 * Check boxes for quality control boxplots, for the feature and parameter colAnn columns (optional). {Insert 2 plots}. Note this uses information from Feature Sets Tab 1.
 
 * Check boxes for plots that will be created for each feature set. 
 
-* Hourglass will read from the output Excel file, mentioned in the beginning of this chapter [##Output excel file].  
-
 * **Either** press:
      * "Create output spreadsheet" button and navigate through the folder directory and save the Excel file locally. Modify if needed before pressing Run. 
      * **OR** press "Upload existing spreadsheet" and find and upload a locally existing Excel file.
-       
-* Finally! Press the "Run Hourglass" button which interfaces to R (back-end).
+      
+* Finally! Press the "Run Hourglass" button which interfaces to R (back-end). Hourglass will read from the [Output: Excel File], mentioned at the end of this chapter.  
 
-This action will relay user options and data file paths to the Hourglass R package and calls on functions to run comparisons, create new output folders and create plots using established R plotting libraries, such as ggplot2 and pheatmap. An error window will pop up if there are any issues running Hourglass on the R side.
+This action will relay user options and data file paths to the Hourglass R package and calls on functions to run comparisons using established R plotting libraries, such as ggplot2 and pheatmap. An error window will pop up if there are any issues running Hourglass. 
+
+Note: Ensure R is installed, see [Installation and Usage]. If you are unsure, open R terminal and type the following to see where R is located on your computer: 
+```
+.libPaths()
+```
 	
+
+## Output: Excel File
+The purpose of this application is to create an Excel file that will be read into R. 
+There are the 4 tables/worksheets:
+
+| No. | Name | Description |
+|:- |:--- |:--- |
+|1| **Comparisons** | comparisons and other analysis parameters (e.g, local file paths to data, survival columns, which plots to create) | 
+|2| **Colors** | color palette for values in comparisons, first column is name and second is color hex code | 
+|3| **Feature Sets** | named groups of features |
+|4| **Feature Parameters** | standard and optionally alternative parameters for the feature sets |

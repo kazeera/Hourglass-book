@@ -5,19 +5,14 @@ documentclass: book
 ---
 # Input Data 
 ## File format
-Hourglass currently supports tables in:
-
-* *csv* = comma separated values files
-
-* *txt* = tab-delimited text files
+Hourglass currently supports input data as *csv* (comma separated values) and *txt* (tab-delimited text) files
 
 Requirements
 
 * All files should have row names.
-
 * Missing values should be denoted NA or left blank (not nan, N/A, "NA")
 
-## The 3 files
+## The 3 Files
 
 **Your dataset comprises of 3 tables or files:**
 

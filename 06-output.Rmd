@@ -50,12 +50,10 @@ groups (from comparison from row annotations) = e.g. Smoker-Yes, Smoker-No
 1. **Overview Boxplot** 
 + 
 + 
-![](www.image_url_here.png)
-
 2.  **Individual Boxplot**
 + 
 + 
-3.  **Paired Patient Plot**
+3.  **Paired Patient Slopegraph**
 + 
 + 
 4.  **p-value/fold-change heatmap**
@@ -65,7 +63,6 @@ groups (from comparison from row annotations) = e.g. Smoker-Yes, Smoker-No
 + 
 + 
 6.  **Correlation Plots**
-+ 
 + 
 + 
 7.  **Correlation scatter plots**
