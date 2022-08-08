@@ -160,14 +160,14 @@ If we look at the same feature IL6, using traditional omics, we get a single rea
 	    gene expression
 
 
-## By-Patient vs. By-Sample analyses
+## By-Patient vs. By-Sample
 In addition to enabling a highly systematic visualization of multiple research questions within the integrated dataset, Hourglass is designed to enable this structured analysis across multiple levels. Specifically, Hourglass is designed to leverage the fact that bioimaging datasets are typically recorded from  multiple samples per patient. For example, TMAs comprise multiple samples per patient while IMC and spatial omic methods usually record multiple regions of interest (ROIs) per patient.
 
 ![](images/patients_vs_samples.png)
 
 Hourglass accesses all levels of this unique data structure: ROIs/samples per patient may be averaged for by-patient analysis, run in parallel as individual sample analysis and, furthermore, be aggregated as patient-matched samples. Hourglass thereby accelerates exploration and direct comparison of regional versus global versus patient-paired features for each patient, providing a comprehensive overview over inter- and intratumoral stain differences.
 
-The multiple levels are (see below for desription): 
+The multiple levels are (see below for description): 
 
 ![](images/levels_of_analysis.png)
 

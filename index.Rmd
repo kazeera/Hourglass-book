@@ -30,3 +30,7 @@ I also would like to thank the developers of R, python, and Kivy for facilitatin
 
 Kazeera
 
+
+**Source Code for Book**
+See [link](https://github.com/kazeera/Hourglass-book).
+

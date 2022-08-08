@@ -9,27 +9,36 @@ documentclass: book
 
 The graphical user interface (GUI) contains sequential tabs taking users step-by-step through the Hourglass algorithm. Each tab contains options to relay data to the R package and customize Hourglass output. GUI tabs and key user events are described here.
 
+
 ## Basic Workflow
-Allows users to pick options and navigate through workflow:
-* Upload data (rows = samples)
-* Choose comparisons of interest (filter rows)
-* Choose genes/features (columns) of interest and label
-* Interactively look at data (make heatmap and boxplot)
-* Run R package to create all plots with one click
+Note: Hold and drag tabs at the top to scroll. Click on the tab name to access section.
+
+```{r, echo=FALSE, fig.align = "center", fig.show='hold', fig.cap="Overview: all tabs."}
+knitr::include_graphics(c("images/app/GUI_0_overview.png"))
+```
+
+* [Upload Files] (See [The 3 Files] for formatting)
+* [Define Comparisons] of interest (row annotations)
+* [Define Feature Sets] and pick relevant parameters (column annotations)
+* [Customize Colors] for comparison subgroups
+* [Advanced Options] for statistical tests, imputation, surival analysis, etc.
+* [Run Hourglass] to create all plots with one click
+
 
 ## Welcome
 
 > This tab briefly explains the overall workflow.
 
-```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Pick Comparisons tab"}
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Welcome."}
 knitr::include_graphics(c("images/app/GUI_1_welcome.png"))
 ```
+No actions are required by the user. Press the next tab "Upload Files" to start.
 
 ## Upload Files
 
 > This tab specifies input data paths that will 1 - customize the user's experience (in this application) and 2 - be used in Hourglass analysis runs.
 
-```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Upload Data tab"}
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Upload data."}
 knitr::include_graphics(c("images/app/GUI_2_upload-data1.png",
                           "images/app/GUI_2_upload-data2.png"))
 ```
@@ -47,7 +56,7 @@ Check [The 3 Files] for table formatting details and supported file types.
 
 > This tab creates a table of "comparisons" on how to stratify patients or samples. Each comparison/row will be run independent of other comparisons.
 
-```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Pick Comparisons tab"}
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Pick comparisons."}
 knitr::include_graphics(
   c("images/app/GUI_3_pick-comparisons1.png", "images/app/GUI_3_pick-comparisons2.png")
 )
