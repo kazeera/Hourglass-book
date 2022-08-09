@@ -33,7 +33,7 @@ For **shorter installation instructions**:
 LoadLibrary failure: The specified module could not be found.
 * **Solution**: Go to where R is located and delete the .Renviron file.
 
-## Install desktop application
+## Install Desktop Application
 > This step is for users who prefer to use Hourglass as a standalone application for a graphical user interface.
 
 i. Click [here](https://github.com/kazeera/Hourglass-interface) for installation instructions.

@@ -16,7 +16,9 @@ Hourglass exists as a stand-alone open-source R package and a desktop applicatio
   
 Please refer to our [link]() paper for more info.  
 
-![](images/Hourglass_logo-removebg.png)
+```{r, echo=FALSE, fig.align = "center", out.width="66%", fig.show='hold', fig.cap="Hourglass logo"}
+knitr::include_graphics(c("images/Hourglass_logo-removebg.png"))
+```
 
 **Acknowledgements**
 
