@@ -26,7 +26,7 @@ We are ready to share Hourglass with the world. It's about _time_.
 
 First of all, I would like to thank Dr. Barbara Gruenwald, whose role cannot be overstated. She is the phenomenal force that curated the pancreatic ductal adenocarcinoma (PDAC) immunochemistry (IHC) dataset, helped conceptualize this toolbox, and drove this project forward. It started off as a script, with 300 lines of code in a single for loop, and progressively grew bigger as we added more stains and figured out new ways to interrogate the data. 
 
-Next, I would like to thank Henry Waterhouse and Bowen Zhang, who built the graphical user interface with me, from planning to launch. Foram Vyas, Emily Poulton, and Nathan Chan are the image analysis experts who quantified the IHC data and consistently offered intelligent and creative feedback. I would like to thank my supervisor, Dr. Rama Khokha, Dr. Paul Waterhouse, and the rest of the Khokha Lab for sharing your excitement about Hourglass.
+Next, I would like to thank Henry Waterhouse, who built the graphical user interface with me, from planning to launch. Foram Vyas, Emily Poulton, and Nathan Chan are the image analysis experts who quantified the IHC data and consistently offered intelligent and creative feedback. I would like to thank my supervisor, Dr. Rama Khokha, Dr. Paul Waterhouse, and the rest of the Khokha Lab for sharing your excitement about Hourglass.
 
 I also would like to thank the developers of R, python, and Kivy for facilitating the making of Hourglass, the StackOverflow community for having the answers to everything, Github for providing a platform in which this program is easily accessible, and RStudio for creating R markdown and bookdown to facilitate the making of the R package and this book. 
 

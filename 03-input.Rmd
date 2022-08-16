@@ -85,9 +85,9 @@ Its purpose is to showcase the functionalities of Hourglass and help users recre
 
 The following stains (referred to as "features" see [Terminology]) were quantified:	
 
-* T Cell markers = CD3, CD8
-* B Cell = CD20, CD27, CD5, PDL1
-* other = IL6, SMA
+* CD3, CD8 (which are T Cell markers)
+* CD20, CD27, CD5, PDL1 (B Cell markers)
+* IL6, SMA (other)
 
 **Parameters**
 
@@ -104,10 +104,10 @@ The parameters measured for each feature are:
      
 **Possible Feature Sets**
 
-* _TCell_ = CD3, CD8  
-* _BCell_ = CD20, CD27, CD5, PDL1  
-* _Immune_ = TCell, BCell  
-* _All_ = Immune, IL6, SMA  
+* **_TCell_** = CD3, CD8  
+* **_BCell_** = CD20, CD27, CD5, PDL1  
+* **_Immune_** = TCell, BCell  
+* **_All_** = Immune, IL6, SMA  
 
 **Possible Feature Parameters**
 
@@ -142,21 +142,4 @@ Download 3 csv files from https://github.com/kazeera/Hourglass, paths:
 
 **How to Access in R**
 
-This is a built-in dataset object in the Hourglass R package. Rename the example dataset variable (to make it smaller). Note: ds = **d**ata**s**et
-```{r}
-ds <- Hourglass::example_IHC_samples_dataset 
-```
-
-Since ds is a list object in R, the $ operator can be used to access individual elements (type data.frame).
-
-Preview of each data frame: 
-```{r}
-ds$vals[1:5, 1:3] # called numMat
-ds$rowAnn[1:5, 1:5]
-ds$colAnn[1:3, 1:4]
-
-# Uncomment lines below to access each element
-# ds$vals       # 102 rows 72 columns
-# ds$colAnn   # 72 rows  4 columns
-# ds$rowAnn  # 102 rows  12 columns
-```
+See [Example Dataset in R].

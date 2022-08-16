@@ -5,7 +5,7 @@ documentclass: book
 ---
 # How to Use the Desktop Application
 
-Before using, ensure R is installed (and rtools for Windows), see [Install R]. If you are unsure, open the R terminal and type the following command to see where R is located on your computer: 
+Before using, ensure R is installed (and rtools for Windows), see [Install R]. To check, open the R terminal and type the following command to see where R is located on your computer: 
 ```
 .libPaths()
 ```
@@ -266,7 +266,7 @@ knitr::include_graphics(c("images/app/GUI_7_run-hourglass.png"))
      * "Create output spreadsheet" button and navigate through the folder directory and save the Excel file locally. Modify if needed before pressing Run. 
      * **OR** press "Upload existing spreadsheet" and find and upload a locally existing Excel file.
       
-* Finally! Press the "Run Hourglass" button which interfaces to R (back-end). Hourglass will read from the [Output: Excel File], mentioned at the end of this chapter.  
+* Finally! Press the "Run Hourglass" button which interfaces to R (back-end). Hourglass will read from the [Output: Excel File].  
 
 This action will relay user options and data file paths to the Hourglass R package and calls on functions to run comparisons using established R plotting libraries, such as ggplot2 and pheatmap. An error window will pop up if there are any issues running Hourglass. 
 
@@ -294,7 +294,7 @@ There are the 4 tables/worksheets:
 
 This worksheet contains specifications for each run. The first column must be the exact names of the user options and the proceeding columns are comparisons, where each column is a comparison. 
 
-```{r, echo=FALSE, out.width="80%", fig.align = "center", fig.show='hold', "Example of Comparisons worksheet in output Excel file."}
+```{r, echo=FALSE, out.width="80%", fig.align = "center", fig.show='hold', fig.cap="Example of Comparisons worksheet in output Excel file."}
 knitr::include_graphics(c("images/excel/output-excel_comparisons.png"))
 ```
 
@@ -310,7 +310,7 @@ This may be useful if you have high,int,low for a CustomComparison (see [Pick Co
 
 Colors are the **same for all unique strata** for consistency. For example, "Patient_Cancer_Subtype-A", "Sample_Cancer_Subtype-A", "Sex-A", "Smoker-A", "Random-A" all have the strata "A" and therefore will be the same color (ie first color defined, duplicates are ignored).
 
-```{r, echo=FALSE, out.width="47%", fig.align = "center", fig.show='hold', fig.cap="Example of Colors worksheet in output Excel file."}
+```{r, echo=FALSE, out.width="43%", fig.align = "center", fig.show='hold', fig.cap="Example of Colors worksheet in output Excel file."}
 knitr::include_graphics(c("images/excel/output-excel_colors.png"))
 ```
 
@@ -318,7 +318,7 @@ knitr::include_graphics(c("images/excel/output-excel_colors.png"))
 
 This worksheet contains the table in [Define Feature Sets] "Tab 3: Define sets". 
 
-```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Example of Feature Sets worksheet in output Excel file."}
+```{r, echo=FALSE, out.width="68%", fig.align = "center", fig.show='hold', fig.cap="Example of Feature Sets worksheet in output Excel file."}
 knitr::include_graphics(c("images/excel/output-excel_feature-sets.png"))
 ```
 
@@ -327,6 +327,6 @@ knitr::include_graphics(c("images/excel/output-excel_feature-sets.png"))
 
 This worksheet contains the table in [Define Feature Sets] "Tab 2: Define parameters". 
 
-```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Example of Feature Parameters worksheet in output Excel file."}
+```{r, echo=FALSE, out.width="68%", fig.align = "center", fig.show='hold', fig.cap="Example of Feature Parameters worksheet in output Excel file."}
 knitr::include_graphics(c("images/excel/output-excel_feature-parameters.png"))
 ```

@@ -22,11 +22,11 @@ documentclass: book
    Provide user preferences to filter and subset large datasets and compare groups in an automated manner.
    
 ## Roadmap
-```{r, echo=FALSE, fig.align = "center"}
+```{r, echo=FALSE, fig.align="center", out.width="100%"}
 knitr::include_graphics("images/overall_inputoutput.png")
 ```
   
-## Introduction
+## Is this you?
 		      
 You are a researcher that has access to multiple tumors samples from different patients. You have deidentified information about each patient's medication history, sex, smoker status, disease-free survival time, and so much more. You also sectioned and stained the tissue samples with 40 cell type markers and took images of them using a microscope. You used a bioimage analysis software to quantify the area, number of stained pixels, etc. 
 
@@ -43,9 +43,9 @@ To enable systematic and automated analysis of such multiparametric bioimage ana
 
 1) A broad range of multi-layer data can be fed into Hourglass. For example, in the data acquisition and merging steps, numerous stains are applied to TMA and different stain types **bringing all the stains together plus all the clinical annotations**. 
 
-2) Next, Hourglass integrates and streamlines all that information **based on user specifications and provies visualizations**. 
+2) Hourglass integrates and streamlines all that information **based on user specifications and provies visualizations**. 
 
-3) Finally, the Hourglass widens, giving the user the opportunity to visually interact with their data and to be highly systematic in their comparison. Rather than analyzing each stain individually as commonly done, Hourglass provides a way to **integrate and cross-compare multiple stains across one or multiple samples**. 
+3) Rather than analyzing each stain individually as commonly done, Hourglass provides a way to **integrate and cross-compare multiple stains across one or multiple samples**. 
 
 
 **Graphical user interface supports smooth navigation through Hourglass workflow.**
@@ -142,7 +142,7 @@ knitr::include_graphics("images/annotations.png")
 * **Feature** = stains, genes, markers, etc (e.g. Gene1, ProteinX, IL6)
 * **Parameters** = readouts, measurements of features (e.g. Numbers of Positive Pixels, Percent Positive Pixels, Stained Area mm^2,Total Area mm^2)
 
-```{r, echo=FALSE, fig.align="center"}
+```{r, echo=FALSE, out.width="100%", fig.align="center"}
 knitr::include_graphics("images/features_vs_parameters2.png")
 ```
 
@@ -181,7 +181,7 @@ These different analysis levels can be utilized alone or in combination, i.e. th
 
 
 ## Comparisons and Feature Sets
-```{r, echo=FALSE}
+```{r, echo=FALSE, out.width="90%"}
 knitr::include_graphics("images/workflow.JPG")
 ```
 

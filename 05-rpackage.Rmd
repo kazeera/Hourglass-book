@@ -5,27 +5,73 @@ documentclass: book
 ---
 # How to Use the R Package
 
-We constructed and compiled the relevant individual data filtering functions (such as subset retrieval, imputation and outlier removal) and plotting functions (such as boxplot, heatmap, correlation matrix, survival plot visualizations) into the package.
+We constructed new functions and compiled relevant individual data filtering functions (such as subset retrieval, imputation and outlier removal) and plotting functions (such as boxplot, heatmap, correlation matrix, survival plot visualizations).
+
+## Outline of Code
+
+```{r, echo=FALSE, out.width="80%", fig.align = "center", fig.show='hold', fig.cap="Workflow: Order of functions in Hourglass R package."}
+knitr::include_graphics(c("images/R_functions.png"))
+```
+
 
 ## Installation and Usage
-You may install the Hourglass R package. [Click here](https://github.com/kazeera/Hourglass) for installation instructions and source code.
 
-Example. Prepare dataframe. Make a boxplot. Make a correlation plot.
+1. See [Install R package (optional)] for installation instructions and source code.
+2. Once you have installed Hourglass, load it into R using the following code:
+```
+library(Hourglass)
+```
+
+## Run Hourglass
+The best way to run Hourglass is from the [Output: Excel File]. Download a template.
+```
+run_from_excel("path/to/excel.xlsx)
+```
+Hourglass plots will be created in this directory.
+
 ## Dataset Object 
+Note: ds = **d**ata**s**et
 
-Similar to the structural input of many assay-based omics analysis R packages, such as struc, singleCellExperiment, .. , Hourglass takes in 3 main data files 1) numeric matrix file (sample by feature matrix), 2) row annotations (including clinical and sample descriptions), and 3) column annotations (including feature and parameter descriptions). To simplify the experience for R users with all levels of experience, this standalone R package was designed to keep accessibility in mind. Therefore, the structure of the dataset object is a list() object. 
 Similar to tools that explore omics and meta data structures, Hourglass characteristically takes in three data input files as part of the dataset object:
-1) numMat - numeric matrix (rows = patients/samples; columns = features/parameters), 
-2) rowAnn - row annotations (clinical and sample descriptions), and 
-3) colAnn - column annotations (feature and parameter descriptions). 
-
 
 In R: dataset or **ds** is a **list** object. You can access the following elements using the $ operator. 
 
 | Element Name | Description | Data Structure | Code to Access |
-|:--- |:--- |:--- |:---|
-| name | The name of dataset or experiment | String | ds$name | 
-| mat | Numeric matrix (samples/patients as rows and features as columns) | Dataframe | ds$mat |
-| rowAnn | Row annotations/metadata (describes rows or samples/patients) | Dataframe | ds$rowAnn |
-| colAnn | Column annotations (describes columns or features of numeric matrix) | Dataframe | ds$colAnn |
-> **Code to Access** meaning: Since the latter 3 elements are dataframes, you may access the column data nesting the $ operator and using standard R operations. Ex. ds$rowAnn returns your table, ds$rowAnn$Smoker returns the info for each row/patient/sample.
+|:--- |:--- |:--- |:--- |
+| name | The name of dataset or experiment | String | ```ds$name``` | 
+| vals | Numeric matrix "numMat" (rows = patients/samples; columns = features/parameters) | Data frame | ```ds$mat``` |
+| rowAnn | Row annotations/metadata (describes rows or samples/patients) | Data frame | ```ds$rowAnn``` |
+| colAnn | Column annotations (describes columns or features of numeric matrix) | Data frame | ```ds$colAnn``` |
+
+To create the dataset object, use Hourglass::make_dataset_ob(), and pass in 3 dataframes for vals, rowAnn, and colAnn. You may use the Hourglass::read_file() function to import tab or comma delimited files (see [The 3 Files]).
+```
+ds <- make_dataset_ob(
+  vals = read_file("ExampleData2/Example_IHC_sample_vals.csv"), 
+  colAnn = read_file("ExampleData2/Example_IHC_sample_colAnn.csv"), 
+  rowAnn = read_file("ExampleData2/Example_IHC_sample_rowAnn.csv"), 
+  remove_outliers = T
+)
+```
+
+## Example Dataset in R
+
+This is a built-in dataset object in the Hourglass R package. Rename the example dataset variable (to make it smaller). 
+```{r}
+ds <- Hourglass::example_IHC_samples_dataset 
+```
+
+Since ds is a list object in R, the $ operator can be used to access individual elements (type data.frame).
+
+Preview of each data frame: 
+```{r}
+ds$vals[1:5, 1:3] # called numMat
+ds$rowAnn[1:5, 1:5]
+ds$colAnn[1:3, 1:4]
+
+# Uncomment lines below to access each element
+# ds$vals       # 102 rows 72 columns
+# ds$colAnn   # 72 rows  4 columns
+# ds$rowAnn  # 102 rows  12 columns
+```
+
+

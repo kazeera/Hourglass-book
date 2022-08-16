@@ -144,7 +144,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="3.1" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#tldr"><i class="fa fa-check"></i><b>3.1</b> tl;dr<span></span></a></li>
 <li class="chapter" data-level="3.2" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#roadmap"><i class="fa fa-check"></i><b>3.2</b> Roadmap<span></span></a></li>
-<li class="chapter" data-level="3.3" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#introduction"><i class="fa fa-check"></i><b>3.3</b> Introduction<span></span></a></li>
+<li class="chapter" data-level="3.3" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#is-this-you"><i class="fa fa-check"></i><b>3.3</b> Is this you?<span></span></a></li>
 <li class="chapter" data-level="3.4" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#is-this-tool-for-me"><i class="fa fa-check"></i><b>3.4</b> Is this tool for me?<span></span></a></li>
 <li class="chapter" data-level="3.5" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#strengths"><i class="fa fa-check"></i><b>3.5</b> Strengths<span></span></a></li>
 <li class="chapter" data-level="3.6" data-path="what-is-hourglass.html"><a href="what-is-hourglass.html#limitations"><i class="fa fa-check"></i><b>3.6</b> Limitations<span></span></a></li>
@@ -173,7 +173,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html"><i class="fa fa-check"></i><b>6</b> How to Use the R Package<span></span></a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#installation-and-usage"><i class="fa fa-check"></i><b>6.1</b> Installation and Usage<span></span></a></li>
+<li class="chapter" data-level="6.1" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#outline-of-code"><i class="fa fa-check"></i><b>6.1</b> Outline of Code<span></span></a></li>
+<li class="chapter" data-level="6.2" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#installation-and-usage"><i class="fa fa-check"></i><b>6.2</b> Installation and Usage<span></span></a></li>
+<li class="chapter" data-level="6.3" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#run-hourglass-1"><i class="fa fa-check"></i><b>6.3</b> Run Hourglass<span></span></a></li>
+<li class="chapter" data-level="6.4" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#dataset-object"><i class="fa fa-check"></i><b>6.4</b> Dataset Object<span></span></a></li>
+<li class="chapter" data-level="6.5" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#example-dataset-in-r"><i class="fa fa-check"></i><b>6.5</b> Example Dataset in R<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="output-plot-types.html"><a href="output-plot-types.html"><i class="fa fa-check"></i><b>7</b> Output Plot Types<span></span></a>
 <ul>
@@ -203,17 +207,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="how-to-use-the-r-package" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">6</span> How to Use the R Package<a href="how-to-use-the-r-package.html#how-to-use-the-r-package" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>We constructed and compiled the relevant individual data filtering functions (such as subset retrieval, imputation and outlier removal) and plotting functions (such as boxplot, heatmap, correlation matrix, survival plot visualizations) into the package.</p>
-<div id="installation-and-usage" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Installation and Usage<a href="how-to-use-the-r-package.html#installation-and-usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You may install the Hourglass R package. <a href="https://github.com/kazeera/Hourglass">Click here</a> for installation instructions and source code.</p>
-<p>Example. Prepare dataframe. Make a boxplot. Make a correlation plot.
-## Dataset Object</p>
-<p>Similar to the structural input of many assay-based omics analysis R packages, such as struc, singleCellExperiment, .. , Hourglass takes in 3 main data files 1) numeric matrix file (sample by feature matrix), 2) row annotations (including clinical and sample descriptions), and 3) column annotations (including feature and parameter descriptions). To simplify the experience for R users with all levels of experience, this standalone R package was designed to keep accessibility in mind. Therefore, the structure of the dataset object is a list() object.
-Similar to tools that explore omics and meta data structures, Hourglass characteristically takes in three data input files as part of the dataset object:
-1) numMat - numeric matrix (rows = patients/samples; columns = features/parameters),
-2) rowAnn - row annotations (clinical and sample descriptions), and
-3) colAnn - column annotations (feature and parameter descriptions).</p>
+<p>We constructed new functions and compiled relevant individual data filtering functions (such as subset retrieval, imputation and outlier removal) and plotting functions (such as boxplot, heatmap, correlation matrix, survival plot visualizations).</p>
+<div id="outline-of-code" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Outline of Code<a href="how-to-use-the-r-package.html#outline-of-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-21"></span>
+<img src="images/R_functions.png" alt="Workflow: Order of functions in Hourglass R package." width="80%" />
+<p class="caption">
+Figure 6.1: Workflow: Order of functions in Hourglass R package.
+</p>
+</div>
+</div>
+<div id="installation-and-usage" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Installation and Usage<a href="how-to-use-the-r-package.html#installation-and-usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>See <a href="installation.html#install-r-package-optional">Install R package (optional)</a> for installation instructions and source code.</li>
+<li>Once you have installed Hourglass, load it into R using the following code:</li>
+</ol>
+<pre><code>library(Hourglass)</code></pre>
+</div>
+<div id="run-hourglass-1" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Run Hourglass<a href="how-to-use-the-r-package.html#run-hourglass-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The best way to run Hourglass is from the <a href="how-to-use-the-desktop-application.html#output-excel-file">Output: Excel File</a>. Download a template.</p>
+<pre><code>run_from_excel(&quot;path/to/excel.xlsx)</code></pre>
+<p>Hourglass plots will be created in this directory.</p>
+</div>
+<div id="dataset-object" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Dataset Object<a href="how-to-use-the-r-package.html#dataset-object" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Note: ds = <strong>d</strong>ata<strong>s</strong>et</p>
+<p>Similar to tools that explore omics and meta data structures, Hourglass characteristically takes in three data input files as part of the dataset object:</p>
 <p>In R: dataset or <strong>ds</strong> is a <strong>list</strong> object. You can access the following elements using the $ operator.</p>
 <table>
 <colgroup>
@@ -235,19 +256,65 @@ Similar to tools that explore omics and meta data structures, Hourglass characte
 <td align="left">name</td>
 <td align="left">The name of dataset or experiment</td>
 <td align="left">String</td>
-<td align="left">ds<span class="math inline">\(name | | mat | Numeric matrix (samples/patients as rows and features as columns) | Dataframe | ds\)</span>mat</td>
+<td align="left"><code>ds$name</code></td>
 </tr>
 <tr class="even">
+<td align="left">vals</td>
+<td align="left">Numeric matrix “numMat” (rows = patients/samples; columns = features/parameters)</td>
+<td align="left">Data frame</td>
+<td align="left"><code>ds$mat</code></td>
+</tr>
+<tr class="odd">
 <td align="left">rowAnn</td>
 <td align="left">Row annotations/metadata (describes rows or samples/patients)</td>
-<td align="left">Dataframe</td>
-<td align="left">ds<span class="math inline">\(rowAnn | | colAnn | Column annotations (describes columns or features of numeric matrix) | Dataframe | ds\)</span>colAnn</td>
+<td align="left">Data frame</td>
+<td align="left"><code>ds$rowAnn</code></td>
+</tr>
+<tr class="even">
+<td align="left">colAnn</td>
+<td align="left">Column annotations (describes columns or features of numeric matrix)</td>
+<td align="left">Data frame</td>
+<td align="left"><code>ds$colAnn</code></td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Code to Access</strong> meaning: Since the latter 3 elements are dataframes, you may access the column data nesting the $ operator and using standard R operations. Ex. ds<span class="math inline">\(rowAnn returns your table, ds\)</span>rowAnn$Smoker returns the info for each row/patient/sample.</p>
-</blockquote>
+<p>To create the dataset object, use Hourglass::make_dataset_ob(), and pass in 3 dataframes for vals, rowAnn, and colAnn. You may use the Hourglass::read_file() function to import tab or comma delimited files (see <a href="input-data.html#the-3-files">The 3 Files</a>).</p>
+<pre><code>ds &lt;- make_dataset_ob(
+  vals = read_file(&quot;ExampleData2/Example_IHC_sample_vals.csv&quot;), 
+  colAnn = read_file(&quot;ExampleData2/Example_IHC_sample_colAnn.csv&quot;), 
+  rowAnn = read_file(&quot;ExampleData2/Example_IHC_sample_rowAnn.csv&quot;), 
+  remove_outliers = T
+)</code></pre>
+</div>
+<div id="example-dataset-in-r" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Example Dataset in R<a href="how-to-use-the-r-package.html#example-dataset-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This is a built-in dataset object in the Hourglass R package. Rename the example dataset variable (to make it smaller).</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="how-to-use-the-r-package.html#cb7-1" aria-hidden="true" tabindex="-1"></a>ds <span class="ot">&lt;-</span> Hourglass<span class="sc">::</span>example_IHC_samples_dataset </span></code></pre></div>
+<p>Since ds is a list object in R, the $ operator can be used to access individual elements (type data.frame).</p>
+<p>Preview of each data frame:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="how-to-use-the-r-package.html#cb8-1" aria-hidden="true" tabindex="-1"></a>ds<span class="sc">$</span>vals[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>] <span class="co"># called numMat</span></span></code></pre></div>
+<pre><code>##                    CD20_Area CD20_Het.Score CD20_Negative.Percent
+## C0_2721_NOOBV4101T   1025027             10                 58.91
+## C9_2721_QCECJ5772H   2405671              1                 53.44
+## E4_2721_KNFYL5159D   1283798              4                    NA
+## G5_3420_PORPL4558C    564828              4                 70.92
+## B4_3327_BWDLJ3279D   1096962              1                 35.22</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="how-to-use-the-r-package.html#cb10-1" aria-hidden="true" tabindex="-1"></a>ds<span class="sc">$</span>rowAnn[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code></pre></div>
+<pre><code>##                             Unique_ID Patient_ID TissueType Smoker Sex
+## C0_2721_NOOBV4101T C0_2721_NOOBV4101T       2721     Stroma   &lt;NA&gt;   M
+## C9_2721_QCECJ5772H C9_2721_QCECJ5772H       2721     Stroma   &lt;NA&gt;   M
+## E4_2721_KNFYL5159D E4_2721_KNFYL5159D       2721     Stroma   &lt;NA&gt;   M
+## G5_3420_PORPL4558C G5_3420_PORPL4558C       3420     Stroma   &lt;NA&gt;   M
+## B4_3327_BWDLJ3279D B4_3327_BWDLJ3279D       3327     Stroma   &lt;NA&gt;   F</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="how-to-use-the-r-package.html#cb12-1" aria-hidden="true" tabindex="-1"></a>ds<span class="sc">$</span>colAnn[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span></code></pre></div>
+<pre><code>##                       Feature        Parameter isNumeric Parameter_of_interest
+## CD20_Area                CD20             Area      TRUE                 FALSE
+## CD20_Het.Score           CD20        Het.Score      TRUE                  TRUE
+## CD20_Negative.Percent    CD20 Negative.Percent      TRUE                  TRUE</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="how-to-use-the-r-package.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Uncomment lines below to access each element</span></span>
+<span id="cb14-2"><a href="how-to-use-the-r-package.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ds$vals       # 102 rows 72 columns</span></span>
+<span id="cb14-3"><a href="how-to-use-the-r-package.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ds$colAnn   # 72 rows  4 columns</span></span>
+<span id="cb14-4"><a href="how-to-use-the-r-package.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ds$rowAnn  # 102 rows  12 columns</span></span></code></pre></div>
 
 </div>
 </div>
@@ -308,20 +375,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

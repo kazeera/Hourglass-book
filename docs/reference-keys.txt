@@ -1,4 +1,6 @@
 fig:unnamed-chunk-1
+fig:unnamed-chunk-7
+fig:unnamed-chunk-8
 fig:unnamed-chunk-9
 fig:unnamed-chunk-10
 fig:unnamed-chunk-11
@@ -20,7 +22,7 @@ install-r-package-optional
 what-is-hourglass
 tldr
 roadmap
-introduction
+is-this-you
 is-this-tool-for-me
 strengths
 limitations
@@ -43,7 +45,11 @@ customize-colors
 run-hourglass
 output-excel-file
 how-to-use-the-r-package
+outline-of-code
 installation-and-usage
+run-hourglass-1
+dataset-object
+example-dataset-in-r
 output-plot-types
 navigating-output-folder
 types-of-plots
