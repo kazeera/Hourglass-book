@@ -86,48 +86,6 @@ This allows user to customize it again. Once the button is run (or alternatively
 * Integration of multiple independent datasets, e.g. can't compare proteome vs transcriptome
 * Image analysis, i.e. read and interpret raw image files
 
-## Strengths
-There are multiple benefits of using Hourglass as a framework for multiparametric dataset interrogation.
-
-
-**Accessibility**
-
-* Accessible for non-expert users, fully reproducible and open-source
-* Makes publication-ready plots via robust and automated pipeline reduces manual work 
-* Leverages metrics of heterogeneity from standard tissue microarray designs
-
-
-**Query and Exploration**
-
-* Customizable and endless combinations of selections of what labels/annotations to compare. Thus, multiple layers of information from TMAs are extracted but can only be understood or interpreted via a smart way of visualizing the data to make sense of it. Hourglass is the tool to subset, integrate, and pick specific parameters to appreciate all of the information from a dataset.
-
-* Different levels of analysis (global or by patient vs regional or by sample) can be run. Common practice is to average these values and collapse by patient, however a wealth of information is contained in the sample data and intra-patient differences.
-
-* Resolves regional vs global differences via paired analysis and heterogeneity barplots. Multiple layers of information from TMAs are extracted but can only be understood or interpreted via a smart way of visualizing the data to make sense of it.
-
-**Reproducibility**
-
-* As the nature of such analyses is iterative, and users often return to refine or add to an analysis after extended periods of time, Hourglass supports a high level of reproducibility. 
-* Each analysis produces a report (Excel file) sufficient to easily reproduce that analysis and also produce different additional versions of that analysis with identical settings.
-
-**Data cleaning and wrangling**
-
-* Subset input table with all parameters to be compared  
-* Filtering - Incorporates exclusion/inclusion criteria, within subgroups. For example, a researcher may want to exclude certain patient subgroups or focus on a subset of a 40 stain panel or pre-treated patients may be excluded to observe the effects of basic biology.
-* Imputation for dropouts. Often, datasets are patchy containing NA values.
-* Supports removal of outliers below the first quartile and above the third.
-
-## Limitations
-Hourglass does not discriminate where the data comes from. Hourglass facilitates efficient knowledge extraction from complex datasets. However, it does have certain weaknesses. 
-
-**Minimum number of stains for it to be useful**
-
-* It is not useful when you have 5 samples and one stain/ typical use case when you have the two. You can still benefit from subsetting.
-* Feature sets have to contain 3 or more features in order to be visualized.
-
-**Time commitment**
-* While Hourglass automatically creates publication-ready plots, it is still semi-automated, the "semi" meaning that you as a user are required to do some work. Firstly, Hourglass requires user tailors its input parameters to guide the analysis. Next, hundreds to thousands of plots will be created. While you may be swimming in a pool of beautiful plots, it may become tedious to look through all the files. However, the organized file output structure seeks to mitigate this through order of folder names: By Patient/By Sample > Imputed or not > Comparison > Feature Set 
-
 ## Terminology
 
 * **Annotation** = any discrete label or description for features/parameters and patients/samples. See [Input Data] for more information. 
@@ -181,7 +139,7 @@ These different analysis levels can be utilized alone or in combination, i.e. th
 
 
 ## Comparisons and Feature Sets
-```{r, echo=FALSE, out.width="90%"}
+```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/workflow.JPG")
 ```
 
@@ -209,3 +167,44 @@ The power lies in the **manipulation of both axes** of a numeric sample by featu
 Any label that is assigned to patients can be used as a main comparison. For example, in an Hourglass-independent manner, annotations for patients can be derived from transcriptomic data such as Moffitt subtypes or genomic calls such as KRAS wild-type vs KRAS mutated. On the other axis, biologically relevant features and corresponding parameters can be grouped to make feature sets such as T cell markers and immune markers. Consequently, by compounding multiple sets with multiple sample or patient comparisons, the potential for data exploration is exponentiated.
  
 ![](images/making_row_annotations.png)
+
+## Strengths
+There are multiple benefits of using Hourglass as a framework for multiparametric dataset interrogation.
+
+
+**Accessibility**
+
+* Accessible for non-expert users, fully reproducible and open-source
+* Makes publication-ready plots via robust and automated pipeline reduces manual work 
+* Leverages metrics of heterogeneity from standard tissue microarray designs
+
+**Query and Exploration**
+
+* Customizable and endless combinations of selections of what labels/annotations to compare. Thus, multiple layers of information from TMAs are extracted but can only be understood or interpreted via a smart way of visualizing the data to make sense of it. Hourglass is the tool to subset, integrate, and pick specific parameters to appreciate all of the information from a dataset.
+
+* Different levels of analysis (global or by patient vs regional or by sample) can be run. Common practice is to average these values and collapse by patient, however a wealth of information is contained in the sample data and intra-patient differences.
+
+* Resolves regional vs global differences via paired analysis and heterogeneity barplots. Multiple layers of information from TMAs are extracted but can only be understood or interpreted via a smart way of visualizing the data to make sense of it.
+
+**Reproducibility**
+
+* As the nature of such analyses is iterative, and users often return to refine or add to an analysis after extended periods of time, Hourglass supports a high level of reproducibility. 
+* Each analysis produces a report (Excel file) sufficient to easily reproduce that analysis and also produce different additional versions of that analysis with identical settings.
+
+**Data cleaning and wrangling**
+
+* Subset input table with all parameters to be compared  
+* Filtering - Incorporates exclusion/inclusion criteria, within subgroups. For example, a researcher may want to exclude certain patient subgroups or focus on a subset of a 40 stain panel or pre-treated patients may be excluded to observe the effects of basic biology.
+* Imputation for dropouts. Often, datasets are patchy containing NA values.
+* Supports removal of outliers below the first quartile and above the third.
+
+## Limitations
+Hourglass does not discriminate where the data comes from. Hourglass facilitates efficient knowledge extraction from complex datasets. However, it does have certain weaknesses. 
+
+**Minimum number of stains for it to be useful**
+
+* It is not useful when you have 5 samples and one stain/ typical use case when you have the two. You can still benefit from subsetting.
+* Feature sets have to contain 3 or more features in order to be visualized.
+
+**Time commitment**
+* While Hourglass automatically creates publication-ready plots, it is still semi-automated, the "semi" meaning that you as a user are required to do some work. Firstly, Hourglass requires user tailors its input parameters to guide the analysis. Next, hundreds to thousands of plots will be created. While you may be swimming in a pool of beautiful plots, it may become tedious to look through all the files. However, the organized file output structure seeks to mitigate this through order of folder names: By Patient/By Sample > Imputed or not > Comparison > Feature Set 
