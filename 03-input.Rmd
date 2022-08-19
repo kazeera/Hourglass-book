@@ -134,11 +134,13 @@ The following trends are:
 
 **How to Access Files**
 
-Download 3 csv files from https://github.com/kazeera/Hourglass, paths:
+Download 3 csv files [here](https://github.com/kazeera/Hourglass/tree/main/example/ExampleData2), file names:
 
-* "ExampleData2/Example_IHC_sample_colAnn.csv" 
-* "ExampleData2/Example_IHC_sample_rowAnn.csv"
-* "ExampleData2/Example_IHC_sample_vals.csv"  
+* "Example_IHC_sample_colAnn.csv" (colAnn)
+* "Example_IHC_sample_rowAnn.csv" (rowAnn)
+* "Example_IHC_sample_vals.csv" (numMat)  
+
+A corresponding example analysis that is the output of the desktop application, serves as the log file for user options and serves input into the R side (See [Output: Excel File] can downloaded found [here](https://github.com/kazeera/Hourglass/blob/main/example/Example_IHC_sample_UserOptions.xlsx).
 
 **How to Access in R**
 

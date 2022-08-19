@@ -23,7 +23,8 @@ library(Hourglass)
 ```
 
 ## Usage
-The best way to run Hourglass is from the [Output: Excel File]. Download a template.
+The best way to run Hourglass is from the [Output: Excel File]. Download a template [here](https://github.com/kazeera/Hourglass/blob/main/example/Template_UserOptions.xlsx). Note: Keep in mind that all inputs are case-sensitive!
+
 ```
 run_from_excel("path/to/excel.xlsx)
 ```
@@ -74,4 +75,7 @@ ds$colAnn[1:3, 1:4]
 # ds$rowAnn  # 102 rows  12 columns
 ```
 
-
+An example analysis run is provided as well (each element of the list object represents a worksheet from [Output: Excel File]).
+```
+example_analysis <- Hourglass::example_IHC_samples_run
+```

@@ -15,6 +15,18 @@ fig:unnamed-chunk-19
 fig:unnamed-chunk-20
 fig:unnamed-chunk-21
 fig:unnamed-chunk-24
+fig:unnamed-chunk-25
+fig:unnamed-chunk-26
+fig:unnamed-chunk-27
+fig:unnamed-chunk-28
+fig:unnamed-chunk-29
+fig:unnamed-chunk-30
+fig:unnamed-chunk-31
+fig:unnamed-chunk-32
+fig:unnamed-chunk-33
+fig:unnamed-chunk-34
+fig:unnamed-chunk-35
+fig:unnamed-chunk-36
 about
 installation
 install-r
@@ -23,7 +35,6 @@ install-r-package-optional
 what-is-hourglass
 tldr
 roadmap
-is-this-you
 is-this-tool-for-me
 terminology
 by-patient-vs.-by-sample
@@ -55,5 +66,5 @@ output-plot-types
 navigating-output-folder
 descriptions
 file-information-and-location
-quality-control
+quality-control-qc-plots
 feature-sets

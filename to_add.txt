@@ -1,0 +1,37 @@
+
+## Is this you?
+		      
+You are a researcher that has access to multiple tumors samples from different patients. You have deidentified information about each patient's medication history, sex, smoker status, disease-free survival time, and so much more. You also sectioned and stained the tissue samples with 40 cell type markers and took images of them using a microscope. You used a bioimage analysis software to quantify the area, number of stained pixels, etc. 
+
+Now you have a huge table with both patient information and stain quantification! You really wanted to determine the relationship between drug history and a group of markers. You are overwhelmed because you do not know where to start and your local bioinformatician is swamped with work. No need to fear, now you have Hourglass and you can easily uncover hidden secrets by just asking questions!
+
+[insert comic / video]
+
+Now you may want to exclude certain patient subgroups or focus on a subset of a 40 stain panel. For example, pre-treated patients may be excluded to observe the effects of basic biology. A parallel analysis can be coupled including all patients. Paired analysis between samples belonging to the sample patient may uncover intra-patient differences rather than aggregated global changes between patients. Keep the questions coming, Hourglass has you covered!
+
+
+**Hourglass enables rapid semi-automated knowledge extraction from large datasets.** 
+
+To enable systematic and automated analysis of such multiparametric bioimage analysis datasets, we constructed a software toolkit called Hourglass. The principal capabilities are to take in large multiparametric datasets with extensive annotation, to integrate based on user specifications, and to visualize.
+
+1) A broad range of multi-layer data can be fed into Hourglass. For example, in the data acquisition and merging steps, numerous stains are applied to TMA and different stain types **bringing all the stains together plus all the clinical annotations**. 
+
+2) Hourglass integrates and streamlines all that information **based on user specifications and provies visualizations**. 
+
+3) Rather than analyzing each stain individually as commonly done, Hourglass provides a way to **integrate and cross-compare multiple stains across one or multiple samples**. 
+
+
+**Graphical user interface supports smooth navigation through Hourglass workflow.**
+
+Hourglass as a software application was designed to be intuitive for non-expert users while also supporting powerful and customizable analysis. Each tab from the GUI displayed here exemplifies a different aspect of the software: 
+
+* [Upload Files] - Easily **accessible** for non-expert users.
+* [Customize Colors] - Tremendously **customizable**, e.g. you may input hex codes for consistent color schemes.
+* [Advanced Options] - **Advanced parameters** may be changed for experienced users to refine their analysis.
+
+The GUI contains sequential tabs taking users step-by-step through the Hourglass algorithm). A user interacts with data in a visual way and is obligated to set a clear structure for the analysis that can then easily be reproduced for any sub-analysis. 
+
+The Hourglass application creates an Excel file that serves as input to the R package with the same name.
+
+This allows user to customize it again. Once the button is run (or alternatively in R, the run_from_excel function is used), it interfaces to the R statistical environment on local systems and runs as a sequential background process. The R package we created leverages newly-created and existing R functions for data wrangling and plotting and creates the publication ready plots in a single folder hierarchy.
+ 

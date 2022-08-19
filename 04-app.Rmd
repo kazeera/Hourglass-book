@@ -278,6 +278,7 @@ The purpose of this application is to create an Excel file that
 1) will be read into R 
 2) act as a log file for run specifications
 
+Download output Excel file template [here](https://github.com/kazeera/Hourglass/blob/main/example/Template_UserOptions.xlsx).
 
 There are the 4 tables/worksheets:
 
