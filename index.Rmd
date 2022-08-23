@@ -39,7 +39,7 @@ I also would like to thank the developers of R, python, and Kivy for facilitatin
 **Contributors**  
   
 ```{r, echo=FALSE, out.width="40%", fig.show='hold'}
-knitr::include_graphics(c("images/contributors1.png","images/contributors2.png"))
+knitr::include_graphics(c("images/contributors11.png","images/contributors21.png"))
 ```
   
   
