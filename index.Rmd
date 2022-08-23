@@ -1,6 +1,6 @@
 --- 
 title: "User's Guide for Hourglass"
-author: "By Kazeera Aliar"
+author: "Written by Kazeera Aliar"
 date: "last revised Aug 23, 2022"
 site: bookdown::bookdown_site
 documentclass: book
@@ -27,9 +27,9 @@ knitr::include_graphics(c("images/Hourglass_art.png"))
 
 We are ready to share Hourglass with the world. It's about _time_.
 
-First of all, I would like to thank Dr. Barbara Grunwald, whose role cannot be overstated. She is the phenomenal force that helped conceptualize this toolbox and drove this project forward. It started off as a script, with 300 lines of code in a single for loop, and progressively grew bigger as we added more stains and figured out new ways to interrogate the data. 
+First of all, I would like to thank Dr. Barbara Grünwald, whose role cannot be overstated. She is the phenomenal force that helped conceptualize this toolbox and drove this project forward. It started off as a script, with 300 lines of code in a single for loop, and progressively grew bigger as we added more stains and figured out new ways to interrogate the data. 
 
-Next, I would like to thank Henry Waterhouse, who built the graphical user interface with me, from planning to launch. Bowen Zhang and Parinaz Nasr Esfahani also supported software development and testing. Foram Vyas, Emily Poulton, and Nathan Chan are the image analysis experts who quantified the IHC data and consistently offered intelligent and creative feedback. I would like to thank my supervisor, Dr. Rama Khokha, Dr. Paul Waterhouse, and the rest of the Khokha Lab ([https://khokhalab.ca/](https://khokhalab.ca/)) for sharing your excitement about Hourglass.
+Next, I would like to thank Henry Waterhouse, who built the graphical user interface with me, from planning to launch. Bowen Zhang and Parinaz Nasr Esfahani also supported software development and testing. Foram Vyas, Emily Poulton, and Nathan Chan are the image analysis experts who quantified the IHC data and consistently offered intelligent and creative feedback. I would like to thank my supervisor, Dr. Rama Khokha, Dr. Paul Waterhouse, Niklas Krebs, and the rest of the Khokha Lab ([https://khokhalab.ca/](https://khokhalab.ca/)) for sharing their excitement about Hourglass.
 
 I also would like to thank the developers of R, python, and Kivy for facilitating the making of Hourglass, the StackOverflow community for having the answers to everything, Github for providing a platform in which this program is easily accessible, and RStudio for creating R markdown and bookdown to facilitate the making of the R package and this book. 
 
@@ -38,16 +38,14 @@ I also would like to thank the developers of R, python, and Kivy for facilitatin
   
 **Contributors**  
   
-```{r, echo=FALSE, out.width="40%", fig.show='hold'}
+```{r, echo=FALSE, out.width="70%", fig.show='hold'}
 knitr::include_graphics(c("images/contributors11.png","images/contributors21.png"))
 ```
   
   
 **Source Code for Book**  
-  
 See Github repository ([link](https://github.com/kazeera/Hourglass-book)).
   
   
-**Contact Us**
-  
+**Contact Us**  
 Open a new issue on Github ([link](https://github.com/kazeera/Hourglass/issues)).

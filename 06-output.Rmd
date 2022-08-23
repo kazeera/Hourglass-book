@@ -8,7 +8,7 @@ documentclass: book
 ## Navigating Output Folder
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center", fig.show='hold', fig.cap="Hourglass Output Folder Hierarchy."}
-knitr::include_graphics(c("images/output_overview.PNG"))
+knitr::include_graphics(c("images/output_overview.png"))
 ```
 
 See: Video tutorial.
