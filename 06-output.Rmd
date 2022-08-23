@@ -47,8 +47,8 @@ knitr::include_graphics(c("images/plots/boxplot overview.png"))
 
 6.  **Individual Boxplot**
 + Visualizes data points for each features/parameter combination and relevant statistics from comparing strata.
-```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="Individual boxplot created by Hourglass."}
-knitr::include_graphics(c("images/plots/boxplot indiv.png"))
+```{r, echo=FALSE, out.width="45%", fig.align = "center", fig.show='hold', fig.cap="Individual boxplot (left) and example with real data (right) created by Hourglass."}
+knitr::include_graphics(c("images/plots/boxplot indiv.png", "images/plots/example/boxplot indiv ex.png"))
 ```
 
 7.  **Profile Barplot**

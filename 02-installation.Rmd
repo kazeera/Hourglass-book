@@ -63,7 +63,7 @@ Option 1. Go to Add or Remove programs
 Option 2. Open Folder location for Hourglass. Press on file unins000.exe to uninstall.  
 
 **Uninstall application on MacOS:**  
-Delete Hourglass application.  
+Delete Hourglass application by clicking on icon and "Move to Trash".  
 
 **Uninstall R package**   
 Open R console and enter the following command:

@@ -21,7 +21,7 @@
   <meta name="twitter:description" content="This is the official documentation for Hourglass - learn how to install and utilize the tool." />
   
 
-<meta name="author" content="Kazeera Aliar" />
+<meta name="author" content="By Kazeera Aliar" />
 
 
 
@@ -218,7 +218,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="roadmap" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Roadmap<a href="what-is-hourglass.html#roadmap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
 <img src="images/overall_inputoutput.png" alt="Schematic depicting Hourglass pipeline. Top: Collecting data. Middle: Hourglass. Bottom: Output visualizations in structured folder hierarchy." width="100%" />
 <p class="caption">
 Figure 2.1: Schematic depicting Hourglass pipeline. Top: Collecting data. Middle: Hourglass. Bottom: Output visualizations in structured folder hierarchy.
@@ -258,7 +258,7 @@ Figure 2.1: Schematic depicting Hourglass pipeline. Top: Collecting data. Middle
 <li>Patient or sample annotations are another layer of data that we can add to an already multi-parametric data.</li>
 </ul></li>
 </ul>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
 <img src="images/annotations.png" alt="Patients have different labels or 'annotations'." width="56%" />
 <p class="caption">
 Figure 2.2: Patients have different labels or ‘annotations’.
@@ -268,7 +268,7 @@ Figure 2.2: Patients have different labels or ‘annotations’.
 <li><strong>Feature</strong> = stains, genes, markers, etc (<em>e.g.</em> Gene1, ProteinX, IL6)</li>
 <li><strong>Parameters</strong> = readouts, measurements of features (<em>e.g.</em> Numbers of Positive Pixels, Percent Positive Pixels, Stained Area mm^2,Total Area mm^2)</li>
 </ul>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
 <img src="images/features_vs_parameters2.png" alt="Columns in stain data can also have labels or 'annotations'." width="90%" />
 <p class="caption">
 Figure 2.3: Columns in stain data can also have labels or ‘annotations’.
@@ -291,7 +291,7 @@ gene expression</p>
 <div id="by-patient-vs.-by-sample" class="section level2 hasAnchor" number="2.5">
 <h2><span class="header-section-number">2.5</span> By-Patient vs. By-Sample<a href="what-is-hourglass.html#by-patient-vs.-by-sample" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In addition to enabling a highly systematic visualization of multiple research questions within the integrated dataset, Hourglass is designed to enable this structured analysis across multiple levels. Specifically, Hourglass is designed to leverage the fact that bioimaging datasets are typically recorded from multiple samples per patient. For example, TMAs comprise multiple samples per patient while IMC and spatial omic methods usually record multiple regions of interest (ROIs) per patient.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
 <img src="images/patients_vs_samples.png" alt="Hourglass can compare annotations at the patient or sample level." width="100%" />
 <p class="caption">
 Figure 2.4: Hourglass can compare annotations at the patient or sample level.
@@ -299,7 +299,7 @@ Figure 2.4: Hourglass can compare annotations at the patient or sample level.
 </div>
 <p>Hourglass accesses all levels of this unique data structure: ROIs/samples per patient may be averaged for by-patient analysis, run in parallel as individual sample analysis and, furthermore, be aggregated as patient-matched samples. Hourglass thereby accelerates exploration and direct comparison of regional versus global versus patient-paired features for each patient, providing a comprehensive overview over inter- and intratumoral stain differences.</p>
 <p>The multiple levels are (see below for description):</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
 <img src="images/levels_of_analysis.png" alt="Patients have different labels or 'annotations'." width="100%" />
 <p class="caption">
 Figure 2.5: Patients have different labels or ‘annotations’.
@@ -314,7 +314,7 @@ Figure 2.5: Patients have different labels or ‘annotations’.
 </div>
 <div id="comparisons-and-feature-sets" class="section level2 hasAnchor" number="2.6">
 <h2><span class="header-section-number">2.6</span> Comparisons and Feature Sets<a href="what-is-hourglass.html#comparisons-and-feature-sets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
 <img src="images/workflow.JPG" alt="The Hourglass Workflow (left to right)." width="100%" />
 <p class="caption">
 Figure 2.6: The Hourglass Workflow (left to right).
@@ -333,7 +333,7 @@ Often-times a dataset may contain features that are not of interest to a specifi
 <li>the subsetting of columns (features/parameters)</li>
 </ol>
 <p>Any label that is assigned to patients can be used as a main comparison. For example, in an Hourglass-independent manner, annotations for patients can be derived from transcriptomic data such as Moffitt subtypes or genomic calls such as KRAS wild-type vs KRAS mutated. On the other axis, biologically relevant features and corresponding parameters can be grouped to make feature sets such as T cell markers and immune markers. Consequently, by compounding multiple sets with multiple sample or patient comparisons, the potential for data exploration is exponentiated.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-10"></span>
 <img src="images/making_row_annotations.png" alt="New annotations can be added prior to running Hourglass. For example, transcriptional profiles of pancreatic cancer can be used to determine Moffitt molecular subtype." width="50%" />
 <p class="caption">
 Figure 2.7: New annotations can be added prior to running Hourglass. For example, transcriptional profiles of pancreatic cancer can be used to determine Moffitt molecular subtype.

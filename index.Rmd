@@ -1,7 +1,7 @@
 --- 
 title: "User's Guide for Hourglass"
-author: "Kazeera Aliar"
-date: "last revised Aug 22, 2022"
+author: "By Kazeera Aliar"
+date: "last revised Aug 23, 2022"
 site: bookdown::bookdown_site
 documentclass: book
 output: bookdown::gitbook
@@ -10,31 +10,44 @@ description: "This is the official documentation for Hourglass - learn how to in
 
 # About
 
-This is the official guide for _Hourglass_, the tool to systematically interrogate multiparametric datasets in a semi-automated manner. It allows users to filter, subset  datasets and perform the analysis under identical settings at the global, regional and patient-paired levels to systematically identify communalities and differences. 
+This is the official guide for _Hourglass_, the tool to systematically interrogate multiparametric datasets in a semi-automated manner. It allows users to filter, subset  datasets and perform analysis under identical settings at the global, regional and patient-paired levels to identify communalities and differences. 
 
-Hourglass exists as a stand-alone open-source R package and a desktop application for Windows. 
-  
-Please refer to our [link]() paper for more info.  
-
-```{r, echo=FALSE, fig.align = "center", out.width="35%", fig.show='hold', fig.cap="The Hourglass logo."}
+```{r, echo=FALSE, fig.align = "center", out.width="10%", fig.show='hold', fig.cap="The Hourglass logo."}
 knitr::include_graphics(c("images/Hourglass_logo-removebg.png"))
 ```
+  
+Hourglass exists as an open-source desktop application for Windows/MacOS and a stand-alone R package. Please refer to our [link]() paper for more information.  
 
+```{r, echo=FALSE, fig.align = "center", out.width="55%", fig.show='hold', fig.cap="The Hourglass concept: input data, computational processing, output graphs."}
+knitr::include_graphics(c("images/Hourglass_art.png"))
+```
+  
+  
 **Acknowledgements**
 
 We are ready to share Hourglass with the world. It's about _time_.
 
-First of all, I would like to thank Dr. Barbara Gruenwald, whose role cannot be overstated. She is the phenomenal force that helped conceptualize this toolbox and drove this project forward. It started off as a script, with 300 lines of code in a single for loop, and progressively grew bigger as we added more stains and figured out new ways to interrogate the data. 
+First of all, I would like to thank Dr. Barbara Grunwald, whose role cannot be overstated. She is the phenomenal force that helped conceptualize this toolbox and drove this project forward. It started off as a script, with 300 lines of code in a single for loop, and progressively grew bigger as we added more stains and figured out new ways to interrogate the data. 
 
-Next, I would like to thank Henry Waterhouse, who built the graphical user interface with me, from planning to launch. Foram Vyas, Emily Poulton, and Nathan Chan are the image analysis experts who quantified the IHC data and consistently offered intelligent and creative feedback. I would like to thank my supervisor, Dr. Rama Khokha, Dr. Paul Waterhouse, and the rest of the Khokha Lab for sharing your excitement about Hourglass.
+Next, I would like to thank Henry Waterhouse, who built the graphical user interface with me, from planning to launch. Bowen Zhang and Parinaz Nasr Esfahani also supported software development and testing. Foram Vyas, Emily Poulton, and Nathan Chan are the image analysis experts who quantified the IHC data and consistently offered intelligent and creative feedback. I would like to thank my supervisor, Dr. Rama Khokha, Dr. Paul Waterhouse, and the rest of the Khokha Lab ([https://khokhalab.ca/](https://khokhalab.ca/)) for sharing your excitement about Hourglass.
 
 I also would like to thank the developers of R, python, and Kivy for facilitating the making of Hourglass, the StackOverflow community for having the answers to everything, Github for providing a platform in which this program is easily accessible, and RStudio for creating R markdown and bookdown to facilitate the making of the R package and this book. 
 
-Kazeera
+\- Kazeera
   
+  
+**Contributors**  
+  
+```{r, echo=FALSE, out.width="40%", fig.show='hold'}
+knitr::include_graphics(c("images/contributors1.png","images/contributors2.png"))
+```
   
   
 **Source Code for Book**  
-
-See [link](https://github.com/kazeera/Hourglass-book).
-
+  
+See Github repository ([link](https://github.com/kazeera/Hourglass-book)).
+  
+  
+**Contact Us**
+  
+Open a new issue on Github ([link](https://github.com/kazeera/Hourglass/issues)).
