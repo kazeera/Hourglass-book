@@ -1,0 +1,78 @@
+---
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+---
+# Installation
+
+## Install R
+> Note: R is a statistical environment / programming language used by Hourglass. R must be installed for the application to work, but working knowledge of R programming is not necessary.
+
+For **step-by-step installation instructions**:  
+
+* Install R & rtools for Windows  [link](https://datag.org/resources/documents/spring-2018/37-de-barros-installing-r-on-windows/file)   
+* Install R for Mac  [link](https://people.umass.edu/biep540w/pdf/HOW%20TO%20install%20R%20and%20R%20Studio%20MAC%20Users%20Fall%202020.pdf).  
+
+
+For **shorter installation instructions**:  
+
+* Install R
+     * Follow [download link](https://cran.r-project.org/bin/) on website for your operating system. 
+     * For Windows, install both R from _base_ folder and Rtools from _Rtools_ folder. 
+
+
+* Install RStudio _(optional)_
+     * RStudio is an integrated development environment (IDE) for R that provides an alternative interface to R.
+     *  Download community/open-source version for free on website [link](https://rstudio.com/products/rstudio/download/#download).
+
+## Install Desktop Application
+> This step is for users who prefer to use Hourglass as a standalone application for a graphical user interface.
+
+**Windows**  
+i. Click [here](https://github.com/kazeera/Hourglass-interface) for installation instructions.  
+ii. Download the exe file.  
+iii. Open in your local Downloads folder and run the file installer by double clicking on it.  
+iv. Select Desktop shortcut option to have it appear on the desktop.  
+  
+**MacOS**  
+i. Click [here](https://github.com/kazeera/Hourglass-interface) for installation instructions.  
+ii. Download the exe file.  
+iii. Drag contents of dmg file to Applications folder.  
+  
+When you run Hourglass for the first time in the desktop application, it will install the R package.
+
+## Install R package (optional)
+> If you are familiar with R programming, Hourglass can be used as an R package independently. Note: It will be installed when running Hourglass application the first time.
+
+i. Open up R console.
+ii. Copy and paste these commands to install the package in R. 
+
+```
+install.packages("devtools")
+devtools::install_github("kazeera/Hourglass")
+```
+See [How to Use the R Package] for more information.
+Click [here](https://github.com/kazeera/Hourglass) for source code on Github.
+
+## Uninstall
+
+Follow instruction if you would like to uninstall Hourglass:
+
+**Uninstall application on Windows:**  
+Option 1. Go to Add or Remove programs  
+Option 2. Open Folder location for Hourglass. Press on file unins000.exe to uninstall.  
+
+**Uninstall application on MacOS:**  
+Delete Hourglass application.  
+
+**Uninstall R package**   
+Open R console and enter the following command:
+```
+remove.packages("Hourglass")
+```
+
+## Troubleshooting
+
+* **Error**: package or namespace load failed for 'stats' in inDL(x, as.logical(local), as.logical(now), ...):
+LoadLibrary failure: The specified module could not be found.
+* **Solution**: Go to where R is located and delete the .Renviron file.

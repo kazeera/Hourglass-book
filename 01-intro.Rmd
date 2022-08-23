@@ -22,48 +22,45 @@ documentclass: book
    Provide user preferences to filter and subset large datasets and compare groups in an automated manner.
    
 ## Roadmap
-```{r, echo=FALSE, fig.align="center", out.width="100%"}
+```{r, echo=FALSE, fig.align="center", out.width="100%", fig.cap="Schematic depicting Hourglass pipeline. Top: Collecting data. Middle: Hourglass. Bottom: Output visualizations in structured folder hierarchy."}
 knitr::include_graphics("images/overall_inputoutput.png")
 ```
   
 ## Is this tool for me?
 
-**What is it optimal for?**
+**What is it optimal for?**  
 
-* Multiparametric data analysis
+* Multiparametric data analysis  
+* Systematic data interrogation  
+  + Explores multiple groups  
+  + Wide range of plotting functions  
+  + Method of quality control  
+ 
 
-* Systematic data interrogation
+**What can it do, but is not optimal for?**  
 
-+ Explores multiple groups
-+ Wide range of plotting functions
-+ Method of quality control
-
-
-**What can it do, but is not optimal for?**
-
-* Omics visualization, i.e. ny numeric dataset with annotations
+* Omics visualization, i.e. any numeric dataset with annotations
 
 
-**What can it not do?**
+**What can it not do?**  
 
-* Integration of multiple independent datasets, e.g. can't compare proteome vs transcriptome
-* Image analysis, i.e. read and interpret raw image files
+* Integration of multiple independent datasets, _e.g._ can't compare proteome vs transcriptome
+* Image analysis, _i.e._ read and interpret raw image files
 
 ## Terminology
 
 * **Annotation** = any discrete label or description for features/parameters and patients/samples. See [Input Data] for more information. 
 
-
-    * Patient or sample annotations are another layer of data that we can add to an already multi-parametric data.
-    
-```{r, echo=FALSE, out.width="56%", fig.align="center"}
+  * Patient or sample annotations are another layer of data that we can add to an already multi-parametric data.
+   
+```{r, echo=FALSE, out.width="56%", fig.align="center", fig.cap="Patients have different labels or 'annotations'."}
 knitr::include_graphics("images/annotations.png")
 ```
 
-* **Feature** = stains, genes, markers, etc (e.g. Gene1, ProteinX, IL6)
-* **Parameters** = readouts, measurements of features (e.g. Numbers of Positive Pixels, Percent Positive Pixels, Stained Area mm^2,Total Area mm^2)
+* **Feature** = stains, genes, markers, etc (_e.g._ Gene1, ProteinX, IL6)
+* **Parameters** = readouts, measurements of features (_e.g._ Numbers of Positive Pixels, Percent Positive Pixels, Stained Area mm^2,Total Area mm^2)
 
-```{r, echo=FALSE, out.width="100%", fig.align="center"}
+```{r, echo=FALSE, out.width="90%", fig.align="center", fig.cap="Columns in stain data can also have labels or 'annotations'."}
 knitr::include_graphics("images/features_vs_parameters2.png")
 ```
 
@@ -84,13 +81,17 @@ If we look at the same feature IL6, using traditional omics, we get a single rea
 ## By-Patient vs. By-Sample
 In addition to enabling a highly systematic visualization of multiple research questions within the integrated dataset, Hourglass is designed to enable this structured analysis across multiple levels. Specifically, Hourglass is designed to leverage the fact that bioimaging datasets are typically recorded from  multiple samples per patient. For example, TMAs comprise multiple samples per patient while IMC and spatial omic methods usually record multiple regions of interest (ROIs) per patient.
 
-![](images/patients_vs_samples.png)
+```{r, echo=FALSE, out.width="100%", fig.align="center", fig.cap="Hourglass can compare annotations at the patient or sample level."}
+knitr::include_graphics("images/patients_vs_samples.png")
+```
 
 Hourglass accesses all levels of this unique data structure: ROIs/samples per patient may be averaged for by-patient analysis, run in parallel as individual sample analysis and, furthermore, be aggregated as patient-matched samples. Hourglass thereby accelerates exploration and direct comparison of regional versus global versus patient-paired features for each patient, providing a comprehensive overview over inter- and intratumoral stain differences.
 
 The multiple levels are (see below for description): 
 
-![](images/levels_of_analysis.png)
+```{r, echo=FALSE, out.width="100%", fig.align="center", fig.cap="Patients have different labels or 'annotations'."}
+knitr::include_graphics("images/levels_of_analysis.png")
+```
 
 1) **Global/ByPatient**: Typically, TMA-derived datasets comprising multiple samples per patient are averaged. Because there are multiple samples per patient, common practice is to collapse to a patient level by averaging samples across patients commonly done for this type of dataset on a by-patient basis. Collapsing our dataset resulted in patient x feature-parameter matrix dimensions of 165 x 631, with a total of 104,115 data points. For example, we could now compare IL6 hi vs IL6 low patients.
 
@@ -102,34 +103,36 @@ These different analysis levels can be utilized alone or in combination, i.e. th
 
 
 ## Comparisons and Feature Sets
-```{r, echo=FALSE, out.width="100%"}
+
+```{r, echo=FALSE, out.width="100%", fig.align="center", fig.cap="The Hourglass Workflow (left to right)."}
 knitr::include_graphics("images/workflow.JPG")
 ```
 
-**Hourglass enables targeted analysis and grouping of feature sets**
-Often-times a dataset may contain features that are not of interest to a specific question or, related to this, sets of features that are biologically related (e.g. T cell stains CD3, CD8, FoxP3). 
-
-Thus, extensive analysis customization options were implemented in Hourglass. This optional analysis step allows for related parameters and features to be grouped together in composite plots, which is referred to as 'feature sets'. For example, users may define T cell and B cell marker sets (set 1 and 2). Users can then furthermore create super-sets from sets, such as "immune markers" from B cell and T cell sets, to be displayed in custom composite plots as depicted in the heatmap. Any combination of features and parameters can be used to create a set, which enables easy but powerful customization of the numerous and partially related features within complex datasets.
-
-**Hourglass enables versions of comparisons**
+**Hourglass enables versions of comparisons**  
 Multiple versions of an analysis can be submitted in parallel to the same Hourglass run, enabling direct comparison of the results. In the case of a main comparison of  IL6 high vs IL6 low patients, the user can submit additional versions of this analysis to directly compare if IL6-related differences could be sex-specific or subtype-specific. 
 
 When interacting with their data, users can thereby easily focus on different parameters and biological differences while having fixed analysis settings (same feature sets, correlation method, two-tailed p-value test). This facilitates systematic recognition and investigation of side/sub-correlations or confounding factors that may have otherwise been overlooked. Consequently, Hourglass provides automated large-scale integrated analysis with and without inclusion of different subgroups of patients or samples. This allows users to gain a quick and comprehensive overview of how different subgroups might be affecting their results. 
 
 
-**Hourglass was designed to take in a general data format with user options and instantaneously generate a wealth of information.**
+**Hourglass enables targeted analysis and grouping of feature sets**  
+Often-times a dataset may contain features that are not of interest to a specific question or, related to this, sets of features that are biologically related (_e.g._ T cell stains CD3, CD8, FoxP3). 
 
-[figure to show manipulation of axes]
+Thus, extensive analysis customization options were implemented in Hourglass. This optional analysis step allows for related parameters and features to be grouped together in composite plots, which is referred to as 'feature sets'. For example, users may define T cell and B cell marker sets (set 1 and 2). Users can then furthermore create super-sets from sets, such as "immune markers" from B cell and T cell sets, to be displayed in custom composite plots as depicted in the heatmap. Any combination of features and parameters can be used to create a set, which enables easy but powerful customization of the numerous and partially related features within complex datasets.
+
+
+**Hourglass was designed to take in a general data format with user options and instantaneously generate a wealth of information.**
 
 The power lies in the **manipulation of both axes** of a numeric sample by feature matrix:
 
 1) the labeling and filtering of rows (patients/samples), and 
-
 2) the subsetting of columns (features/parameters) 
 
 Any label that is assigned to patients can be used as a main comparison. For example, in an Hourglass-independent manner, annotations for patients can be derived from transcriptomic data such as Moffitt subtypes or genomic calls such as KRAS wild-type vs KRAS mutated. On the other axis, biologically relevant features and corresponding parameters can be grouped to make feature sets such as T cell markers and immune markers. Consequently, by compounding multiple sets with multiple sample or patient comparisons, the potential for data exploration is exponentiated.
  
-![](images/making_row_annotations.png)
+```{r, echo=FALSE, out.width="50%", fig.align="center",fig.cap="New annotations can be added prior to running Hourglass. For example, transcriptional profiles of pancreatic cancer can be used to determine Moffitt molecular subtype."}
+knitr::include_graphics("images/making_row_annotations.png")
+```
+
 
 ## Strengths
 There are multiple benefits of using Hourglass as a framework for multiparametric dataset interrogation.
@@ -137,9 +140,9 @@ There are multiple benefits of using Hourglass as a framework for multiparametri
 
 **Accessibility**
 
-* Accessible for non-expert users, fully reproducible and open-source
-* Makes publication-ready plots via robust and automated pipeline reduces manual work 
-* Leverages metrics of heterogeneity from standard tissue microarray designs
+* Accessible for non-expert users, fully reproducible and open-source.
+* Makes publication-ready plots via robust and automated pipeline reduces manual work.
+* Leverages metrics of heterogeneity from standard tissue microarray designs.
 
 **Query and Exploration**
 
@@ -162,7 +165,7 @@ There are multiple benefits of using Hourglass as a framework for multiparametri
 * Supports removal of outliers below the first quartile and above the third.
 
 ## Limitations
-Hourglass does not discriminate where the data comes from. Hourglass facilitates efficient knowledge extraction from complex datasets. However, it does have certain weaknesses. 
+Hourglass facilitates efficient knowledge extraction from complex datasets. However, it does have certain weaknesses. 
 
 **Minimum number of stains for it to be useful**
 
@@ -170,4 +173,5 @@ Hourglass does not discriminate where the data comes from. Hourglass facilitates
 * Feature sets have to contain 3 or more features in order to be visualized.
 
 **Time commitment**
+
 * While Hourglass automatically creates publication-ready plots, it is still semi-automated, the "semi" meaning that you as a user are required to do some work. Firstly, Hourglass requires user tailors its input parameters to guide the analysis. Next, hundreds to thousands of plots will be created. While you may be swimming in a pool of beautiful plots, it may become tedious to look through all the files. However, the organized file output structure seeks to mitigate this through order of folder names: By Patient/By Sample > Imputed or not > Comparison > Feature Set 

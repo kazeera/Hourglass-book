@@ -4,7 +4,7 @@ output: bookdown::gitbook
 documentclass: book
 ---
 # Input Data 
-## File format
+## File Format
 Hourglass currently supports input data as *csv* (comma separated values) and *txt* (tab-delimited text) files
 
 Requirements
@@ -18,7 +18,7 @@ Requirements
 
 The file descriptors are named below with abbreviations in brackets. For R package users, these are names of elements in the _dataset (ds)_ list object.
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, fig.cap="Snippet of the three files/tables required for Hourglass: 1) values matrix, 2) metadata/annotations for columns of values matrix, and 3)  metadata/annotations for rows of values matrix."}
 knitr::include_graphics("images/input_files.jpg")
 ```
 
@@ -140,7 +140,7 @@ Download 3 csv files [here](https://github.com/kazeera/Hourglass/tree/main/examp
 * "Example_IHC_sample_rowAnn.csv" (rowAnn)
 * "Example_IHC_sample_vals.csv" (numMat)  
 
-A corresponding example analysis that is the output of the desktop application, serves as the log file for user options and serves input into the R side (See [Output: Excel File] can downloaded found [here](https://github.com/kazeera/Hourglass/blob/main/example/Example_IHC_sample_UserOptions.xlsx).
+A corresponding example analysis that is the output of the desktop application, serves as the log file for user options and serves input into the R side (See [Output: Excel File] can downloaded found [here](https://github.com/kazeera/Hourglass/blob/main/example/Example_IHC_sample_UserOptions.xlsx)).
 
 **How to Access in R**
 

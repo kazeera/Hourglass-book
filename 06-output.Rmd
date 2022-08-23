@@ -17,8 +17,8 @@ See: Video tutorial.
 
 1. **Heterogeneity Barplot** 
 + Visualizes sample compositon (or expression levels within samples) in patients, indicative of intrapatient heterogeneity.
-```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="Heterogeneity barplot stacked (left) created by Hourglass."}
-knitr::include_graphics(c("images/plots/hetplot stacked.png"))
+```{r, echo=FALSE, out.width="40%", fig.align = "center", fig.show='hold', fig.cap="Heterogeneity barplot stacked (first image) and filled to 100% (second) created by Hourglass."}
+knitr::include_graphics(c("images/plots/hetplot stacked.png", "images/plots/hetplot filled.png"))
 ```
 
 2.  **Survival Plot**
@@ -29,43 +29,43 @@ knitr::include_graphics(c("images/plots/survival.png"))
 
 3.  **Paired Patient Slopegraph**
 + Enables screening of any intra-patient differences that may be reflective of heterogeneity. Points are averaged values across strata per patient. Lines connect different averages within patients.
-```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="Patient paired plot created by Hourglass."}
+```{r, echo=FALSE, out.width="40%", fig.align = "center", fig.show='hold', fig.cap="Patient paired plot created by Hourglass."}
 knitr::include_graphics(c("images/plots/paired.png"))
 ```
 
 4.  **Discrete Barplot**
-+ Visualizes discrete values of a parameter in each stain, that is numeric in the input data but should be considered discrete. E.g. A parameter called "Heterogeneity Score" contains values 1-10 but should be "1", "2", .. "10".
-```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="Overview boxplot created by Hourglass."}
++ Visualizes discrete values of a parameter in each stain, that is, numeric in the input data but should be considered discrete. E.g. A parameter called "Heterogeneity Score" contains values 1-10 but should be "1", "2", .. "10".
+```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="Plot showing discrete parameters created by Hourglass."}
 knitr::include_graphics(c("images/plots/discrete barplot.png"))
 ```
 
 5.  **Overview Boxplot** 
 + Screen primary data for interesting relationships in one plot and significance associations.
-```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="Individual boxplot with statistics created by Hourglass."}
+```{r, echo=FALSE, out.width="60%", fig.align = "center", fig.show='hold', fig.cap="Overview boxplot with statistics created by Hourglass."}
 knitr::include_graphics(c("images/plots/boxplot overview.png"))
 ```
 
 6.  **Individual Boxplot**
 + Visualizes data points for each features/parameter combination and relevant statistics from comparing strata.
-```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="Overview boxplots created by Hourglass."}
+```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="Individual boxplot created by Hourglass."}
 knitr::include_graphics(c("images/plots/boxplot indiv.png"))
 ```
 
 7.  **Profile Barplot**
 + Compare set of markers across different strata for each patient/sample.
-```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Profile barplot stacked and filled to 100%, created by Hourglass."}
+```{r, echo=FALSE, out.width="45%", fig.align = "center", fig.show='hold', fig.cap="Profile barplot stacked (first) and filled to 100% (second), created by Hourglass."}
 knitr::include_graphics(c("images/plots/profile barplot filled.png","images/plots/profile barplot filled.png"))
 ```
 
 8. **Expression Heatmap**
 + Provides overview of patterns in stain data. When there are no NA/missing values (in imputed version for example), values will be clustered using unsupervised hierarchal clustering.
-```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="Heatmaps showing expression of features, created by Hourglass."}
+```{r, echo=FALSE, out.width="40%", fig.align = "center", fig.show='hold', fig.cap="Heatmap showing expression of features, created by Hourglass."}
 knitr::include_graphics(c("images/plots/heatmap expression.png"))
 ```
 
 9. **Fold-change (FC) p-value Heatmap**
 + Screen for patterns of fold-changes between strata in comparisons and overall significance seen in individuals boxplots. Fold-changes of strata are shown as color gradient and significance between two groups are presented as stars/numbers.
-```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="Plots showing fold-change values (color gradients) and p-values (stars/number), created by Hourglass."}
+```{r, echo=FALSE, out.width="55%", fig.align = "center", fig.show='hold', fig.cap="Plot showing fold-change values (color gradients) and p-values (stars/number), created by Hourglass."}
 knitr::include_graphics(c("images/plots/heatmap pval FC.png"))
 ```
 
@@ -73,20 +73,20 @@ knitr::include_graphics(c("images/plots/heatmap pval FC.png"))
 + Provides correlations between cell communities and their interactions, e.g. of an insight that can be drawn: correlations between fibroblast markers in one cancer subtype and anti-correlated with immune cells in another. Can only be performed on imputed (no missing values) dataset.
 + spearman or pearson
 + Only created when there are no NA/missing values - for example in 1) imputed version, and 2) "complete" rows in feature sets.
-```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="Correlation plots created by Hourglass."}
+```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="Correlation plot created by Hourglass."}
 knitr::include_graphics(c("images/plots/correlation.png"))
 ```
 
 11. **Correlation Scatter Plot**
 + Provides details of correlations, such as regression, scatter plots, correlation coefficients and significant and histograms of values used. Can only be performed on imputed (no missing values) dataset.
 + Only created when there are no NA/missing values - for example in 1) imputed version, and 2) "complete" rows in feature setsc
-```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="Correlation scatter plots created by Hourglass."}
+```{r, echo=FALSE, out.width="40%", fig.align = "center", fig.show='hold', fig.cap="Correlation scatter plot created by Hourglass."}
 knitr::include_graphics(c("images/plots/correlation scatter.png"))
 ```
 
 12. **ID Table** 
 + Provides sample/patient ID and strata used in comparison, useful for custom comparisons (where groups are assigned by Hourglass) and to see which samples/patients were included after filter inclusion/exclusion.
-```{r, echo=FALSE, out.width="50%", fig.align = "center", fig.show='hold', fig.cap="ID table (csv file) created by Hourglass."}
+```{r, echo=FALSE, out.width="40%", fig.align = "center", fig.show='hold', fig.cap="ID table (csv file) created by Hourglass."}
 knitr::include_graphics(c("images/plots/id_table.png"))
 ```
 
@@ -125,34 +125,40 @@ Note for Filename:
 |ID Table| 0/1/2/ | [comparison].csv ||
 
 
-## Quality Control (QC) plots
+## Quality Control (QC) Plots
 
 Purpose:
 
-*  Informs whether anything is skewed in a comparison. For example, the overall number of positive cells for that stain is higher in high groups (a problem)  
-* Verify that a specific metric or data point exists for a stain  
+*  Informs whether anything is skewed in a comparison. For example, the overall number of positive cells for that stain is higher in high groups (a problem).  
+* Verify that a specific metric or data point exists for a stain.  
+* Visualized using boxplots (individual and overview).  
 
-Types of stratification (creates similar plots but different combinations):
+Types:
 
 * **QC Feature**: Plot all parameters present for a feature, split by comparison. Note: If your "feature column" parameter is called "Stain", this folder will be called "QC Stain" in the output folder.
+
+```{r, echo=FALSE, out.width="60%", fig.align = "center", fig.show='hold', fig.cap="Example of a 'QC feature' overview boxplot (all parameters measured for CD3)."}
+knitr::include_graphics(c("images/plots/QC feature.png"))
+```
+
 * **QC Parameter**: Plot all features present for a parameter, split by comparison
 
+```{r, echo=FALSE, out.width="60%", fig.align = "center", fig.show='hold', fig.cap="Example of a 'QC parameter' overview boxplot (all features that have a readout for Num.Pos.per.mm.2)."}
+knitr::include_graphics(c("images/plots/QC parameter.png"))
+```
 
-## Feature Sets
+## Feature Sets Plots
 
-Purpose: 
+Purpose:  
+* Group relevant features (_e.g._ biologically relevant). 
 
-* Look at stains in context of other stains within the dataset  
+See [Define Feature Sets] for workflow/user specifications. Briefly: 
   
-**Step 1: Specify relevant parameters for each stain.**  
-
-If multiple parameters are present per feature (usually the case in multiparametric imaging data), most will be irrelevant/for QC. The final readout is usually a ratio: (1) /(2), where (1) is quantification metric and (2) is normalization metric.
+**Step 1: Specify relevant parameters for each stain.**   
+* If multiple parameters are present per feature (usually the case in multiparametric imaging data), most will be irrelevant/for QC. The final readout is usually a ratio: (1) /(2), where (1) is quantification metric and (2) is normalization metric.
   
-**Step 2: Make groups, the data integration step.**  
- 
-Look at a stain in context of other stains within the dataset. Make smaller groups (e.g. T cell, immune, stromal cell features).
-
-Multiple plot types are supported for feature sets. 
-
+**Step 2: Make groups, the data integration step.** 
+* Look at a stain in context of other stains within the dataset. Make smaller groups (e.g. T cell, immune, stromal cell features).   
+* Multiple plot types are supported for feature sets. 
 groups (from comparison from row annotations) = e.g. Smoker-Yes, Smoker-No
 
