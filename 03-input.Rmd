@@ -58,7 +58,7 @@ Examples
      * Smoker
      * Age at diagnosis
 
-A column for "PatientID" is required (can be called something else) for paired analysis (_i.e._ averaging samples from the same patient) and patient level analysis (_i.e._ averaging samples from the same patient).
+A column for "Patient_ID" is required (can be called something else) for paired analysis (_i.e._ averaging samples from the same patient) and patient level analysis (_i.e._ averaging samples from the same patient).
 
 > Note: this is external information from clinical charts / prior analysis that is integrated manually prior to running Hourglass. This means transcriptomic, genomic, and clinical calls are created independently of Hourglass and merged to the master rowAnn table via sample or patient identifiers.  
 
@@ -94,13 +94,13 @@ The following stains (referred to as "features" see [Terminology]) were quantifi
 The parameters measured for each feature are:
 
 * **Area** = area of tissue image in mm^2 (random)
-* **Num.Detections** = number of detected pixels on tissue area = Num.Positive + Num.Negative
-* **Num.Negative** = number of pixels of negative staining (random)
-* **Num.Positive** = number of pixels of positive staining (based on trends), affects the following: 
-     * **Positive.Percent** = Num.Positive / Num.Detections x 100
-     * **Negative.Percent** = 100 - Positive.Percent 
-     * **Pos.Pixel.Percent** = Num.Positive/10^3  x random value from 0.3 to 1.5 
-     * **Num.Pos.per.mm.2** = Num.Positive / Area x 10^4
+* **Num_Detections** = number of detected pixels on tissue area = Num_Positive + Num_Negative
+* **Num_Negative** = number of pixels of negative staining (random)
+* **Num_Positive** = number of pixels of positive staining (based on trends), affects the following: 
+     * **Positive_Percent** = Num_Positive / Num_Detections x 100
+     * **Negative_Percent** = 100 - Positive_Percent 
+     * **Pos_Pixel_Percent** = Num_Positive/10^3  x random value from 0_3 to 1_5 
+     * **Num_Pos_per_mm_2** = Num_Positive / Area x 10^4
      
 **Possible Feature Sets**
 
@@ -111,8 +111,8 @@ The parameters measured for each feature are:
 
 **Possible Feature Parameters**
 
-* Num.Pos.per.mm.2
-* Pos.Pixel.Percent
+* Num_Pos_per_mm_2
+* Pos_Pixel_Percent
 
 **Summary of Trends**
 
