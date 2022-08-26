@@ -7,9 +7,9 @@ documentclass: book
 
 ## tl;dr
 
-**What?** 
+**What is it?** 
 
-   To facilitate exploration of multi-parametric data (especially bioimage quantification).
+   Software tool facilitate exploration of multi-parametric data (especially bioimage quantification).
    
    
 **For who?**

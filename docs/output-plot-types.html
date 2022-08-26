@@ -297,7 +297,7 @@ Figure 7.7: Individual boxplot (left) and example with real data (right) created
 <ul>
 <li>Compare set of markers across different strata for each patient/sample.
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-37"></span>
-<img src="images/plots/profile%20barplot%20filled.PNG" alt="Profile barplot stacked (first) and filled to 100% (second), created by Hourglass." width="45%" /><img src="images/plots/profile%20barplot%20filled.PNG" alt="Profile barplot stacked (first) and filled to 100% (second), created by Hourglass." width="45%" />
+<img src="images/plots/profile%20barplot%20stacked.PNG" alt="Profile barplot stacked (first) and filled to 100% (second), created by Hourglass." width="45%" /><img src="images/plots/profile%20barplot%20filled.PNG" alt="Profile barplot stacked (first) and filled to 100% (second), created by Hourglass." width="45%" />
 <p class="caption">
 Figure 7.8: Profile barplot stacked (first) and filled to 100% (second), created by Hourglass.
 </p>
@@ -319,7 +319,9 @@ Figure 7.9: Heatmap showing expression of features, created by Hourglass.
 <li><strong>Fold-change (FC) p-value Heatmap</strong></li>
 </ol>
 <ul>
-<li>Screen for patterns of fold-changes between strata in comparisons and overall significance seen in individuals boxplots. Fold-changes of strata are shown as color gradient and significance between two groups are presented as stars/numbers.
+<li>Screen for patterns of fold-changes between strata in comparisons and overall significance seen in individuals boxplots.<br />
+</li>
+<li>Fold-changes of strata are shown as color gradient and significance between two groups are presented as stars/numbers.
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-39"></span>
 <img src="images/plots/heatmap%20pval%20FC.PNG" alt="Plot showing fold-change values (color gradients) and p-values (stars/number), created by Hourglass." width="55%" />
 <p class="caption">
@@ -552,8 +554,7 @@ Figure 7.15: Example of a ‘QC parameter’ overview boxplot (all features that
 * If multiple parameters are present per feature (usually the case in multiparametric imaging data), most will be irrelevant/for QC. The final readout is usually a ratio: (1) /(2), where (1) is quantification metric and (2) is normalization metric.</p>
 <p><strong>Step 2: Make groups, the data integration step.</strong>
 * Look at a stain in context of other stains within the dataset. Make smaller groups (e.g. T cell, immune, stromal cell features).<br />
-* Multiple plot types are supported for feature sets.
-groups (from comparison from row annotations) = e.g. Smoker-Yes, Smoker-No</p>
+* Multiple plot types are supported for feature sets.</p>
 
 </div>
 </div>

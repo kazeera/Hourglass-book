@@ -317,7 +317,7 @@ This may be useful if you have high,int,low for a CustomComparison (see [Pick Co
 
 Colors are the **same for all unique strata** for consistency. For example, "Patient_Cancer_Subtype-A", "Sample_Cancer_Subtype-A", "Sex-A", "Smoker-A", "Random-A" all have the strata "A" and therefore will be the same color (ie first color defined, duplicates are ignored).
 
-```{r, echo=FALSE, out.width="43%", fig.align = "center", fig.show='hold', fig.cap="Example of Colors worksheet in output Excel file."}
+```{r, echo=FALSE, out.width="40%", fig.align = "center", fig.show='hold', fig.cap="Example of Colors worksheet in output Excel file."}
 knitr::include_graphics(c("images/excel/output-excel_colors.png"))
 ```
 
@@ -334,6 +334,6 @@ knitr::include_graphics(c("images/excel/output-excel_feature-sets.png"))
 
 This worksheet contains the table in [Define Feature Sets] "Tab 2: Define parameters". 
 
-```{r, echo=FALSE, out.width="68%", fig.align = "center", fig.show='hold', fig.cap="Example of Feature Parameters worksheet in output Excel file."}
+```{r, echo=FALSE, out.width="60%", fig.align = "center", fig.show='hold', fig.cap="Example of Feature Parameters worksheet in output Excel file."}
 knitr::include_graphics(c("images/excel/output-excel_feature-parameters.png"))
 ```

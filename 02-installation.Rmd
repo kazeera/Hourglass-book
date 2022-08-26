@@ -10,7 +10,7 @@ documentclass: book
 
 For **step-by-step installation instructions**:  
 
-* Install R & rtools for Windows  [link](https://datag.org/resources/documents/spring-2018/37-de-barros-installing-r-on-windows/file)   
+* Install R & rtools for Windows  [link](https://datag.org/resources/documents/spring-2018/37-de-barros-installing-r-on-windows/file).   
 * Install R for Mac  [link](https://people.umass.edu/biep540w/pdf/HOW%20TO%20install%20R%20and%20R%20Studio%20MAC%20Users%20Fall%202020.pdf).  
 
 
@@ -29,14 +29,14 @@ For **shorter installation instructions**:
 > This step is for users who prefer to use Hourglass as a standalone application for a graphical user interface.
 
 **Windows**  
-i. Click [here](https://github.com/kazeera/Hourglass-interface) for installation instructions.  
+i. Click [here](https://github.com/kazeera/Hourglass-interface).  
 ii. Download the exe file.  
 iii. Open in your local Downloads folder and run the file installer by double clicking on it.  
 iv. Select Desktop shortcut option to have it appear on the desktop.  
   
 **MacOS**  
-i. Click [here](https://github.com/kazeera/Hourglass-interface) for installation instructions.  
-ii. Download the exe file.  
+i. Click [here](https://github.com/kazeera/Hourglass-interface).  
+ii. Download the dmg file.  
 iii. Drag contents of dmg file to Applications folder.  
   
 When you run Hourglass for the first time in the desktop application, it will install the R package.
@@ -65,7 +65,7 @@ Option 2. Open Folder location for Hourglass. Press on file unins000.exe to unin
 **Uninstall application on MacOS:**  
 Delete Hourglass application by clicking on icon and "Move to Trash".  
 
-**Uninstall R package**   
+**Uninstall R package:**   
 Open R console and enter the following command:
 ```
 remove.packages("Hourglass")

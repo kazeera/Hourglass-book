@@ -259,7 +259,7 @@ Figure 4.1: Snippet of the three files/tables required for Hourglass: 1) values 
 <li>Age at diagnosis</li>
 </ul></li>
 </ul>
-<p>A column for “PatientID” is required (can be called something else) for paired analysis (<em>i.e.</em> averaging samples from the same patient) and patient level analysis (<em>i.e.</em> averaging samples from the same patient).</p>
+<p>A column for “Patient_ID” is required (can be called something else) for paired analysis (<em>i.e.</em> averaging samples from the same patient) and patient level analysis (<em>i.e.</em> averaging samples from the same patient).</p>
 <blockquote>
 <p>Note: this is external information from clinical charts / prior analysis that is integrated manually prior to running Hourglass. This means transcriptomic, genomic, and clinical calls are created independently of Hourglass and merged to the master rowAnn table via sample or patient identifiers.</p>
 </blockquote>
@@ -293,14 +293,14 @@ Figure 4.1: Snippet of the three files/tables required for Hourglass: 1) values 
 <p>The parameters measured for each feature are:</p>
 <ul>
 <li><strong>Area</strong> = area of tissue image in mm^2 (random)</li>
-<li><strong>Num.Detections</strong> = number of detected pixels on tissue area = Num.Positive + Num.Negative</li>
-<li><strong>Num.Negative</strong> = number of pixels of negative staining (random)</li>
-<li><strong>Num.Positive</strong> = number of pixels of positive staining (based on trends), affects the following:
+<li><strong>Num_Detections</strong> = number of detected pixels on tissue area = Num_Positive + Num_Negative</li>
+<li><strong>Num_Negative</strong> = number of pixels of negative staining (random)</li>
+<li><strong>Num_Positive</strong> = number of pixels of positive staining (based on trends), affects the following:
 <ul>
-<li><strong>Positive.Percent</strong> = Num.Positive / Num.Detections x 100</li>
-<li><strong>Negative.Percent</strong> = 100 - Positive.Percent</li>
-<li><strong>Pos.Pixel.Percent</strong> = Num.Positive/10^3 x random value from 0.3 to 1.5</li>
-<li><strong>Num.Pos.per.mm.2</strong> = Num.Positive / Area x 10^4</li>
+<li><strong>Positive_Percent</strong> = Num_Positive / Num_Detections x 100</li>
+<li><strong>Negative_Percent</strong> = 100 - Positive_Percent</li>
+<li><strong>Pos_Pixel_Percent</strong> = Num_Positive/10^3 x random value from 0_3 to 1_5</li>
+<li><strong>Num_Pos_per_mm_2</strong> = Num_Positive / Area x 10^4</li>
 </ul></li>
 </ul>
 <p><strong>Possible Feature Sets</strong></p>
@@ -315,8 +315,8 @@ Figure 4.1: Snippet of the three files/tables required for Hourglass: 1) values 
 </ul>
 <p><strong>Possible Feature Parameters</strong></p>
 <ul>
-<li>Num.Pos.per.mm.2</li>
-<li>Pos.Pixel.Percent</li>
+<li>Num_Pos_per_mm_2</li>
+<li>Pos_Pixel_Percent</li>
 </ul>
 <p><strong>Summary of Trends</strong></p>
 <p>Most values differ/segregate based on 3 sample cancer subtypes (A, B and C). When there are more than 2 samples per patient, there is a predominant “Patient Cancer Subtype” but some samples might deviate from this (ie. intrapatient heterogeneity).</p>

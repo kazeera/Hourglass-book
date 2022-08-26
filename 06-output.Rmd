@@ -54,7 +54,7 @@ knitr::include_graphics(c("images/plots/boxplot indiv.png", "images/plots/exampl
 7.  **Profile Barplot**
 + Compare set of markers across different strata for each patient/sample.
 ```{r, echo=FALSE, out.width="45%", fig.align = "center", fig.show='hold', fig.cap="Profile barplot stacked (first) and filled to 100% (second), created by Hourglass."}
-knitr::include_graphics(c("images/plots/profile barplot filled.png","images/plots/profile barplot filled.png"))
+knitr::include_graphics(c("images/plots/profile barplot stacked.png","images/plots/profile barplot filled.png"))
 ```
 
 8. **Expression Heatmap**
@@ -64,7 +64,8 @@ knitr::include_graphics(c("images/plots/heatmap expression.png"))
 ```
 
 9. **Fold-change (FC) p-value Heatmap**
-+ Screen for patterns of fold-changes between strata in comparisons and overall significance seen in individuals boxplots. Fold-changes of strata are shown as color gradient and significance between two groups are presented as stars/numbers.
++ Screen for patterns of fold-changes between strata in comparisons and overall significance seen in individuals boxplots.  
++ Fold-changes of strata are shown as color gradient and significance between two groups are presented as stars/numbers.
 ```{r, echo=FALSE, out.width="55%", fig.align = "center", fig.show='hold', fig.cap="Plot showing fold-change values (color gradients) and p-values (stars/number), created by Hourglass."}
 knitr::include_graphics(c("images/plots/heatmap pval FC.png"))
 ```
@@ -159,6 +160,5 @@ See [Define Feature Sets] for workflow/user specifications. Briefly:
   
 **Step 2: Make groups, the data integration step.** 
 * Look at a stain in context of other stains within the dataset. Make smaller groups (e.g. T cell, immune, stromal cell features).   
-* Multiple plot types are supported for feature sets. 
-groups (from comparison from row annotations) = e.g. Smoker-Yes, Smoker-No
+* Multiple plot types are supported for feature sets.  
 

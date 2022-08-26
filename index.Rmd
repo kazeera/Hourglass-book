@@ -1,7 +1,7 @@
 --- 
 title: "User's Guide for Hourglass"
 author: "Written by Kazeera Aliar"
-date: "last revised Aug 23, 2022"
+date: "last revised Aug 26, 2022"
 site: bookdown::bookdown_site
 documentclass: book
 output: bookdown::gitbook
@@ -39,7 +39,7 @@ I also would like to thank the developers of R, python, and Kivy for facilitatin
   
 **Contributors**  
   
-```{r, echo=FALSE, out.width="70%", fig.show='hold'}
+```{r, echo=FALSE, out.width="75%", fig.show='hold'}
 knitr::include_graphics(c("images/contributors11.png","images/contributors21.png"))
 ```
   
