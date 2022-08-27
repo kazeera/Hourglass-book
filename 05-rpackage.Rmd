@@ -9,22 +9,19 @@ We constructed new functions and compiled relevant individual data filtering fun
 
 ## Outline of Code
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center", fig.show='hold', fig.cap="Workflow: Order of functions in Hourglass R package."}
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.show='hold', fig.cap="Workflow: Order of functions in Hourglass R package."}
 knitr::include_graphics(c("images/R_functions.png"))
 ```
 
 
-## Installation
+## Installation and Usage
 
 1. See [Install R package (optional)] for installation instructions and source code.
 2. Once you have installed Hourglass, load it into R using the following code:
 ```
 library(Hourglass)
 ```
-
-## Usage
-The best way to run Hourglass is from the [Output: Excel File]. Download a template [here](https://github.com/kazeera/Hourglass/blob/main/example/Template_UserOptions.xlsx). Note: Keep in mind that all inputs are case-sensitive!
-
+3. The best way to run Hourglass is from the [Output: Excel File]. Download a template [here](https://github.com/kazeera/Hourglass/blob/main/example/Template_UserOptions.xlsx). Note: Keep in mind that all inputs are case-sensitive!
 ```
 run_from_excel("path/to/excel.xlsx)
 ```

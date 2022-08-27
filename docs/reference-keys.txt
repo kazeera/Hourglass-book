@@ -72,8 +72,7 @@ run-hourglass
 output-excel-file
 how-to-use-the-r-package
 outline-of-code
-installation-1
-usage
+installation-and-usage
 dataset-object
 example-dataset-in-r
 output-plot-types

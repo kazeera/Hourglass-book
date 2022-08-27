@@ -175,10 +175,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html"><i class="fa fa-check"></i><b>6</b> How to Use the R Package<span></span></a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#outline-of-code"><i class="fa fa-check"></i><b>6.1</b> Outline of Code<span></span></a></li>
-<li class="chapter" data-level="6.2" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#installation-1"><i class="fa fa-check"></i><b>6.2</b> Installation<span></span></a></li>
-<li class="chapter" data-level="6.3" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#usage"><i class="fa fa-check"></i><b>6.3</b> Usage<span></span></a></li>
-<li class="chapter" data-level="6.4" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#dataset-object"><i class="fa fa-check"></i><b>6.4</b> Dataset Object<span></span></a></li>
-<li class="chapter" data-level="6.5" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#example-dataset-in-r"><i class="fa fa-check"></i><b>6.5</b> Example Dataset in R<span></span></a></li>
+<li class="chapter" data-level="6.2" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#installation-and-usage"><i class="fa fa-check"></i><b>6.2</b> Installation and Usage<span></span></a></li>
+<li class="chapter" data-level="6.3" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#dataset-object"><i class="fa fa-check"></i><b>6.3</b> Dataset Object<span></span></a></li>
+<li class="chapter" data-level="6.4" data-path="how-to-use-the-r-package.html"><a href="how-to-use-the-r-package.html#example-dataset-in-r"><i class="fa fa-check"></i><b>6.4</b> Example Dataset in R<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="output-plot-types.html"><a href="output-plot-types.html"><i class="fa fa-check"></i><b>7</b> Output Plot Types<span></span></a>
 <ul>
@@ -211,28 +210,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="outline-of-code" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> Outline of Code<a href="how-to-use-the-r-package.html#outline-of-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-29"></span>
-<img src="images/R_functions.png" alt="Workflow: Order of functions in Hourglass R package." width="100%" />
+<img src="images/R_functions.png" alt="Workflow: Order of functions in Hourglass R package." width="90%" />
 <p class="caption">
 Figure 6.1: Workflow: Order of functions in Hourglass R package.
 </p>
 </div>
 </div>
-<div id="installation-1" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Installation<a href="how-to-use-the-r-package.html#installation-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="installation-and-usage" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Installation and Usage<a href="how-to-use-the-r-package.html#installation-and-usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li>See <a href="installation.html#install-r-package-optional">Install R package (optional)</a> for installation instructions and source code.</li>
 <li>Once you have installed Hourglass, load it into R using the following code:</li>
 </ol>
 <pre><code>library(Hourglass)</code></pre>
-</div>
-<div id="usage" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Usage<a href="how-to-use-the-r-package.html#usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The best way to run Hourglass is from the <a href="how-to-use-the-desktop-application.html#output-excel-file">Output: Excel File</a>. Download a template <a href="https://github.com/kazeera/Hourglass/blob/main/example/Template_UserOptions.xlsx">here</a>. Note: Keep in mind that all inputs are case-sensitive!</p>
+<ol start="3" style="list-style-type: decimal">
+<li>The best way to run Hourglass is from the <a href="how-to-use-the-desktop-application.html#output-excel-file">Output: Excel File</a>. Download a template <a href="https://github.com/kazeera/Hourglass/blob/main/example/Template_UserOptions.xlsx">here</a>. Note: Keep in mind that all inputs are case-sensitive!</li>
+</ol>
 <pre><code>run_from_excel(&quot;path/to/excel.xlsx)</code></pre>
 <p>Hourglass plots will be created in this directory.</p>
 </div>
-<div id="dataset-object" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Dataset Object<a href="how-to-use-the-r-package.html#dataset-object" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="dataset-object" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Dataset Object<a href="how-to-use-the-r-package.html#dataset-object" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Note: ds = <strong>d</strong>ata<strong>s</strong>et</p>
 <p>Similar to tools that explore omics and meta data structures, Hourglass characteristically takes in three data input files as part of the dataset object:</p>
 <p>In R: dataset or <strong>ds</strong> is a <strong>list</strong> object. You can access the following elements using the $ operator.</p>
@@ -286,8 +284,8 @@ Figure 6.1: Workflow: Order of functions in Hourglass R package.
   remove_outliers = T
 )</code></pre>
 </div>
-<div id="example-dataset-in-r" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Example Dataset in R<a href="how-to-use-the-r-package.html#example-dataset-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-dataset-in-r" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Example Dataset in R<a href="how-to-use-the-r-package.html#example-dataset-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This is a built-in dataset object in the Hourglass R package. Rename the example dataset variable (to make it smaller).</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="how-to-use-the-r-package.html#cb8-1" aria-hidden="true" tabindex="-1"></a>ds <span class="ot">&lt;-</span> Hourglass<span class="sc">::</span>example_IHC_samples_dataset </span></code></pre></div>
 <p>Since ds is a list object in R, the $ operator can be used to access individual elements (type data.frame).</p>

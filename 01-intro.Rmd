@@ -9,12 +9,12 @@ documentclass: book
 
 **What is it?** 
 
-   Software tool facilitate exploration of multi-parametric data (especially bioimage quantification).
+   Software tool to facilitate exploration of multi-parametric data (especially bioimage quantification).
    
    
 **For who?**
 
-  Individuals who need their data plotted hands-free.
+  Individuals who need data plotted hands-free.
   
   
 **How?** 
