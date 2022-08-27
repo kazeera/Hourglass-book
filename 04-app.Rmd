@@ -64,6 +64,20 @@ knitr::include_graphics(c("images/app/GUI_2_upload-data1.png",
                           "images/app/GUI_2_upload-data2.png"))
 ```
 
+Note: To upload, press on button and it will open a file chooser with this appearance: 
+
+```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="File/Folder chooser view."}
+knitr::include_graphics(c("images/app/GUI_2_upload-data3.png"))
+```
+
+To go into a folder, double-click on its icon. 
+  
+To go back up a folder, double-click on the first folder denoted "../". It looks like this:
+```{r, echo=FALSE, out.width="10%", fig.align = "center", fig.show='hold'}
+knitr::include_graphics(c("images/app/GUI_2_upload-data4_go-back.png"))
+```
+
+
 ## Define Comparisons
 
 > This tab creates a table of "comparisons" on how to stratify patients or samples. Each comparison/row will be run independent of other comparisons.

@@ -99,7 +99,7 @@ The parameters measured for each feature are:
 * **Num_Positive** = number of pixels of positive staining (based on trends), affects the following: 
      * **Positive_Percent** = Num_Positive / Num_Detections x 100
      * **Negative_Percent** = 100 - Positive_Percent 
-     * **Pos_Pixel_Percent** = Num_Positive/10^3  x random value from 0_3 to 1_5 
+     * **Pos_Pixel_Percent** = Num_Positive/10^3  x random value from 0.3 to 1.5 
      * **Num_Pos_per_mm_2** = Num_Positive / Area x 10^4
      
 **Possible Feature Sets**
