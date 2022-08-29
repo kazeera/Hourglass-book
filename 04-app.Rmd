@@ -110,8 +110,8 @@ Select a "Subgroup" from the drop down menu displaying rowAnn column names (e.g.
 **Within Group**
 
 This will run Hourglass within groups or cohorts of sample/patients.
-Append rowAnn column names with ";". 
-e.g. Sex;Smoker
+Append rowAnn column names with ",". 
+e.g. Sex,Smoker
 
 **Filter**
 
@@ -221,11 +221,16 @@ Labels for options are on the left and drop down menus on the right side:
 
 * **Fold-change method**: Fold change computation method to use, either "divide" (for non-transformed values) or "subtract" (for log2-transformed values).
 
-* **Color gradient**: Color palette for scaled plot types: heatmaps, correlation plots. See color palettes (visual) by pressing the button "See color gradients".
+* **Color gradient**: Color palette for scaled plot types: heatmaps, correlation plots. See color palettes (visual) by pressing the button "See color gradients". 
+```{r, echo=FALSE, out.width="40%", fig.align = "center", fig.show='hold', fig.cap="Color gradients supported by Hourglass - image from RColorBrewer."}
+knitr::include_graphics(c("images/app/GUI_5_adv-options3_colors.png"))
+```
 
 * **Number of custom levels**: Number of intermediate groups resulting from Hourglass separating a continuous variable into low, int, high. For example, if 2 is selected, there will only be low and high groups, whereas if 4 is selected, the groups will be low, int1, int2, high. 
 
 * **Save ID data to file**: Would you like sample/patient IDs and corresponding comparison groups to be saved to a .csv table? If TRUE is selected, then yes. This may be useful to 1) identify how Hourglass stratified custom comparisons, i.e. which patient IDs were considers low, int, high in the analysis and 2) see which samples/patients were in analysis after filtering steps.
+
+* **Log10 y axis for box/paired plots**: Should the data be transformed (y axis) for box plots and patient-paired slopegraphs? Opt for this option if the data columns have large ranges.
 
 
 Survival analysis options:
@@ -275,12 +280,13 @@ Note: the information will help populate the table/sheet in the output Excel fil
 > This tab is the final tab that defines which plot types should be created in output folder
 
 ```{r, echo=FALSE, out.width="66%", fig.align = "center", fig.show='hold', fig.cap="Run Hourglass."}
-knitr::include_graphics(c("images/app/GUI_7_run-hourglass.png"))
+knitr::include_graphics(c("images/app/GUI_7_run-hourglass1.png", 
+                          "images/app/GUI_7_run-hourglass2.png"))
 ```
 
   * Check boxes for quality control boxplots, for the feature and parameter colAnn columns (optional). See [Quality Control (QC) Plots]. Note this uses information from Feature Sets Tab 1.
 
-* Check boxes for plots that will be created for each feature set. 
+* Check boxes for plots that will be created for each feature set. Ensure "Feature Plots" is checked.
 
 * **Either** press:
      * "Create output spreadsheet" button and navigate through the folder directory and save the Excel file locally. Modify if needed before pressing Run. 

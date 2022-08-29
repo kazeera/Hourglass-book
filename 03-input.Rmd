@@ -9,8 +9,9 @@ Hourglass currently supports input data as *csv* (comma separated values) and *t
 
 Requirements
 
-* All files should have row names.
+* All files should have row and column names.
 * Missing values should be denoted NA or left blank (not nan, N/A, "NA")
+* Avoid special characters, such as /,\\,+,-,^ in column names. Use descriptive names with underscores (_i.e._ \_) or periods (.).
 
 ## The 3 Files
 
@@ -22,9 +23,9 @@ The file descriptors are named below with abbreviations in brackets. For R packa
 knitr::include_graphics("images/input_files.jpg")
 ```
 
-**1. Numeric matrix (or 'numMat')** 
+**1. Numeric matrix (referred to as 'numMat'/'vals')** 
 
-= Numeric values from quantification, where rows (samples/patients) x columns (genes/features/parameters).
+= Numeric values from quantification, where rows (samples/patients) x columns (genes/features/parameters). For best output results, columns should contain feature first name with a period to delimit the rest of the column name. (_e.g._ try "Gene1.Parameter", not "Gene1_Parameter"); for heatmaps/correlation plots, the part of the column name after the period will be removed by Hourglass.
 
 For example, for RNA sequencing data: data matrix = expression matrix, columns = genes, rows = samples.
 

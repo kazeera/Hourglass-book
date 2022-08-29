@@ -28,7 +28,7 @@ knitr::include_graphics(c("images/Hourglass_art.png"))
 
 We are ready to share Hourglass with the world. It's about _time_.
 
-First of all, I would like to thank Dr. Barbara Grünwald, whose role cannot be overstated. She is the phenomenal force that helped conceptualize this toolbox and drove this project forward. It started off as a script, with 300 lines of code in a single for loop, and progressively grew bigger as we added more stains and figured out new ways to interrogate the data. 
+First of all, I would like to thank Dr. Barbara Grünwald, whose role cannot be overstated. She is the phenomenal force who helped conceptualize this toolbox and drove this project forward. It started off as a script, with 300 lines of code in a single for loop, and progressively grew bigger as we added more stains and figured out new ways to interrogate the data. 
 
 Next, I would like to thank Henry Waterhouse, who built the graphical user interface with me, from planning to launch. Bowen Zhang and Parinaz Nasr Esfahani supported software development and testing for the MacOS version. Foram Vyas, Emily Poulton, and Nathan Chan are the image analysis experts who quantified the IHC data and consistently offered creative feedback. I would like to thank my supervisor, Dr. Rama Khokha, Dr. Paul Waterhouse, Dr. Niklas Krebs, and the rest of the Khokha Lab ([https://khokhalab.ca/](https://khokhalab.ca/)) for sharing their excitement about Hourglass.
 

@@ -211,8 +211,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Hourglass currently supports input data as <em>csv</em> (comma separated values) and <em>txt</em> (tab-delimited text) files</p>
 <p>Requirements</p>
 <ul>
-<li>All files should have row names.</li>
+<li>All files should have row and column names.</li>
 <li>Missing values should be denoted NA or left blank (not nan, N/A, “NA”)</li>
+<li>Avoid special characters, such as /,\,+,-,^ in column names. Use descriptive names with underscores (<em>i.e.</em> _) or periods (.).</li>
 </ul>
 </div>
 <div id="the-3-files" class="section level2 hasAnchor" number="4.2">
@@ -225,8 +226,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Figure 4.1: Snippet of the three files/tables required for Hourglass: 1) values matrix, 2) metadata/annotations for columns of values matrix, and 3) metadata/annotations for rows of values matrix.
 </p>
 </div>
-<p><strong>1. Numeric matrix (or ‘numMat’)</strong></p>
-<p>= Numeric values from quantification, where rows (samples/patients) x columns (genes/features/parameters).</p>
+<p><strong>1. Numeric matrix (referred to as ‘numMat’/‘vals’)</strong></p>
+<p>= Numeric values from quantification, where rows (samples/patients) x columns (genes/features/parameters). For best output results, columns should contain feature first name with a period to delimit the rest of the column name. (<em>e.g.</em> try “Gene1.Parameter”, not “Gene1_Parameter”); for heatmaps/correlation plots, the part of the column name after the period will be removed by Hourglass.</p>
 <p>For example, for RNA sequencing data: data matrix = expression matrix, columns = genes, rows = samples.</p>
 <p><strong>2. Column Annotations (or ‘colAnn’)</strong></p>
 <blockquote>

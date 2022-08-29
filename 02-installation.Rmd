@@ -59,8 +59,8 @@ Click [here](https://github.com/kazeera/Hourglass) for source code on Github.
 Follow instruction if you would like to uninstall Hourglass:
 
 **Uninstall application on Windows:**  
-Option 1. Go to Add or Remove programs  
-Option 2. Open Folder location for Hourglass. Press on file unins000.exe to uninstall.  
+Option 1. Go to Add or Remove programs. Search for Hourglass. Press uninstall.  
+Option 2. Open folder where Hourglass was installed (usually in Program Files). Double-click on file called "unins000.exe" to uninstall.  
 
 **Uninstall application on MacOS:**  
 Delete Hourglass application by clicking on icon and "Move to Trash".  
