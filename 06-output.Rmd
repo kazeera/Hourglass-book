@@ -151,14 +151,17 @@ knitr::include_graphics(c("images/plots/QC parameter.png"))
 ## Feature Sets Plots
 
 Purpose:  
+
 * Group relevant features (_e.g._ biologically relevant). 
 
 See [Define Feature Sets] for workflow/user specifications. Briefly: 
   
 **Step 1: Specify relevant parameters for each stain.**   
+
 * If multiple parameters are present per feature (usually the case in multiparametric imaging data), most will be irrelevant/for QC. The final readout is usually a ratio: (1) /(2), where (1) is quantification metric and (2) is normalization metric.
   
-**Step 2: Make groups, the data integration step.** 
-* Look at a stain in context of other stains within the dataset. Make smaller groups (e.g. T cell, immune, stromal cell features).   
+**Step 2: Make sets.**  
+
+* Look at a stain in context of other stains within the dataset. Create smaller groups (e.g. T cell, immune, stromal cell features).   
 * Multiple plot types are supported for feature sets.  
 

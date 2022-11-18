@@ -271,7 +271,7 @@ knitr::include_graphics(c("images/app/GUI_6_customize-colors1.png",
 
 2. Press "Select and Close Window" to save.
 
-* If **white** is chosen (center of the color wheel), that value will be excluded from all comparisons. This will bypass filters in comparisons. For example, perhaps "Sex" in rowAnn has the values "F", "M" and "X", where "X" does not have high enough patient numbers. To exclude this group, make the "Sex-X" button white.
+* If **white** (hex code #ffffffff) is chosen (center of the color wheel), that value will be excluded from all comparisons. This will bypass filters in comparisons. For example, perhaps "Sex" in rowAnn has the values "F", "M" and "X", where "X" does not have high enough patient numbers. To exclude this group, make the "Sex-X" button white.
 
 * Press "Select" to choose colors.
 Note: the information will help populate the table/sheet in the output Excel file called Colors.
@@ -284,7 +284,7 @@ knitr::include_graphics(c("images/app/GUI_7_run-hourglass1.png",
                           "images/app/GUI_7_run-hourglass2.png"))
 ```
 
-  * Check boxes for quality control boxplots, for the feature and parameter colAnn columns (optional). See [Quality Control (QC) Plots]. Note this uses information from Feature Sets Tab 1.
+* Check boxes for quality control boxplots, for the feature and parameter colAnn columns (optional). See [Quality Control (QC) Plots]. Note this uses information from Feature Sets Tab 1.
 
 * Check boxes for plots that will be created for each feature set. Ensure "Feature Plots" is checked.
 
